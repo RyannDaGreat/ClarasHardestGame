@@ -1,0 +1,12 @@
+{
+  "prefixes": {
+    "Z:/CleanCode/Personal/Projects/RyansHardestGame/": "../../assets/original/"
+  },
+  "overrides": {
+    "/game/textures/power.png": "../../assets/flash-backup/Ryan_s Hardest Game/textures/power.png"
+  },
+  "allow_missing": [
+    {"id": "IMHZR.jpg", "path": "D:\\HZR.jpg"},
+    {"id": "IMUntitled.004", "path": "Untitled"}
+  ]
+}

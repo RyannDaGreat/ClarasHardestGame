@@ -25,3 +25,6 @@ __pycache__/
 .frenzy/baseline/samples/
 .frenzy/baseline/textures/
 .frenzy
+.frenzy/baseline/windows/
+build/
+.cache/
