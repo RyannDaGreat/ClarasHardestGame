@@ -87,4 +87,6 @@ file(GENERATE OUTPUT "${CMAKE_BINARY_DIR}/player-libraries.txt" CONTENT "${PLAYE
     -sMAXIMUM_MEMORY=2147483648 -sFORCE_FILESYSTEM=1
     "-sEXPORTED_RUNTIME_METHODS=['FS','callMain']" "-sEXPORTED_FUNCTIONS=['_main']"
     -sINVOKE_RUN=0
+    "--post-js" "${CMAKE_CURRENT_SOURCE_DIR}/browser-support.js"
     "--preload-file" "${CMAKE_CURRENT_SOURCE_DIR}/.cache/patched/Python-2.6.2/Lib@/python/lib/python2.6")
+  set_property(TARGET player APPEND PROPERTY LINK_DEPENDS "${CMAKE_CURRENT_SOURCE_DIR}/browser-support.js")

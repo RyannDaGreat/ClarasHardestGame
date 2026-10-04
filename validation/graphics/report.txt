@@ -1,0 +1,101 @@
+Portable graphics regressions — 2026-10-04
+
+Scope and reproduction
+----------------------
+Two independent fixed-function OpenGL probes, each rendering a 1920×1080 WebGL1
+canvas. Input is original desktop GL commands, output is sampled RGBA pixels and
+GL state queries. No game assets or .blend mutations are involved. build.sh links
+the existing runtime GL4ES archive; run.mjs checks exit status, expected PASS text,
+absence of FAIL/browser errors, and captures screenshots. README.md has commands.
+
+Portable run: Chrome/150.0.7871.24, software WebGL, Emscripten 3.1.74.
+GL4ES commit: a444cc94b17c672c66c3e6ce07428dc603034db1 plus the two runtime patches.
+Tested libGL.a SHA256:
+13ad16faa32855d941b50884581ae05a66c568c899d878e08f1c4941d63a2ec7
+Exact current run record: evidence/portable-results.json.
+Archive hashes may vary across builds; this identifies the tested build, not a pin.
+Harness negative check: temporarily forcing generated-page exit1 was rejected with
+AssertionError even with PASS text. The page was restored after this expected failure.
+
+1. Wireframe quad perimeter
+--------------------------
+GL4ES src/gl/list.c turns a single four-vertex GL_QUADS list into GL_TRIANGLE_FAN,
+retaining the original mode. src/gl/listdraw.c fill_lineIndices did not handle
+original GL_QUADS inside its triangle-fan branch, so polygon LINE drew the fan's
+internal diagonal. This appeared across the game's Deaths counter rectangle.
+
+runtime/patches/gl4es-wireframe-quads.patch emits only the four original quad edges.
+wireframe.c reads two 16×16 regions: rectangle center and bottom boundary.
+Before: WIREFRAME_FAIL center=16 edge=16 error=0
+After:  WIREFRAME_PASS center=0 edge=16 error=0
+Portable run reproduces the after result. VLM inspection of historical screenshots
+confirmed disappearance of the internal diagonal with perimeter intact.
+
+Evidence: evidence/wireframe-before.png and evidence/wireframe-after.png.
+
+2. Texture combiner defaults
+----------------------------
+GL4ES src/gl/glstate.c initialized texture environment mode but left combine_rgb,
+combine_alpha, and fixed-function shader combine state zeroed. Desktop OpenGL's
+initial COMBINE_RGB and COMBINE_ALPHA are MODULATE (0x2100 / 8448). Zero selected
+the internal REPLACE behavior. In this game, procedural-texture fallback can enable
+COMBINE without overriding these defaults; the white texture then hid painted
+vertex colors. The same state error can alter textured floor brightness.
+
+runtime/patches/gl4es-combine-defaults.patch initializes both queried fields to
+GL_MODULATE and both packed shader-combiner fields to FPE_CR_MODULATE.
+combine-defaults.c uses indexed quads, a 72-byte vertex stride, RGBA offset28,
+vertex RGBA(64,160,32,128), and a white RGBA(255,255,255,128) texture. Three columns
+use implicit COMBINE defaults, explicit MODULATE, and explicit REPLACE respectively.
+Before RGB: (255,255,255), (64,160,32), (255,255,255); queried defaults 0 / 0.
+After RGB:  (64,160,32),   (64,160,32), (255,255,255); queried defaults 8448 / 8448.
+Portable result: COMBINE_DEFAULTS_PASS rgb=8448 alpha=8448 stride=72 rgba_offset=28 error=0
+Canvas alpha is disabled, so all read-back alpha values are255. The alpha default
+is verified by state query only; alpha multiplication is not a pixel assertion.
+VLM inspection confirmed only the implicit-default column changed white to green.
+
+Evidence: evidence/combine-defaults-before.png and evidence/combine-defaults-after.png.
+The four before/after images are historical captures of the independent probes
+using the research build, not falsely labeled as captures from this portable run.
+
+Full-game corroboration (separate from these isolated probes): direct Lv1/Lv2
+captures regained native green/red/pink colors after relinking. Normal Intro/menu
+progression retained white Lv1 hazards, matching native normal progression: engine
+texture-environment state inherited across scenes remains authentic. No material,
+vertex colors, logic, or game data was changed to enforce a desired screenshot.
+
+Remaining compatibility limitations
+-----------------------------------
+Original game startup calls glDisable(GL_LOGIC_OP), alias GL_INDEX_LOGIC_OP0x0BF1,
+from source/blender/gpu/intern/gpu_draw.c GPU_state_init. GL4ES handles color logic
+operations but forwards this obsolete color-index capability to WebGL, which emits
+INVALID_ENUM. Disabling index-buffer logic has no expected RGBA pixel effect, but
+complete generic enable/query/attribute-stack support has not been implemented.
+
+Four menu warnings, INVALID_OPERATION texParameter: no texture bound to target,
+come from GL4ES realize_1texture/realize_textures during indexed drawing. Its default
+texture object has backend name0. WebGL interprets binding0 as null, rejecting the
+default sampler synchronization: MIN_FILTER=NEAREST_MIPMAP_LINEAR,
+MAG_FILTER=LINEAR, WRAP_S=REPEAT, WRAP_T=REPEAT. Desktop GL has a default object0.
+Complete generic default-texture support would require target-specific backing
+objects and correct sharing/lifetime behavior. Arbitrary .blend/default-object
+uploads therefore remain a compatibility limitation. No pixel defect in this game
+was established from these warnings; that is not proof of universal correctness.
+
+Neither warning is suppressed. Neither probe claims to test those missing features.
+One separately observed fill_lineIndices modes[k] versus modes[m] indexing concern
+was not patched because no independent failure was reproduced. These tests do not
+measure frame rate, keyboard latency, or certify every GL primitive/state combination.
+
+Sources
+-------
+- runtime/patches/gl4es-wireframe-quads.patch and gl4es-combine-defaults.patch.
+- https://github.com/ptitSeb/gl4es/tree/a444cc94b17c672c66c3e6ce07428dc603034db1
+  src/gl/list.c, src/gl/listdraw.c, src/gl/glstate.c, src/gl/enable.c, src/gl/texture.c.
+- https://registry.khronos.org/OpenGL/specs/gl/glspec14.pdf
+  Texture environment initial state: COMBINE_RGB/COMBINE_ALPHA default MODULATE.
+- Blender2.49b source in runtime/.cache/patched/blender-2.49b:
+  source/gameengine/Ketsji/BL_Texture.cpp setTexEnv;
+  source/gameengine/Converter/BL_BlenderDataConversion.cpp;
+  source/gameengine/Rasterizer/RAS_OpenGLRasterizer/RAS_VAOpenGLRasterizer.cpp;
+  source/blender/gpu/intern/gpu_draw.c GPU_state_init.

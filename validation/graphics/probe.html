@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+<meta charset="utf-8">
+<title>GL4ES regression: PROBE_NAME</title>
+<style>
+:root { --page-margin: 0; --background: #111; --foreground: #fff; }
+body { margin: var(--page-margin); background: var(--background); color: var(--foreground); }
+</style>
+<canvas id="canvas" width="1920" height="1080"></canvas>
+<pre id="output"></pre>
+<script>
+var Module = {
+  canvas: document.querySelector('#canvas'),
+  print: function (line) {
+    console.log(line);
+    document.querySelector('#output').textContent += line + '\n';
+  },
+  printErr: console.error,
+  onExit: function (status) { window.probeExit = status; },
+  onAbort: function (reason) { window.probeAbort = String(reason); }
+};
+</script>
+<script src="PROBE_NAME.js"></script>
+</html>

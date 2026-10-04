@@ -104,3 +104,27 @@ Performance and baseline release requirements (verbatim):
 > push to github the first version and tag it tho
 
 Interpretation: publish and tag the working first version before performance changes, then profile and improve frame rate/input latency without replacing original gameplay or physics. Preserve the baseline for comparisons and rollback. Performance becomes an additional required objective; completion notification still waits until authorized work is complete.
+
+Performance investigation plan: `validation/performance/` will hold repeatable browser frame-time, event-queue and CPU profiles of the tagged baseline and candidate builds. Measure before optimizing; retain original physics scheduling, geometry, effects and 1080p. Separate CPU work, browser/GPU presentation and input delivery so improvements address measured causes. `validation/graphics/` retains portable pixel regressions for the two existing GL compatibility fixes.
+
+Performance findings after v0.1.0: actual Lv10 render cadence is ~16 FPS on Chrome/ANGLE M1 Max although callback CPU work is ~8 ms. Original gl4es implements glAccum as a stub: original motion-blur actuators therefore need a genuine accumulation implementation for fidelity. Investigating both repeated log DOM updates and GPU pacing before selecting a fix. Diagnostic profiler distinguishes rAF callbacks from actual draws. Live Pages deployment and remote browser smoke passed at https://ryanndagreat.github.io/ClarasHardestGame/.
+
+Additional user request (verbatim, 2026-10-04):
+> /Users/ryan/CleanCode/Personal/Website plz add it to my 404 page
+> and pus
+> push
+
+Add a project card linking the live game to the existing website's 404 project list, append at the end per its existing convention, and commit/push that separate repository. This does not replace the ongoing game performance/fidelity work.
+
+Performance implementation decision: replace Emscripten's single scratch index buffer per size with a bounded, lazily allocated128-buffer ring per size and WebGL context. This mirrors the existing temporary vertex-buffer rotation strategy and prevents repeatedly modifying an in-flight index buffer. Keep all geometry/indices, resolution, original simulation timing and materials. Use a small post-JS adapter and verify pixel correctness through ring wrap/reuse plus game performance/all-level regression. The controlled Lv10 test improved16.42→60.10 renderedFPS on Chrome M1 Max.
+
+Additional user request (verbatim, 2026-10-04):
+> add this too https://github.com/RyannDaGreat/JXL-Art
+
+Interpretation: append JXL-Art to the same website 404 project list and push, under the prior push authorization. Its README describes art computed from compact JPEG XL decision trees; use the exact repository link supplied by the user.
+
+Final performance validation plan: copy the linked browser-support candidate into `web/runtime/`, reassemble the site, and run the existing performance profiler separately for all twelve playable scenes. Preserve baseline VLM captures; promote compact performance results and candidate captures into `validation/performance/evidence/`. Run the normal-menu/audio smoke again. Regenerate the corresponding-source archive after final runtime documentation changes before deploying. The original WASM and Python data hashes must remain unchanged for this buffer-only optimization.
+
+Accumulation investigation correction: original GHOST Win32 requests zero accumulation bits and X11 requests no accumulation buffer. A stubbed glAccum cannot yet be called an observed visual regression: the original framebuffer may have no accumulation storage either. The isolated implementation remains research-only until actual native context bits/errors are measured; enabling motion blur without that evidence could change original behavior.
+
+Optimized candidate validation completed: linked JS hash 4a3890539ce09c41fe16f68d55e50c97deefdc208d93c18a39bbfa84d874f0fb; WASM and Python data unchanged. All twelve level scenes individually VLM inspected after ten real arrow presses; zero page exceptions. Performance report and compact hash-bound evidence are under `validation/performance/`. Lv10 measured 59.98FPS vs16.42 baseline; next-render-end proxy3.6–16.3ms vs28–72ms, not physical input latency. Release as v0.1.1 while retaining immutable v0.1.0. Native accumulation probe found zero actual bits; preserve that appearance, no experimental blur integration.

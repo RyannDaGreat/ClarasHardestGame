@@ -1,0 +1,1389 @@
+{
+  "date": "2026-10-04T09:36:35.358Z",
+  "hashes": {
+    "player.js": "4a3890539ce09c41fe16f68d55e50c97deefdc208d93c18a39bbfa84d874f0fb",
+    "player.wasm": "7b3defa8466aa777cb57d485719d61ba6de8a17d526402866d2282abb90a9821",
+    "player.data": "39eef3dcd8d096a15cb7a67cf1f9d397292baf5b9aa0ea0ca9c3aa88ef610a04"
+  },
+  "baseline": {
+    "scene": "Lv10",
+    "gpu": {
+      "vendor": "Google Inc. (Apple)",
+      "renderer": "ANGLE (Apple, ANGLE Metal Renderer: Apple M1 Max, Unspecified Version)"
+    },
+    "renderFPS": 16.41677836318307,
+    "callbackFPS": 17.329943444196545,
+    "renderedCPU": {
+      "n": 159,
+      "mean": 8.001886793652421,
+      "p50": 8.200000047683716,
+      "p95": 8.899999976158142,
+      "max": 9.600000023841858
+    },
+    "renderPeriods": {
+      "n": 158,
+      "mean": 60.91329113893871,
+      "p50": 62.89999997615814,
+      "p95": 69.30000007152557,
+      "max": 71.10000002384186
+    },
+    "keyboard": [
+      {
+        "code": "ArrowRight",
+        "eventTime": 5873.5,
+        "handlerTime": 5874.100000023842,
+        "queueDelay": 0.6000000238418579,
+        "untilNextFrame": 20.799999952316284,
+        "untilFrameEnd": 28.399999976158142
+      },
+      {
+        "code": "ArrowLeft",
+        "eventTime": 6637.399999976158,
+        "handlerTime": 6637.600000023842,
+        "queueDelay": 0.20000004768371582,
+        "untilNextFrame": 28.700000047683716,
+        "untilFrameEnd": 37.40000009536743
+      },
+      {
+        "code": "ArrowRight",
+        "eventTime": 7399.600000023842,
+        "handlerTime": 7405.800000071526,
+        "queueDelay": 6.200000047683716,
+        "untilNextFrame": 53,
+        "untilFrameEnd": 67.39999997615814
+      },
+      {
+        "code": "ArrowLeft",
+        "eventTime": 8168.700000047684,
+        "handlerTime": 8169.399999976158,
+        "queueDelay": 0.6999999284744263,
+        "untilNextFrame": 58,
+        "untilFrameEnd": 67.29999995231628
+      },
+      {
+        "code": "ArrowRight",
+        "eventTime": 8938.700000047684,
+        "handlerTime": 8938.899999976158,
+        "queueDelay": 0.19999992847442627,
+        "untilNextFrame": 38.5,
+        "untilFrameEnd": 47.299999952316284
+      },
+      {
+        "code": "ArrowLeft",
+        "eventTime": 9702.200000047684,
+        "handlerTime": 9702.300000071526,
+        "queueDelay": 0.10000002384185791,
+        "untilNextFrame": 30.899999976158142,
+        "untilFrameEnd": 39.60000002384186
+      },
+      {
+        "code": "ArrowRight",
+        "eventTime": 10464.100000023842,
+        "handlerTime": 10464.399999976158,
+        "queueDelay": 0.2999999523162842,
+        "untilNextFrame": 55.700000047683716,
+        "untilFrameEnd": 64.60000002384186
+      },
+      {
+        "code": "ArrowLeft",
+        "eventTime": 11230.700000047684,
+        "handlerTime": 11237.600000023842,
+        "queueDelay": 6.899999976158142,
+        "untilNextFrame": 55.60000002384186,
+        "untilFrameEnd": 71
+      },
+      {
+        "code": "ArrowRight",
+        "eventTime": 12003.399999976158,
+        "handlerTime": 12010.800000071526,
+        "queueDelay": 7.400000095367432,
+        "untilNextFrame": 56.09999990463257,
+        "untilFrameEnd": 72
+      },
+      {
+        "code": "ArrowLeft",
+        "eventTime": 12776.300000071526,
+        "handlerTime": 12776.5,
+        "queueDelay": 0.19999992847442627,
+        "untilNextFrame": 48.5,
+        "untilFrameEnd": 57.59999990463257
+      }
+    ],
+    "errors": []
+  },
+  "levels": [
+    {
+      "scene": "Lv1",
+      "gpu": {
+        "vendor": "Google Inc. (Apple)",
+        "renderer": "ANGLE (Apple, ANGLE Metal Renderer: Apple M1 Max, Unspecified Version)"
+      },
+      "renderFPS": 60.01057181013315,
+      "callbackFPS": 60.11421701187777,
+      "renderedCPU": {
+        "n": 580,
+        "mean": 1.848275860835766,
+        "p50": 1.8000000715255737,
+        "p95": 2.3000000715255737,
+        "max": 2.700000047683716
+      },
+      "renderPeriods": {
+        "n": 579,
+        "mean": 16.66373057007172,
+        "p50": 16.699999928474426,
+        "p95": 17.799999952316284,
+        "max": 22.200000047683716
+      },
+      "keyboard": [
+        {
+          "code": "ArrowRight",
+          "eventTime": 5308.700000047684,
+          "handlerTime": 5310.700000047684,
+          "queueDelay": 2,
+          "untilNextFrame": 0.19999992847442627,
+          "untilFrameEnd": 4
+        },
+        {
+          "code": "ArrowLeft",
+          "eventTime": 6075.200000047684,
+          "handlerTime": 6075.399999976158,
+          "queueDelay": 0.19999992847442627,
+          "untilNextFrame": 13.100000023841858,
+          "untilFrameEnd": 15.599999904632568
+        },
+        {
+          "code": "ArrowRight",
+          "eventTime": 6839.399999976158,
+          "handlerTime": 6841,
+          "queueDelay": 1.600000023841858,
+          "untilNextFrame": 14.100000023841858,
+          "untilFrameEnd": 17.300000071525574
+        },
+        {
+          "code": "ArrowLeft",
+          "eventTime": 7605.5,
+          "handlerTime": 7607.5,
+          "queueDelay": 2,
+          "untilNextFrame": 14.299999952316284,
+          "untilFrameEnd": 18.100000023841858
+        },
+        {
+          "code": "ArrowRight",
+          "eventTime": 8371.600000023842,
+          "handlerTime": 8374,
+          "queueDelay": 2.399999976158142,
+          "untilNextFrame": 14.399999976158142,
+          "untilFrameEnd": 19.5
+        },
+        {
+          "code": "ArrowLeft",
+          "eventTime": 9138.399999976158,
+          "handlerTime": 9141.700000047684,
+          "queueDelay": 3.3000000715255737,
+          "untilNextFrame": 13.799999952316284,
+          "untilFrameEnd": 19.300000071525574
+        },
+        {
+          "code": "ArrowRight",
+          "eventTime": 9905.399999976158,
+          "handlerTime": 9906.899999976158,
+          "queueDelay": 1.5,
+          "untilNextFrame": 14.800000071525574,
+          "untilFrameEnd": 18.300000071525574
+        },
+        {
+          "code": "ArrowLeft",
+          "eventTime": 10670.399999976158,
+          "handlerTime": 10670.799999952316,
+          "queueDelay": 0.3999999761581421,
+          "untilNextFrame": 0.9000000953674316,
+          "untilFrameEnd": 3.100000023841858
+        },
+        {
+          "code": "ArrowRight",
+          "eventTime": 11433.600000023842,
+          "handlerTime": 11434.100000023842,
+          "queueDelay": 0.5,
+          "untilNextFrame": 4.199999928474426,
+          "untilFrameEnd": 6.799999952316284
+        },
+        {
+          "code": "ArrowLeft",
+          "eventTime": 12197.600000023842,
+          "handlerTime": 12198,
+          "queueDelay": 0.3999999761581421,
+          "untilNextFrame": 8.100000023841858,
+          "untilFrameEnd": 10.399999976158142
+        }
+      ],
+      "errors": []
+    },
+    {
+      "scene": "Lv2",
+      "gpu": {
+        "vendor": "Google Inc. (Apple)",
+        "renderer": "ANGLE (Apple, ANGLE Metal Renderer: Apple M1 Max, Unspecified Version)"
+      },
+      "renderFPS": 50.0598428474788,
+      "callbackFPS": 60.07034143578861,
+      "renderedCPU": {
+        "n": 482,
+        "mean": 2.2031120277044685,
+        "p50": 2.200000047683716,
+        "p95": 2.6999999284744263,
+        "max": 3.1999999284744263
+      },
+      "renderPeriods": {
+        "n": 481,
+        "mean": 19.976091476091476,
+        "p50": 16.700000047683716,
+        "p95": 33.700000047683716,
+        "max": 34.5
+      },
+      "keyboard": [
+        {
+          "code": "ArrowRight",
+          "eventTime": 5204.5,
+          "handlerTime": 5205.199999928474,
+          "queueDelay": 0.6999999284744263,
+          "untilNextFrame": 3.700000047683716,
+          "untilFrameEnd": 6.699999928474426
+        },
+        {
+          "code": "ArrowLeft",
+          "eventTime": 5968.199999928474,
+          "handlerTime": 5968.399999976158,
+          "queueDelay": 0.20000004768371582,
+          "untilNextFrame": 6.5,
+          "untilFrameEnd": 9.100000023841858
+        },
+        {
+          "code": "ArrowRight",
+          "eventTime": 6732.899999976158,
+          "handlerTime": 6733.199999928474,
+          "queueDelay": 0.2999999523162842,
+          "untilNextFrame": 25.40000009536743,
+          "untilFrameEnd": 28.200000047683716
+        },
+        {
+          "code": "ArrowLeft",
+          "eventTime": 7496.699999928474,
+          "handlerTime": 7496.899999976158,
+          "queueDelay": 0.20000004768371582,
+          "untilNextFrame": 11.200000047683716,
+          "untilFrameEnd": 13.400000095367432
+        },
+        {
+          "code": "ArrowRight",
+          "eventTime": 8261.899999976158,
+          "handlerTime": 8262.399999976158,
+          "queueDelay": 0.5,
+          "untilNextFrame": 13.5,
+          "untilFrameEnd": 16.899999976158142
+        },
+        {
+          "code": "ArrowLeft",
+          "eventTime": 9025.299999952316,
+          "handlerTime": 9027.5,
+          "queueDelay": 2.200000047683716,
+          "untilNextFrame": 30.600000023841858,
+          "untilFrameEnd": 35
+        },
+        {
+          "code": "ArrowRight",
+          "eventTime": 9791.5,
+          "handlerTime": 9793.600000023842,
+          "queueDelay": 2.100000023841858,
+          "untilNextFrame": 13.899999976158142,
+          "untilFrameEnd": 17.899999976158142
+        },
+        {
+          "code": "ArrowLeft",
+          "eventTime": 10556.899999976158,
+          "handlerTime": 10557.199999928474,
+          "queueDelay": 0.2999999523162842,
+          "untilNextFrame": 1.3000000715255737,
+          "untilFrameEnd": 3.700000047683716
+        },
+        {
+          "code": "ArrowRight",
+          "eventTime": 11320.600000023842,
+          "handlerTime": 11320.799999952316,
+          "queueDelay": 0.19999992847442627,
+          "untilNextFrame": 5,
+          "untilFrameEnd": 7.299999952316284
+        },
+        {
+          "code": "ArrowLeft",
+          "eventTime": 12084.199999928474,
+          "handlerTime": 12084.699999928474,
+          "queueDelay": 0.5,
+          "untilNextFrame": 6.800000071525574,
+          "untilFrameEnd": 10.300000071525574
+        }
+      ],
+      "errors": []
+    },
+    {
+      "scene": "Lv3",
+      "gpu": {
+        "vendor": "Google Inc. (Apple)",
+        "renderer": "ANGLE (Apple, ANGLE Metal Renderer: Apple M1 Max, Unspecified Version)"
+      },
+      "renderFPS": 59.99875650215944,
+      "callbackFPS": 60.10238129749996,
+      "renderedCPU": {
+        "n": 580,
+        "mean": 1.8118965504498317,
+        "p50": 1.7999999523162842,
+        "p95": 2.299999952316284,
+        "max": 3
+      },
+      "renderPeriods": {
+        "n": 579,
+        "mean": 16.667012089892374,
+        "p50": 16.699999928474426,
+        "p95": 17.699999928474426,
+        "max": 24.100000023841858
+      },
+      "keyboard": [
+        {
+          "code": "ArrowRight",
+          "eventTime": 5163.099999904633,
+          "handlerTime": 5163.799999952316,
+          "queueDelay": 0.7000000476837158,
+          "untilNextFrame": 0.20000004768371582,
+          "untilFrameEnd": 2.700000047683716
+        },
+        {
+          "code": "ArrowLeft",
+          "eventTime": 5929.199999928474,
+          "handlerTime": 5929.599999904633,
+          "queueDelay": 0.3999999761581421,
+          "untilNextFrame": 13.700000047683716,
+          "untilFrameEnd": 16.100000023841858
+        },
+        {
+          "code": "ArrowRight",
+          "eventTime": 6692.599999904633,
+          "handlerTime": 6692.799999952316,
+          "queueDelay": 0.20000004768371582,
+          "untilNextFrame": 0.5,
+          "untilFrameEnd": 2.4000000953674316
+        },
+        {
+          "code": "ArrowLeft",
+          "eventTime": 7456.5,
+          "handlerTime": 7457,
+          "queueDelay": 0.5,
+          "untilNextFrame": 3.0999999046325684,
+          "untilFrameEnd": 5.699999928474426
+        },
+        {
+          "code": "ArrowRight",
+          "eventTime": 8221.299999952316,
+          "handlerTime": 8221.5,
+          "queueDelay": 0.20000004768371582,
+          "untilNextFrame": 5.899999976158142,
+          "untilFrameEnd": 8.100000023841858
+        },
+        {
+          "code": "ArrowLeft",
+          "eventTime": 8984.5,
+          "handlerTime": 8984.899999976158,
+          "queueDelay": 0.3999999761581421,
+          "untilNextFrame": 9.5,
+          "untilFrameEnd": 12.099999904632568
+        },
+        {
+          "code": "ArrowRight",
+          "eventTime": 9749.399999976158,
+          "handlerTime": 9749.899999976158,
+          "queueDelay": 0.5,
+          "untilNextFrame": 10.5,
+          "untilFrameEnd": 13
+        },
+        {
+          "code": "ArrowLeft",
+          "eventTime": 10513.099999904633,
+          "handlerTime": 10513.399999976158,
+          "queueDelay": 0.30000007152557373,
+          "untilNextFrame": 13.100000023841858,
+          "untilFrameEnd": 15.200000047683716
+        },
+        {
+          "code": "ArrowRight",
+          "eventTime": 11277.099999904633,
+          "handlerTime": 11279.199999928474,
+          "queueDelay": 2.100000023841858,
+          "untilNextFrame": 13.399999976158142,
+          "untilFrameEnd": 17.100000023841858
+        },
+        {
+          "code": "ArrowLeft",
+          "eventTime": 12041.099999904633,
+          "handlerTime": 12041.399999976158,
+          "queueDelay": 0.30000007152557373,
+          "untilNextFrame": 1.7999999523162842,
+          "untilFrameEnd": 3.600000023841858
+        }
+      ],
+      "errors": []
+    },
+    {
+      "scene": "Lv4",
+      "gpu": {
+        "vendor": "Google Inc. (Apple)",
+        "renderer": "ANGLE (Apple, ANGLE Metal Renderer: Apple M1 Max, Unspecified Version)"
+      },
+      "renderFPS": 59.22314992480424,
+      "callbackFPS": 60.05289633355805,
+      "renderedCPU": {
+        "n": 572,
+        "mean": 2.210139860223223,
+        "p50": 2.200000047683716,
+        "p95": 2.5999999046325684,
+        "max": 2.8000000715255737
+      },
+      "renderPeriods": {
+        "n": 571,
+        "mean": 16.885288966725042,
+        "p50": 16.699999928474426,
+        "p95": 17.799999952316284,
+        "max": 34
+      },
+      "keyboard": [
+        {
+          "code": "ArrowRight",
+          "eventTime": 5186.100000023842,
+          "handlerTime": 5186.800000071526,
+          "queueDelay": 0.7000000476837158,
+          "untilNextFrame": 18.199999928474426,
+          "untilFrameEnd": 21.100000023841858
+        },
+        {
+          "code": "ArrowLeft",
+          "eventTime": 5949.5,
+          "handlerTime": 5949.700000047684,
+          "queueDelay": 0.20000004768371582,
+          "untilNextFrame": 5.299999952316284,
+          "untilFrameEnd": 7.800000071525574
+        },
+        {
+          "code": "ArrowRight",
+          "eventTime": 6713.899999976158,
+          "handlerTime": 6714.200000047684,
+          "queueDelay": 0.30000007152557373,
+          "untilNextFrame": 7.5,
+          "untilFrameEnd": 10
+        },
+        {
+          "code": "ArrowLeft",
+          "eventTime": 7477.899999976158,
+          "handlerTime": 7478.100000023842,
+          "queueDelay": 0.20000004768371582,
+          "untilNextFrame": 10.299999952316284,
+          "untilFrameEnd": 12.800000071525574
+        },
+        {
+          "code": "ArrowRight",
+          "eventTime": 8244,
+          "handlerTime": 8244.300000071526,
+          "queueDelay": 0.30000007152557373,
+          "untilNextFrame": 12,
+          "untilFrameEnd": 14.700000047683716
+        },
+        {
+          "code": "ArrowLeft",
+          "eventTime": 9009.300000071526,
+          "handlerTime": 9009.5,
+          "queueDelay": 0.19999992847442627,
+          "untilNextFrame": 12.600000023841858,
+          "untilFrameEnd": 15
+        },
+        {
+          "code": "ArrowRight",
+          "eventTime": 9773.100000023842,
+          "handlerTime": 9774.600000023842,
+          "queueDelay": 1.5,
+          "untilNextFrame": 13.899999976158142,
+          "untilFrameEnd": 17.899999976158142
+        },
+        {
+          "code": "ArrowLeft",
+          "eventTime": 10537.399999976158,
+          "handlerTime": 10537.700000047684,
+          "queueDelay": 0.30000007152557373,
+          "untilNextFrame": 1.600000023841858,
+          "untilFrameEnd": 4.5
+        },
+        {
+          "code": "ArrowRight",
+          "eventTime": 11300.800000071526,
+          "handlerTime": 11301,
+          "queueDelay": 0.19999992847442627,
+          "untilNextFrame": 5.100000023841858,
+          "untilFrameEnd": 7.5
+        },
+        {
+          "code": "ArrowLeft",
+          "eventTime": 12064.700000047684,
+          "handlerTime": 12064.800000071526,
+          "queueDelay": 0.10000002384185791,
+          "untilNextFrame": 6.899999976158142,
+          "untilFrameEnd": 9.199999928474426
+        }
+      ],
+      "errors": []
+    },
+    {
+      "scene": "Lv5",
+      "gpu": {
+        "vendor": "Google Inc. (Apple)",
+        "renderer": "ANGLE (Apple, ANGLE Metal Renderer: Apple M1 Max, Unspecified Version)"
+      },
+      "renderFPS": 59.9647266313933,
+      "callbackFPS": 60.06847183317772,
+      "renderedCPU": {
+        "n": 579,
+        "mean": 2.7122625240184277,
+        "p50": 2.700000047683716,
+        "p95": 3.0999999046325684,
+        "max": 3.600000023841858
+      },
+      "renderPeriods": {
+        "n": 578,
+        "mean": 16.676470588235293,
+        "p50": 16.699999928474426,
+        "p95": 17.600000023841858,
+        "max": 25.799999952316284
+      },
+      "keyboard": [
+        {
+          "code": "ArrowRight",
+          "eventTime": 5226.100000023842,
+          "handlerTime": 5226.700000047684,
+          "queueDelay": 0.6000000238418579,
+          "untilNextFrame": 18.799999952316284,
+          "untilFrameEnd": 22.299999952316284
+        },
+        {
+          "code": "ArrowLeft",
+          "eventTime": 5989.600000023842,
+          "handlerTime": 5989.899999976158,
+          "queueDelay": 0.2999999523162842,
+          "untilNextFrame": 5.600000023841858,
+          "untilFrameEnd": 8.399999976158142
+        },
+        {
+          "code": "ArrowRight",
+          "eventTime": 6754,
+          "handlerTime": 6754.200000047684,
+          "queueDelay": 0.20000004768371582,
+          "untilNextFrame": 8.299999952316284,
+          "untilFrameEnd": 11.299999952316284
+        },
+        {
+          "code": "ArrowLeft",
+          "eventTime": 7517.700000047684,
+          "handlerTime": 7517.899999976158,
+          "queueDelay": 0.19999992847442627,
+          "untilNextFrame": 11.5,
+          "untilFrameEnd": 13.899999976158142
+        },
+        {
+          "code": "ArrowRight",
+          "eventTime": 8283.200000047684,
+          "handlerTime": 8283.299999952316,
+          "queueDelay": 0.09999990463256836,
+          "untilNextFrame": 12.400000095367432,
+          "untilFrameEnd": 14.899999976158142
+        },
+        {
+          "code": "ArrowLeft",
+          "eventTime": 9047,
+          "handlerTime": 9049.5,
+          "queueDelay": 2.5,
+          "untilNextFrame": 12.700000047683716,
+          "untilFrameEnd": 18.100000023841858
+        },
+        {
+          "code": "ArrowRight",
+          "eventTime": 9811.700000047684,
+          "handlerTime": 9812,
+          "queueDelay": 0.2999999523162842,
+          "untilNextFrame": 0.7000000476837158,
+          "untilFrameEnd": 3.899999976158142
+        },
+        {
+          "code": "ArrowLeft",
+          "eventTime": 10574.600000023842,
+          "handlerTime": 10575,
+          "queueDelay": 0.3999999761581421,
+          "untilNextFrame": 3.899999976158142,
+          "untilFrameEnd": 7.100000023841858
+        },
+        {
+          "code": "ArrowRight",
+          "eventTime": 11338.799999952316,
+          "handlerTime": 11339,
+          "queueDelay": 0.20000004768371582,
+          "untilNextFrame": 6.5,
+          "untilFrameEnd": 9.800000071525574
+        },
+        {
+          "code": "ArrowLeft",
+          "eventTime": 12102.700000047684,
+          "handlerTime": 12102.899999976158,
+          "queueDelay": 0.19999992847442627,
+          "untilNextFrame": 9,
+          "untilFrameEnd": 12.199999928474426
+        }
+      ],
+      "errors": []
+    },
+    {
+      "scene": "Lv6",
+      "gpu": {
+        "vendor": "Google Inc. (Apple)",
+        "renderer": "ANGLE (Apple, ANGLE Metal Renderer: Apple M1 Max, Unspecified Version)"
+      },
+      "renderFPS": 59.941717568434335,
+      "callbackFPS": 60.04542296215135,
+      "renderedCPU": {
+        "n": 579,
+        "mean": 2.9618307426185804,
+        "p50": 3,
+        "p95": 3.299999952316284,
+        "max": 3.799999952316284
+      },
+      "renderPeriods": {
+        "n": 578,
+        "mean": 16.682871972400836,
+        "p50": 16.699999928474426,
+        "p95": 17.699999928474426,
+        "max": 25.100000023841858
+      },
+      "keyboard": [
+        {
+          "code": "ArrowRight",
+          "eventTime": 5370.100000023842,
+          "handlerTime": 5371,
+          "queueDelay": 0.8999999761581421,
+          "untilNextFrame": 21.40000009536743,
+          "untilFrameEnd": 25.200000047683716
+        },
+        {
+          "code": "ArrowLeft",
+          "eventTime": 6134.300000071526,
+          "handlerTime": 6134.5,
+          "queueDelay": 0.19999992847442627,
+          "untilNextFrame": 7.100000023841858,
+          "untilFrameEnd": 10.600000023841858
+        },
+        {
+          "code": "ArrowRight",
+          "eventTime": 6897.300000071526,
+          "handlerTime": 6897.5,
+          "queueDelay": 0.19999992847442627,
+          "untilNextFrame": 11.400000095367432,
+          "untilFrameEnd": 14.699999928474426
+        },
+        {
+          "code": "ArrowLeft",
+          "eventTime": 7661.800000071526,
+          "handlerTime": 7662,
+          "queueDelay": 0.19999992847442627,
+          "untilNextFrame": 12.900000095367432,
+          "untilFrameEnd": 16
+        },
+        {
+          "code": "ArrowRight",
+          "eventTime": 8424.700000047684,
+          "handlerTime": 8424.900000095367,
+          "queueDelay": 0.20000004768371582,
+          "untilNextFrame": 0.09999990463256836,
+          "untilFrameEnd": 3.100000023841858
+        },
+        {
+          "code": "ArrowLeft",
+          "eventTime": 9188.800000071526,
+          "handlerTime": 9189,
+          "queueDelay": 0.19999992847442627,
+          "untilNextFrame": 3.200000047683716,
+          "untilFrameEnd": 6.399999976158142
+        },
+        {
+          "code": "ArrowRight",
+          "eventTime": 9952.100000023842,
+          "handlerTime": 9952.300000071526,
+          "queueDelay": 0.20000004768371582,
+          "untilNextFrame": 6.299999952316284,
+          "untilFrameEnd": 9.600000023841858
+        },
+        {
+          "code": "ArrowLeft",
+          "eventTime": 10715.5,
+          "handlerTime": 10715.800000071526,
+          "queueDelay": 0.30000007152557373,
+          "untilNextFrame": 9.100000023841858,
+          "untilFrameEnd": 12.300000071525574
+        },
+        {
+          "code": "ArrowRight",
+          "eventTime": 11478.700000047684,
+          "handlerTime": 11479,
+          "queueDelay": 0.2999999523162842,
+          "untilNextFrame": 12.600000023841858,
+          "untilFrameEnd": 16.200000047683716
+        },
+        {
+          "code": "ArrowLeft",
+          "eventTime": 12242.5,
+          "handlerTime": 12245.5,
+          "queueDelay": 3,
+          "untilNextFrame": 12.800000071525574,
+          "untilFrameEnd": 18.90000009536743
+        }
+      ],
+      "errors": []
+    },
+    {
+      "scene": "Lv7",
+      "gpu": {
+        "vendor": "Google Inc. (Apple)",
+        "renderer": "ANGLE (Apple, ANGLE Metal Renderer: Apple M1 Max, Unspecified Version)"
+      },
+      "renderFPS": 59.97530428676703,
+      "callbackFPS": 60.079067788993264,
+      "renderedCPU": {
+        "n": 579,
+        "mean": 3.5400690853286902,
+        "p50": 3.5999999046325684,
+        "p95": 4,
+        "max": 5.399999976158142
+      },
+      "renderPeriods": {
+        "n": 578,
+        "mean": 16.673529411682207,
+        "p50": 16.699999928474426,
+        "p95": 17.700000047683716,
+        "max": 29.899999976158142
+      },
+      "keyboard": [
+        {
+          "code": "ArrowRight",
+          "eventTime": 5272.799999952316,
+          "handlerTime": 5273.399999976158,
+          "queueDelay": 0.6000000238418579,
+          "untilNextFrame": 1.600000023841858,
+          "untilFrameEnd": 5.799999952316284
+        },
+        {
+          "code": "ArrowLeft",
+          "eventTime": 6036.399999976158,
+          "handlerTime": 6036.699999928474,
+          "queueDelay": 0.2999999523162842,
+          "untilNextFrame": 6,
+          "untilFrameEnd": 9.799999952316284
+        },
+        {
+          "code": "ArrowRight",
+          "eventTime": 6800.599999904633,
+          "handlerTime": 6800.899999976158,
+          "queueDelay": 0.30000007152557373,
+          "untilNextFrame": 8.5,
+          "untilFrameEnd": 12.800000071525574
+        },
+        {
+          "code": "ArrowLeft",
+          "eventTime": 7563.099999904633,
+          "handlerTime": 7563.299999952316,
+          "queueDelay": 0.20000004768371582,
+          "untilNextFrame": 12.799999952316284,
+          "untilFrameEnd": 17
+        },
+        {
+          "code": "ArrowRight",
+          "eventTime": 8326.5,
+          "handlerTime": 8328.099999904633,
+          "queueDelay": 1.5999999046325684,
+          "untilNextFrame": 14.800000071525574,
+          "untilFrameEnd": 19.799999952316284
+        },
+        {
+          "code": "ArrowLeft",
+          "eventTime": 9091.299999952316,
+          "handlerTime": 9091.399999976158,
+          "queueDelay": 0.10000002384185791,
+          "untilNextFrame": 1.2999999523162842,
+          "untilFrameEnd": 5.100000023841858
+        },
+        {
+          "code": "ArrowRight",
+          "eventTime": 9855.399999976158,
+          "handlerTime": 9855.599999904633,
+          "queueDelay": 0.19999992847442627,
+          "untilNextFrame": 2.9000000953674316,
+          "untilFrameEnd": 6.699999928474426
+        },
+        {
+          "code": "ArrowLeft",
+          "eventTime": 10619.199999928474,
+          "handlerTime": 10619.5,
+          "queueDelay": 0.30000007152557373,
+          "untilNextFrame": 6.5,
+          "untilFrameEnd": 10.300000071525574
+        },
+        {
+          "code": "ArrowRight",
+          "eventTime": 11382.699999928474,
+          "handlerTime": 11382.899999976158,
+          "queueDelay": 0.20000004768371582,
+          "untilNextFrame": 9.100000023841858,
+          "untilFrameEnd": 12.5
+        },
+        {
+          "code": "ArrowLeft",
+          "eventTime": 12145.899999976158,
+          "handlerTime": 12146.099999904633,
+          "queueDelay": 0.19999992847442627,
+          "untilNextFrame": 12.200000047683716,
+          "untilFrameEnd": 16
+        }
+      ],
+      "errors": []
+    },
+    {
+      "scene": "Lv8",
+      "gpu": {
+        "vendor": "Google Inc. (Apple)",
+        "renderer": "ANGLE (Apple, ANGLE Metal Renderer: Apple M1 Max, Unspecified Version)"
+      },
+      "renderFPS": 59.9647266313933,
+      "callbackFPS": 60.06847183317772,
+      "renderedCPU": {
+        "n": 579,
+        "mean": 3.1438687393290596,
+        "p50": 3.100000023841858,
+        "p95": 3.5,
+        "max": 4.099999904632568
+      },
+      "renderPeriods": {
+        "n": 578,
+        "mean": 16.676470588235293,
+        "p50": 16.699999928474426,
+        "p95": 17.700000047683716,
+        "max": 24.899999976158142
+      },
+      "keyboard": [
+        {
+          "code": "ArrowRight",
+          "eventTime": 5325.800000071526,
+          "handlerTime": 5326.300000071526,
+          "queueDelay": 0.5,
+          "untilNextFrame": 20.09999990463257,
+          "untilFrameEnd": 23.5
+        },
+        {
+          "code": "ArrowLeft",
+          "eventTime": 6089.700000047684,
+          "handlerTime": 6090,
+          "queueDelay": 0.2999999523162842,
+          "untilNextFrame": 7.5,
+          "untilFrameEnd": 11.100000023841858
+        },
+        {
+          "code": "ArrowRight",
+          "eventTime": 6853.100000023842,
+          "handlerTime": 6853.200000047684,
+          "queueDelay": 0.10000002384185791,
+          "untilNextFrame": 10.199999928474426,
+          "untilFrameEnd": 13.399999976158142
+        },
+        {
+          "code": "ArrowLeft",
+          "eventTime": 7617,
+          "handlerTime": 7617.300000071526,
+          "queueDelay": 0.30000007152557373,
+          "untilNextFrame": 12.5,
+          "untilFrameEnd": 16.399999976158142
+        },
+        {
+          "code": "ArrowRight",
+          "eventTime": 8380.200000047684,
+          "handlerTime": 8383.100000023842,
+          "queueDelay": 2.899999976158142,
+          "untilNextFrame": 13.5,
+          "untilFrameEnd": 19.399999976158142
+        },
+        {
+          "code": "ArrowLeft",
+          "eventTime": 9146.800000071526,
+          "handlerTime": 9149.700000047684,
+          "queueDelay": 2.899999976158142,
+          "untilNextFrame": 13.399999976158142,
+          "untilFrameEnd": 19.59999990463257
+        },
+        {
+          "code": "ArrowRight",
+          "eventTime": 9913.5,
+          "handlerTime": 9916.300000071526,
+          "queueDelay": 2.8000000715255737,
+          "untilNextFrame": 13.399999976158142,
+          "untilFrameEnd": 19.399999976158142
+        },
+        {
+          "code": "ArrowLeft",
+          "eventTime": 10677.700000047684,
+          "handlerTime": 10678,
+          "queueDelay": 0.2999999523162842,
+          "untilNextFrame": 1.7000000476837158,
+          "untilFrameEnd": 5
+        },
+        {
+          "code": "ArrowRight",
+          "eventTime": 11441.200000047684,
+          "handlerTime": 11441.5,
+          "queueDelay": 0.2999999523162842,
+          "untilNextFrame": 4.899999976158142,
+          "untilFrameEnd": 8
+        },
+        {
+          "code": "ArrowLeft",
+          "eventTime": 12203.600000023842,
+          "handlerTime": 12203.700000047684,
+          "queueDelay": 0.10000002384185791,
+          "untilNextFrame": 9.5,
+          "untilFrameEnd": 12.600000023841858
+        }
+      ],
+      "errors": []
+    },
+    {
+      "scene": "Lv9",
+      "gpu": {
+        "vendor": "Google Inc. (Apple)",
+        "renderer": "ANGLE (Apple, ANGLE Metal Renderer: Apple M1 Max, Unspecified Version)"
+      },
+      "renderFPS": 59.972033766637324,
+      "callbackFPS": 60.07561240872132,
+      "renderedCPU": {
+        "n": 580,
+        "mean": 2.9344827608815556,
+        "p50": 2.9000000953674316,
+        "p95": 3.3000000715255737,
+        "max": 4.100000023841858
+      },
+      "renderPeriods": {
+        "n": 579,
+        "mean": 16.674438687392055,
+        "p50": 16.699999928474426,
+        "p95": 17.700000047683716,
+        "max": 25
+      },
+      "keyboard": [
+        {
+          "code": "ArrowRight",
+          "eventTime": 5348.799999952316,
+          "handlerTime": 5349.5,
+          "queueDelay": 0.7000000476837158,
+          "untilNextFrame": 19.59999990463257,
+          "untilFrameEnd": 23.299999952316284
+        },
+        {
+          "code": "ArrowLeft",
+          "eventTime": 6112.599999904633,
+          "handlerTime": 6112.899999976158,
+          "queueDelay": 0.30000007152557373,
+          "untilNextFrame": 6.199999928474426,
+          "untilFrameEnd": 9.300000071525574
+        },
+        {
+          "code": "ArrowRight",
+          "eventTime": 6875.699999928474,
+          "handlerTime": 6876,
+          "queueDelay": 0.30000007152557373,
+          "untilNextFrame": 10.799999952316284,
+          "untilFrameEnd": 14.100000023841858
+        },
+        {
+          "code": "ArrowLeft",
+          "eventTime": 7640.899999976158,
+          "handlerTime": 7641.199999928474,
+          "queueDelay": 0.2999999523162842,
+          "untilNextFrame": 10.800000071525574,
+          "untilFrameEnd": 14.299999952316284
+        },
+        {
+          "code": "ArrowRight",
+          "eventTime": 8407.299999952316,
+          "handlerTime": 8407.5,
+          "queueDelay": 0.20000004768371582,
+          "untilNextFrame": 12.699999928474426,
+          "untilFrameEnd": 15.700000047683716
+        },
+        {
+          "code": "ArrowLeft",
+          "eventTime": 9173.799999952316,
+          "handlerTime": 9174,
+          "queueDelay": 0.20000004768371582,
+          "untilNextFrame": 12.399999976158142,
+          "untilFrameEnd": 15.899999976158142
+        },
+        {
+          "code": "ArrowRight",
+          "eventTime": 9936.899999976158,
+          "handlerTime": 9940.199999928474,
+          "queueDelay": 3.299999952316284,
+          "untilNextFrame": 11.700000047683716,
+          "untilFrameEnd": 17.899999976158142
+        },
+        {
+          "code": "ArrowLeft",
+          "eventTime": 10704.5,
+          "handlerTime": 10707.699999928474,
+          "queueDelay": 3.1999999284744263,
+          "untilNextFrame": 11.800000071525574,
+          "untilFrameEnd": 18.09999990463257
+        },
+        {
+          "code": "ArrowRight",
+          "eventTime": 11471.199999928474,
+          "handlerTime": 11472,
+          "queueDelay": 0.8000000715255737,
+          "untilNextFrame": 13.799999952316284,
+          "untilFrameEnd": 17.800000071525574
+        },
+        {
+          "code": "ArrowLeft",
+          "eventTime": 12234.5,
+          "handlerTime": 12234.699999928474,
+          "queueDelay": 0.19999992847442627,
+          "untilNextFrame": 2.100000023841858,
+          "untilFrameEnd": 5.299999952316284
+        }
+      ],
+      "errors": []
+    },
+    {
+      "scene": "Lv10",
+      "gpu": {
+        "vendor": "Google Inc. (Apple)",
+        "renderer": "ANGLE (Apple, ANGLE Metal Renderer: Apple M1 Max, Unspecified Version)"
+      },
+      "renderFPS": 59.98383855112301,
+      "callbackFPS": 60.087437581435815,
+      "renderedCPU": {
+        "n": 580,
+        "mean": 3.978793104352622,
+        "p50": 4,
+        "p95": 4.5,
+        "max": 5.400000095367432
+      },
+      "renderPeriods": {
+        "n": 579,
+        "mean": 16.6711571675714,
+        "p50": 16.699999928474426,
+        "p95": 17.699999928474426,
+        "max": 27.700000047683716
+      },
+      "keyboard": [
+        {
+          "code": "ArrowRight",
+          "eventTime": 5401.699999928474,
+          "handlerTime": 5402.299999952316,
+          "queueDelay": 0.6000000238418579,
+          "untilNextFrame": 0.10000002384185791,
+          "untilFrameEnd": 3.600000023841858
+        },
+        {
+          "code": "ArrowLeft",
+          "eventTime": 6165.799999952316,
+          "handlerTime": 6166.100000023842,
+          "queueDelay": 0.30000007152557373,
+          "untilNextFrame": 2.399999976158142,
+          "untilFrameEnd": 6
+        },
+        {
+          "code": "ArrowRight",
+          "eventTime": 6930,
+          "handlerTime": 6930.299999952316,
+          "queueDelay": 0.2999999523162842,
+          "untilNextFrame": 4.100000023841858,
+          "untilFrameEnd": 8.600000023841858
+        },
+        {
+          "code": "ArrowLeft",
+          "eventTime": 7692.600000023842,
+          "handlerTime": 7692.799999952316,
+          "queueDelay": 0.19999992847442627,
+          "untilNextFrame": 8,
+          "untilFrameEnd": 12.199999928474426
+        },
+        {
+          "code": "ArrowRight",
+          "eventTime": 8457.100000023842,
+          "handlerTime": 8457.299999952316,
+          "queueDelay": 0.19999992847442627,
+          "untilNextFrame": 10.200000047683716,
+          "untilFrameEnd": 14.199999928474426
+        },
+        {
+          "code": "ArrowLeft",
+          "eventTime": 9223.299999952316,
+          "handlerTime": 9223.5,
+          "queueDelay": 0.20000004768371582,
+          "untilNextFrame": 10.799999952316284,
+          "untilFrameEnd": 15.100000023841858
+        },
+        {
+          "code": "ArrowRight",
+          "eventTime": 9991.199999928474,
+          "handlerTime": 9991.399999976158,
+          "queueDelay": 0.20000004768371582,
+          "untilNextFrame": 9.200000047683716,
+          "untilFrameEnd": 13.700000047683716
+        },
+        {
+          "code": "ArrowLeft",
+          "eventTime": 10756.299999952316,
+          "handlerTime": 10756.600000023842,
+          "queueDelay": 0.30000007152557373,
+          "untilNextFrame": 11.899999976158142,
+          "untilFrameEnd": 16.300000071525574
+        },
+        {
+          "code": "ArrowRight",
+          "eventTime": 11524.699999928474,
+          "handlerTime": 11524.899999976158,
+          "queueDelay": 0.20000004768371582,
+          "untilNextFrame": 9.899999976158142,
+          "untilFrameEnd": 14.400000095367432
+        },
+        {
+          "code": "ArrowLeft",
+          "eventTime": 12290.100000023842,
+          "handlerTime": 12290.399999976158,
+          "queueDelay": 0.2999999523162842,
+          "untilNextFrame": 11.299999952316284,
+          "untilFrameEnd": 15.599999904632568
+        }
+      ],
+      "errors": []
+    },
+    {
+      "scene": "Lv1A",
+      "gpu": {
+        "vendor": "Google Inc. (Apple)",
+        "renderer": "ANGLE (Apple, ANGLE Metal Renderer: Apple M1 Max, Unspecified Version)"
+      },
+      "renderFPS": 59.911273269888014,
+      "callbackFPS": 60.11857871372846,
+      "renderedCPU": {
+        "n": 579,
+        "mean": 2.1777202080362614,
+        "p50": 2.1999999284744263,
+        "p95": 2.600000023841858,
+        "max": 3.4000000953674316
+      },
+      "renderPeriods": {
+        "n": 578,
+        "mean": 16.691349481010107,
+        "p50": 16.699999928474426,
+        "p95": 17.700000047683716,
+        "max": 25
+      },
+      "keyboard": [
+        {
+          "code": "ArrowRight",
+          "eventTime": 5366.700000047684,
+          "handlerTime": 5369.100000023842,
+          "queueDelay": 2.399999976158142,
+          "untilNextFrame": 22.100000023841858,
+          "untilFrameEnd": 26.899999976158142
+        },
+        {
+          "code": "ArrowLeft",
+          "eventTime": 6133.100000023842,
+          "handlerTime": 6133.5,
+          "queueDelay": 0.3999999761581421,
+          "untilNextFrame": 7.800000071525574,
+          "untilFrameEnd": 11
+        },
+        {
+          "code": "ArrowRight",
+          "eventTime": 6896.200000047684,
+          "handlerTime": 6896.5,
+          "queueDelay": 0.2999999523162842,
+          "untilNextFrame": 12,
+          "untilFrameEnd": 14.100000023841858
+        },
+        {
+          "code": "ArrowLeft",
+          "eventTime": 7661.5,
+          "handlerTime": 7661.700000047684,
+          "queueDelay": 0.20000004768371582,
+          "untilNextFrame": 14,
+          "untilFrameEnd": 16.40000009536743
+        },
+        {
+          "code": "ArrowRight",
+          "eventTime": 8424.300000071526,
+          "handlerTime": 8426.700000047684,
+          "queueDelay": 2.399999976158142,
+          "untilNextFrame": 15.700000047683716,
+          "untilFrameEnd": 20.5
+        },
+        {
+          "code": "ArrowLeft",
+          "eventTime": 9190.700000047684,
+          "handlerTime": 9191.100000023842,
+          "queueDelay": 0.3999999761581421,
+          "untilNextFrame": 0.20000004768371582,
+          "untilFrameEnd": 3.200000047683716
+        },
+        {
+          "code": "ArrowRight",
+          "eventTime": 9956.700000047684,
+          "handlerTime": 9956.900000095367,
+          "queueDelay": 0.20000004768371582,
+          "untilNextFrame": 2,
+          "untilFrameEnd": 4.399999976158142
+        },
+        {
+          "code": "ArrowLeft",
+          "eventTime": 10719.900000095367,
+          "handlerTime": 10720.200000047684,
+          "queueDelay": 0.2999999523162842,
+          "untilNextFrame": 4.100000023841858,
+          "untilFrameEnd": 6.799999952316284
+        },
+        {
+          "code": "ArrowRight",
+          "eventTime": 11483.800000071526,
+          "handlerTime": 11484.300000071526,
+          "queueDelay": 0.5,
+          "untilNextFrame": 7,
+          "untilFrameEnd": 9.699999928474426
+        },
+        {
+          "code": "ArrowLeft",
+          "eventTime": 12248.200000047684,
+          "handlerTime": 12248.600000023842,
+          "queueDelay": 0.3999999761581421,
+          "untilNextFrame": 9.300000071525574,
+          "untilFrameEnd": 12.200000047683716
+        }
+      ],
+      "errors": []
+    },
+    {
+      "scene": "Lv2A",
+      "gpu": {
+        "vendor": "Google Inc. (Apple)",
+        "renderer": "ANGLE (Apple, ANGLE Metal Renderer: Apple M1 Max, Unspecified Version)"
+      },
+      "renderFPS": 59.94047433803977,
+      "callbackFPS": 60.14788082363851,
+      "renderedCPU": {
+        "n": 579,
+        "mean": 2.676165801049926,
+        "p50": 2.700000047683716,
+        "p95": 3.0999999046325684,
+        "max": 3.9000000953674316
+      },
+      "renderPeriods": {
+        "n": 578,
+        "mean": 16.68321799324458,
+        "p50": 16.699999928474426,
+        "p95": 17.700000047683716,
+        "max": 25.300000071525574
+      },
+      "keyboard": [
+        {
+          "code": "ArrowRight",
+          "eventTime": 5353,
+          "handlerTime": 5355.899999976158,
+          "queueDelay": 2.899999976158142,
+          "untilNextFrame": 21.200000047683716,
+          "untilFrameEnd": 27.100000023841858
+        },
+        {
+          "code": "ArrowLeft",
+          "eventTime": 6119.399999976158,
+          "handlerTime": 6119.600000023842,
+          "queueDelay": 0.20000004768371582,
+          "untilNextFrame": 8.199999928474426,
+          "untilFrameEnd": 11.100000023841858
+        },
+        {
+          "code": "ArrowRight",
+          "eventTime": 6882.100000023842,
+          "handlerTime": 6882.399999976158,
+          "queueDelay": 0.2999999523162842,
+          "untilNextFrame": 12,
+          "untilFrameEnd": 15
+        },
+        {
+          "code": "ArrowLeft",
+          "eventTime": 7646.799999952316,
+          "handlerTime": 7647.100000023842,
+          "queueDelay": 0.30000007152557373,
+          "untilNextFrame": 13,
+          "untilFrameEnd": 16.200000047683716
+        },
+        {
+          "code": "ArrowRight",
+          "eventTime": 8410.399999976158,
+          "handlerTime": 8412.899999976158,
+          "queueDelay": 2.5,
+          "untilNextFrame": 13.899999976158142,
+          "untilFrameEnd": 19.399999976158142
+        },
+        {
+          "code": "ArrowLeft",
+          "eventTime": 9177,
+          "handlerTime": 9180.299999952316,
+          "queueDelay": 3.299999952316284,
+          "untilNextFrame": 14.300000071525574,
+          "untilFrameEnd": 20.199999928474426
+        },
+        {
+          "code": "ArrowRight",
+          "eventTime": 9942.600000023842,
+          "handlerTime": 9942.699999928474,
+          "queueDelay": 0.09999990463256836,
+          "untilNextFrame": 0.40000009536743164,
+          "untilFrameEnd": 3.299999952316284
+        },
+        {
+          "code": "ArrowLeft",
+          "eventTime": 10706,
+          "handlerTime": 10706.299999952316,
+          "queueDelay": 0.2999999523162842,
+          "untilNextFrame": 4.800000071525574,
+          "untilFrameEnd": 7.600000023841858
+        },
+        {
+          "code": "ArrowRight",
+          "eventTime": 11469.699999928474,
+          "handlerTime": 11469.899999976158,
+          "queueDelay": 0.20000004768371582,
+          "untilNextFrame": 7,
+          "untilFrameEnd": 10.100000023841858
+        },
+        {
+          "code": "ArrowLeft",
+          "eventTime": 12233.399999976158,
+          "handlerTime": 12233.699999928474,
+          "queueDelay": 0.2999999523162842,
+          "untilNextFrame": 9.800000071525574,
+          "untilFrameEnd": 13
+        }
+      ],
+      "errors": []
+    }
+  ],
+  "visualReview": "All twelve candidate frames individually VLM reviewed: expected walls, hazards, player, floor textures, portals and projectiles present; no observed geometry/color regression. Unaligned animation timing is not pixel parity or completed gameplay."
+}

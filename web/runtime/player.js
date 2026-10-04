@@ -29,7 +29,7 @@ if (ENVIRONMENT_IS_NODE) {}
 
 // --pre-jses are emitted after the Module integration code, so that they can
 // refer to Module (if they choose; they can also define Module)
-// include: /var/folders/pm/461ntwb12b7bbqcjw1s6t0kw0000gn/T/tmphvu4q99u.js
+// include: /var/folders/pm/461ntwb12b7bbqcjw1s6t0kw0000gn/T/tmp4dnzkryp.js
 Module["expectedDataFileDownloads"] ??= 0;
 
 Module["expectedDataFileDownloads"]++;
@@ -7143,7 +7143,7 @@ Module["expectedDataFileDownloads"]++;
   });
 })();
 
-// end include: /var/folders/pm/461ntwb12b7bbqcjw1s6t0kw0000gn/T/tmphvu4q99u.js
+// end include: /var/folders/pm/461ntwb12b7bbqcjw1s6t0kw0000gn/T/tmp4dnzkryp.js
 // Sometimes an existing Module object exists with properties
 // meant to overwrite the default module functionality. Here
 // we collect those properties and reapply _after_ we configure
@@ -19061,3 +19061,33 @@ var shouldRunNow = false;
 if (Module["noInitialRun"]) shouldRunNow = false;
 
 run();
+
+// end include: postamble.js
+// include: /Users/ryan/CleanCode/Sandbox/RP_Dumps/RyansHardestGame_Web/runtime/browser-support.js
+// Emscripten 3.1.74 FULL_ES2 client indices otherwise rewrite one GPU buffer
+// per size on every draw. A ring avoids measured ANGLE synchronization stalls.
+// Match the existing vertex pool's two sets of 64 buffers; allocate lazily.
+(() => {
+  const buffersPerSize = 128;
+  GL.getTempIndexBuffer = sizeBytes => {
+    const context = GL.currentContext;
+    const exponent = GL.log2ceilLookup(sizeBytes);
+    const rings = context.tempIndexBufferRings || (context.tempIndexBufferRings = []);
+    const ring = rings[exponent] || (rings[exponent] = {
+      next: 0,
+      buffers: []
+    });
+    const slot = ring.next;
+    ring.next = (slot + 1) % buffersPerSize;
+    if (!ring.buffers[slot]) {
+      const previous = GLctx.getParameter(GLctx.ELEMENT_ARRAY_BUFFER_BINDING);
+      const buffer = GLctx.createBuffer();
+      if (!buffer) throw new Error("Unable to allocate temporary WebGL index buffer.");
+      GLctx.bindBuffer(GLctx.ELEMENT_ARRAY_BUFFER, buffer);
+      GLctx.bufferData(GLctx.ELEMENT_ARRAY_BUFFER, 2 ** exponent, GLctx.DYNAMIC_DRAW);
+      GLctx.bindBuffer(GLctx.ELEMENT_ARRAY_BUFFER, previous);
+      ring.buffers[slot] = buffer;
+    }
+    return ring.buffers[slot];
+  };
+})();

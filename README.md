@@ -2,7 +2,7 @@
 
 This runs the original Blender 2.49b game engine, Bullet 2.74 and CPython 2.6.2 compiled to WebAssembly. The game is the original `.blend`, loaded by Blender's own file reader. Rendering uses GL4ES over WebGL; sound uses the original OpenAL backend through Web Audio.
 
-Published address: **https://ryanndagreat.github.io/ClarasHardestGame/**. The first playable engine baseline is tagged `v0.1.0`. Frame-rate and input-latency optimization is in progress.
+Published address: **https://ryanndagreat.github.io/ClarasHardestGame/**. The first playable engine baseline is tagged `v0.1.0`; the optimized release is `v0.1.1`. On Chrome/Apple M1 Max, Lv10 improved from 16.4 to 60.0 rendered FPS at 1080p. See [performance evidence](validation/performance/README.md) for measurements and limitations.
 
 Click **Load game**, then **Play**. The first download is approximately 391 MiB. The drawing buffer is 1920×1080; the original game's 4:3 framing is preserved with side bars. Use **Fullscreen** for the full display.
 
