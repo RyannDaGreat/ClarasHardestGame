@@ -1,0 +1,63 @@
+{
+  "scene": "Lv1A",
+  "url": "http://127.0.0.1:8765/build/",
+  "date": "2026-10-04T09:04:06.182Z",
+  "hashes": {
+    "player.js": "a0c3bdc00f65b43fda5c6d5bcf61a02461f6832d85380493b5edafaff904b702",
+    "player.wasm": "7b3defa8466aa777cb57d485719d61ba6de8a17d526402866d2282abb90a9821"
+  },
+  "pressMilliseconds": 100,
+  "coastMilliseconds": 300,
+  "frames": [
+    {
+      "stage": "initial",
+      "path": "validation/levels/Lv1A-browser-motion-initial.png",
+      "sha256": "32eb273932d64b67aad37126d41bf78c397a3eb12c78b3341a2b15e786e6aaa4"
+    },
+    {
+      "stage": "animated",
+      "path": "validation/levels/Lv1A-browser-motion-animated.png",
+      "sha256": "344612f26cb59310f5f8a4c032733051d0f10810cb9009cc5a08741f473cac7a"
+    },
+    {
+      "stage": "up",
+      "path": "validation/levels/Lv1A-browser-motion-up.png",
+      "sha256": "f37b97c67bf9a204f5cff57da60a1fe0ed0bb6349a508d78775abe6b6209efd3"
+    },
+    {
+      "stage": "right",
+      "path": "validation/levels/Lv1A-browser-motion-right.png",
+      "sha256": "18650e1c4e72cb0bde11527a30a41876b534a138635e4cedcceb1430763c9ec6"
+    }
+  ],
+  "state": {
+    "status": "Playing at 1920 × 1080",
+    "canvas": {
+      "width": 1920,
+      "height": 1080
+    },
+    "keyEvents": [
+      {
+        "type": "keydown",
+        "code": "ArrowUp",
+        "time": 4277.799999952316
+      },
+      {
+        "type": "keyup",
+        "code": "ArrowUp",
+        "time": 4378.600000023842
+      },
+      {
+        "type": "keydown",
+        "code": "ArrowRight",
+        "time": 4773.5
+      },
+      {
+        "type": "keyup",
+        "code": "ArrowRight",
+        "time": 4875.199999928474
+      }
+    ]
+  },
+  "errors": []
+}

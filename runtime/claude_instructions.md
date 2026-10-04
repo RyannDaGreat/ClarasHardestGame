@@ -1,0 +1,34 @@
+# Runtime reconstruction manifest
+
+Compile the original Blender 2.49b player engine and CPython 2.6.2 to WebAssembly so the original `.blend` logic, Bullet physics, materials and OpenAL sounds execute in a static browser page. This is a platform port, not a game reimplementation. The enclosing project manifest records the user's original instructions and acceptance criteria; this file records the reproducible toolchain.
+
+Glossary: WASM = WebAssembly; BGE = original Blender Game Engine; GL4ES = fixed-function desktop OpenGL implementation backed by OpenGL ES/WebGL; GLU = original SGI utility library; SDNA = Blender's serialized C structure schema; manifest = reconstruction instructions; concerns = append-only engineering history.
+
+## Portable layout and planned build
+
+- `sources.json` pins every direct download by SHA-256 or Git commit. `fetch.py` verifies downloads and immutable source checkouts. Dependencies live in ignored `.cache/`; local outputs live in ignored `build/`. No tracked instruction depends on another dump or research scratch directory.
+- `setup.sh` installs the pinned local Emscripten SDK 3.1.74 (no global installation). Host requirements are Bash, Git, curl, CMake, make, a C/C++ compiler and Python 3.10+. `PYTHON` selects the host interpreter. On macOS our execution uses the user's selected Homebrew Python 3.10.
+- `build.sh` runs prerequisite setup, original-source patches, CPython configuration/build, GL4ES/GLU builds, WASM-target `makesdna`, then the engine's original per-component CMake graphs and platform entry point. `JOBS` controls parallel compilation.
+- `prepare.py` reconstructs minimal checked source patches from pristine downloads, retains original gameplay code, and generates GL4ES names for direct GL calls while preserving GLEW extension dispatch.
+- `python/prepare.py`, `python/build.sh`, `python/smoke.c`, `python/smoke.sh` preserve Python 2.6.2 bytecode and the original C API. Build is single-threaded at runtime, static modules, no dynamic extension loading. Configure answers explicitly describe WASM32, 64-bit `time_t` and `off_t`; a host-native Python is never used to generate incompatible engine data.
+- `graphics/CMakeLists.txt` builds real GLU from its upstream source list. `patches/gl4es-wireframe-quads.patch` fixes an experimentally demonstrated extra diagonal when a single wireframe quad is internally stored as a triangle fan. Header overlay removes only GLU's obsolete `USE_MGL_NAMESPACE` stanza.
+- `player.cpp` is the browser platform adapter; root agent owns subsequent changes after initial promotion. It uses original BLO loading, Ketsji, scene converter, rasterizer and keyboard translation. `CMakeLists.txt` retains full original player-tagged archives; upstream editor-only stubs remain explicitly upstream, never fabricated game replacements.
+- `licenses/` retains upstream notices. `SOURCES.md` explains pins, source availability and build limitations. GPL source distribution must include this recipe and its complete corresponding upstream sources, not only a WASM binary.
+- `source_bundle.py` creates `build/runtime-source.tar.gz` containing the runtime recipes, pristine Blender/Python/TIFF archives, pinned GL4ES/GLU source snapshots, and the Emscripten source/ports used by the build. Excludes SDK compiler binaries, generated outputs and source test data. Parent packaging owns placement of this source bundle beside the static site's binary artifacts.
+- GL4ES receives two isolated generic correctness patches: wireframe quad perimeter preservation and desktop GL's initial RGB/alpha combiner MODULATE state. `prepare.py` resets both affected files to their pinned upstream originals before applying reviewed patches. The latter was independently demonstrated by the graphics agent using an indexed-array, two-texture-unit state reproduction.
+
+## Critical adaptations and verification
+
+Use `-sEMULATE_FUNCTION_POINTER_CASTS=1` and `-sBINARYEN_EXTRA_PASSES=--pass-arg=max-func-params@32` because Python 2.6 callback ABI relies on casts and Blender has functions with 17 parameters. Stack is 16 MiB; initial memory 512 MiB, maximum 2 GiB with growth. GL4ES requires `FULL_ES2` and real `emscripten_GetProcAddress` callback before initialization. Browser audio uses Emscripten OpenAL; recognizing Emscripten in upstream platform selection is essential or the original dummy device is chosen.
+
+CPython 2.6.2 has no bundled `config.guess`; its configure accepts a host description directly. Compute the build description from `uname` before invoking configure, then pass a distinct target triplet to force cross-compilation. Never inline a failing command substitution in configure arguments: Bash can continue with an empty build alias.
+
+Run Python's legacy configure and make under `env -u PYTHON`: they assign their own `PYTHON=python`, which otherwise becomes exported and overrides Emscripten's interpreter choice. `EMSDK_PYTHON` carries the explicitly selected modern host interpreter throughout compiler invocations.
+
+## Portable build validation
+
+2026-10-04: Fresh runtime-local build completed all 43 original archives and `build/engine/player.{js,wasm,data}` using only this directory's tracked recipes and ignored cache. Both generic GL4ES patches were included before the final link. Exact CPython 2.6.2 bytecode/static-module smoke passed. Target configuration was inspected: pointer/int/long=4, time_t/off_t=8, no native dynamic loading or Python threads. Shell scripts passed `bash -n`; tracked runtime sources contain no developer absolute paths or research-scratch dependency. Parent owns production browser/VLM validation, static packaging and Git commit.
+
+Generate SDNA using the original `makesdna` compiled to WASM and executed by Node: host pointer width otherwise corrupts the generated schema. All source modifications are explicit with preconditions. Original editor exclusions and unavailable optional codecs are documented, never represented as universal support for every Blender game.
+
+Verification: reproduce the Python bytecode smoke; fresh complete build from pinned inputs; inspect generated dependency paths for scratch-directory leakage; parent runs browser VLM, original game keyboard/audio and all-scene comparisons. Build success alone is not gameplay parity evidence. Keep concerns append-only and update this manifest before modifying the toolchain.

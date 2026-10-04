@@ -1,0 +1,222 @@
+{
+  "validationType": "Direct-scene startup and brief keyboard motion; not complete gameplay",
+  "blendSHA256": "e7f047be356346eebd166e1918ab854c9bf1494dbecd81f44174596f598a18ff",
+  "scenes": [
+    {
+      "scene": "Lv1",
+      "date": "2026-10-04T09:02:59.466Z",
+      "hashes": {
+        "player.js": "a0c3bdc00f65b43fda5c6d5bcf61a02461f6832d85380493b5edafaff904b702",
+        "player.wasm": "7b3defa8466aa777cb57d485719d61ba6de8a17d526402866d2282abb90a9821"
+      },
+      "canvas": {
+        "width": 1920,
+        "height": 1080
+      },
+      "uniqueFrames": 4,
+      "keyEvents": 4,
+      "pageErrors": 0,
+      "nativePath": "validation/levels/Lv1-native.png",
+      "nativeHash": "6f296e5ecfe81603995b0b6f72eca9d1463465b8ed1486cdc0cd7cb401d18a9a",
+      "vlmReviewed": true
+    },
+    {
+      "scene": "Lv2",
+      "date": "2026-10-04T09:03:05.476Z",
+      "hashes": {
+        "player.js": "a0c3bdc00f65b43fda5c6d5bcf61a02461f6832d85380493b5edafaff904b702",
+        "player.wasm": "7b3defa8466aa777cb57d485719d61ba6de8a17d526402866d2282abb90a9821"
+      },
+      "canvas": {
+        "width": 1920,
+        "height": 1080
+      },
+      "uniqueFrames": 4,
+      "keyEvents": 4,
+      "pageErrors": 0,
+      "nativePath": "validation/levels/Lv2-native.png",
+      "nativeHash": "65b2e49f4a44380c0e0190d139eb0fc85425f1f18b50e73e933fb4b4d0cea38b",
+      "vlmReviewed": true
+    },
+    {
+      "scene": "Lv3",
+      "date": "2026-10-04T09:03:12.307Z",
+      "hashes": {
+        "player.js": "a0c3bdc00f65b43fda5c6d5bcf61a02461f6832d85380493b5edafaff904b702",
+        "player.wasm": "7b3defa8466aa777cb57d485719d61ba6de8a17d526402866d2282abb90a9821"
+      },
+      "canvas": {
+        "width": 1920,
+        "height": 1080
+      },
+      "uniqueFrames": 4,
+      "keyEvents": 4,
+      "pageErrors": 0,
+      "nativePath": "validation/levels/Lv3-native.png",
+      "nativeHash": "2d3256915ea9541fd113541855b83e4db99099b6a6833cd104d99e9f0c635ba9",
+      "vlmReviewed": true
+    },
+    {
+      "scene": "Lv4",
+      "date": "2026-10-04T09:03:17.978Z",
+      "hashes": {
+        "player.js": "a0c3bdc00f65b43fda5c6d5bcf61a02461f6832d85380493b5edafaff904b702",
+        "player.wasm": "7b3defa8466aa777cb57d485719d61ba6de8a17d526402866d2282abb90a9821"
+      },
+      "canvas": {
+        "width": 1920,
+        "height": 1080
+      },
+      "uniqueFrames": 4,
+      "keyEvents": 4,
+      "pageErrors": 0,
+      "nativePath": "validation/levels/Lv4-native.png",
+      "nativeHash": "119ed22c9f0949e50ea3ab5c9835ad229a723f214d796d8d4ab0998776b60757",
+      "vlmReviewed": true
+    },
+    {
+      "scene": "Lv5",
+      "date": "2026-10-04T09:03:24.120Z",
+      "hashes": {
+        "player.js": "a0c3bdc00f65b43fda5c6d5bcf61a02461f6832d85380493b5edafaff904b702",
+        "player.wasm": "7b3defa8466aa777cb57d485719d61ba6de8a17d526402866d2282abb90a9821"
+      },
+      "canvas": {
+        "width": 1920,
+        "height": 1080
+      },
+      "uniqueFrames": 4,
+      "keyEvents": 4,
+      "pageErrors": 0,
+      "nativePath": "validation/levels/Lv5-native.png",
+      "nativeHash": "9ab8269fcacb94e51b07c8d5891ce5eed6745d08f395424c122f6055e9553b7e",
+      "vlmReviewed": true
+    },
+    {
+      "scene": "Lv6",
+      "date": "2026-10-04T09:03:30.547Z",
+      "hashes": {
+        "player.js": "a0c3bdc00f65b43fda5c6d5bcf61a02461f6832d85380493b5edafaff904b702",
+        "player.wasm": "7b3defa8466aa777cb57d485719d61ba6de8a17d526402866d2282abb90a9821"
+      },
+      "canvas": {
+        "width": 1920,
+        "height": 1080
+      },
+      "uniqueFrames": 4,
+      "keyEvents": 4,
+      "pageErrors": 0,
+      "nativePath": "validation/levels/Lv6-native.png",
+      "nativeHash": "9c6eb5ee02ef6566a1a536b4b486c7829448b4b00be6242594e88c8fdfb6d929",
+      "vlmReviewed": true
+    },
+    {
+      "scene": "Lv7",
+      "date": "2026-10-04T09:03:37.370Z",
+      "hashes": {
+        "player.js": "a0c3bdc00f65b43fda5c6d5bcf61a02461f6832d85380493b5edafaff904b702",
+        "player.wasm": "7b3defa8466aa777cb57d485719d61ba6de8a17d526402866d2282abb90a9821"
+      },
+      "canvas": {
+        "width": 1920,
+        "height": 1080
+      },
+      "uniqueFrames": 4,
+      "keyEvents": 4,
+      "pageErrors": 0,
+      "nativePath": "validation/levels/Lv7-native.png",
+      "nativeHash": "df4f156d647f6caaeaf10b65e9056eb0a7688be3038edf196024a671d78eab6b",
+      "vlmReviewed": true
+    },
+    {
+      "scene": "Lv8",
+      "date": "2026-10-04T09:03:44.037Z",
+      "hashes": {
+        "player.js": "a0c3bdc00f65b43fda5c6d5bcf61a02461f6832d85380493b5edafaff904b702",
+        "player.wasm": "7b3defa8466aa777cb57d485719d61ba6de8a17d526402866d2282abb90a9821"
+      },
+      "canvas": {
+        "width": 1920,
+        "height": 1080
+      },
+      "uniqueFrames": 4,
+      "keyEvents": 4,
+      "pageErrors": 0,
+      "nativePath": "validation/levels/Lv8-native.png",
+      "nativeHash": "d6c71ba73243cb3be418b33dc04ca29dafca38d8271489ddef8aa87628c76341",
+      "vlmReviewed": true
+    },
+    {
+      "scene": "Lv9",
+      "date": "2026-10-04T09:03:51.203Z",
+      "hashes": {
+        "player.js": "a0c3bdc00f65b43fda5c6d5bcf61a02461f6832d85380493b5edafaff904b702",
+        "player.wasm": "7b3defa8466aa777cb57d485719d61ba6de8a17d526402866d2282abb90a9821"
+      },
+      "canvas": {
+        "width": 1920,
+        "height": 1080
+      },
+      "uniqueFrames": 4,
+      "keyEvents": 4,
+      "pageErrors": 0,
+      "nativePath": "validation/levels/Lv9-native.png",
+      "nativeHash": "19b5ed27ee1387a0f7d171e92a85adffc354c176f424533871821f119d37f7e6",
+      "vlmReviewed": true
+    },
+    {
+      "scene": "Lv10",
+      "date": "2026-10-04T09:03:58.017Z",
+      "hashes": {
+        "player.js": "a0c3bdc00f65b43fda5c6d5bcf61a02461f6832d85380493b5edafaff904b702",
+        "player.wasm": "7b3defa8466aa777cb57d485719d61ba6de8a17d526402866d2282abb90a9821"
+      },
+      "canvas": {
+        "width": 1920,
+        "height": 1080
+      },
+      "uniqueFrames": 4,
+      "keyEvents": 4,
+      "pageErrors": 0,
+      "nativePath": "validation/levels/Lv10-native.png",
+      "nativeHash": "33ec8f1b52091110b5cd12cad64aeffdd277e5b379f57e4d5778d12a2e5b9a52",
+      "vlmReviewed": true
+    },
+    {
+      "scene": "Lv1A",
+      "date": "2026-10-04T09:04:06.182Z",
+      "hashes": {
+        "player.js": "a0c3bdc00f65b43fda5c6d5bcf61a02461f6832d85380493b5edafaff904b702",
+        "player.wasm": "7b3defa8466aa777cb57d485719d61ba6de8a17d526402866d2282abb90a9821"
+      },
+      "canvas": {
+        "width": 1920,
+        "height": 1080
+      },
+      "uniqueFrames": 4,
+      "keyEvents": 4,
+      "pageErrors": 0,
+      "nativePath": "validation/levels/Lv1A-native.png",
+      "nativeHash": "53b55377e1dc38ae181332c8a6a0834b043adc5041b6212a3c998bd369f64f56",
+      "vlmReviewed": true
+    },
+    {
+      "scene": "Lv2A",
+      "date": "2026-10-04T09:04:12.052Z",
+      "hashes": {
+        "player.js": "a0c3bdc00f65b43fda5c6d5bcf61a02461f6832d85380493b5edafaff904b702",
+        "player.wasm": "7b3defa8466aa777cb57d485719d61ba6de8a17d526402866d2282abb90a9821"
+      },
+      "canvas": {
+        "width": 1920,
+        "height": 1080
+      },
+      "uniqueFrames": 4,
+      "keyEvents": 4,
+      "pageErrors": 0,
+      "nativePath": "validation/levels/Lv2A-native.png",
+      "nativeHash": "7c19ad3eda8ad4df19767553089298f8fd5bdf9e59b267cae50d3c879da184d4",
+      "vlmReviewed": true
+    }
+  ]
+}

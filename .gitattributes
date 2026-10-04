@@ -1,0 +1,4 @@
+*.data binary
+*.wasm binary
+*.bin binary
+web/runtime/player.js linguist-generated=true

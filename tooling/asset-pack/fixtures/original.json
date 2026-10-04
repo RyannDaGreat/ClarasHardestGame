@@ -1,0 +1,103 @@
+{
+  "game": {
+    "sha256": "e7f047be356346eebd166e1918ab854c9bf1494dbecd81f44174596f598a18ff",
+    "bytes": 351865072
+  },
+  "files": [
+    {
+      "virtual": "/game/samples/msuic.wav",
+      "sha256": "ce4a428f155b1d014523611f6fce30ae8ec0b90e95cb68149f7ebaed09e1fe51",
+      "bytes": 22997922
+    },
+    {
+      "virtual": "/game/textures/6619-v1.jpg",
+      "sha256": "bf834151300edc9f6434f78d4ba0760bd17c20a1ea78671a81bcec151c1e6a03",
+      "bytes": 65536
+    },
+    {
+      "virtual": "/game/textures/6619-v4.jpg",
+      "sha256": "086c4906d20e68bd0253e2dc62cb7b2526abbfc06b079ce65a58af88b8657995",
+      "bytes": 65536
+    },
+    {
+      "virtual": "/z/CleanCode/Personal/Projects/RyansHardestGame/textures/chrome.jpg",
+      "sha256": "8784589b8a4e4a0df76b2bd17ba67e70751ab6c074c3ff7531bbd7e348e6c695",
+      "bytes": 47711
+    },
+    {
+      "virtual": "/game/textures/1211.jpg",
+      "sha256": "8784589b8a4e4a0df76b2bd17ba67e70751ab6c074c3ff7531bbd7e348e6c695",
+      "bytes": 47711
+    },
+    {
+      "virtual": "/game/textures/Guide.png",
+      "sha256": "299c68cd504b0fbe42077604ac567842f8201b7c34396828ec176b79e8beadd0",
+      "bytes": 3590
+    },
+    {
+      "virtual": "/game/textures/HoverRing.png",
+      "sha256": "b6939437d13e3d063af9fe039c3bdcb83f7d34dbf9c264c00b954a78df9eda4c",
+      "bytes": 41367
+    },
+    {
+      "virtual": "/game/textures/ice.png",
+      "sha256": "9e3941e38b7ff5607851cafd7f4894a050593cf79c05661f4180d25bac7770ee",
+      "bytes": 1467404
+    },
+    {
+      "virtual": "/game/textures/Muddy.tga",
+      "sha256": "5efe9aea6f3e88e170372fc0064848eb2f0e9e2daee4002e98fb99c7b74c549b",
+      "bytes": 2005294
+    },
+    {
+      "virtual": "/game/textures/Off.png",
+      "sha256": "5773ad3e3e893861d78fa00e103a5f50fd32dd807148f07d868ed85d73b8985c",
+      "bytes": 54880
+    },
+    {
+      "virtual": "/game/textures/On.png",
+      "sha256": "1fee1fbe98bdc6cf22d5580d471f1332b50eba0f647265f9f0aea284e42e5436",
+      "bytes": 57023
+    },
+    {
+      "virtual": "/game/textures/power.png",
+      "sha256": "47a7bfaba497bdab76426549f5f97f0198e4abb30695da5b446427f5d04ec620",
+      "bytes": 68680
+    },
+    {
+      "virtual": "/z/CleanCode/Personal/Projects/RyansHardestGame/textures/ice.png",
+      "sha256": "9e3941e38b7ff5607851cafd7f4894a050593cf79c05661f4180d25bac7770ee",
+      "bytes": 1467404
+    },
+    {
+      "virtual": "/game/textures/star2.jpg",
+      "sha256": "6c39553dd54442e5f63d3489efddbda437ef31351041c61e2b566f9efc2cf80f",
+      "bytes": 131072
+    },
+    {
+      "virtual": "/game/textures/7350.jpg",
+      "sha256": "2acdc46927058598b6d7ef20bf42b1f7a3ad6f76ca7b7601d31be038184aef17",
+      "bytes": 65536
+    },
+    {
+      "virtual": "/game/textures/Stars1.jpg",
+      "sha256": "567cfeb748fc1f01ebf9f0a372de8da0c5a8e96cbd5f31a0e778de50f8d29a35",
+      "bytes": 131072
+    },
+    {
+      "virtual": "/game/textures/Untitled",
+      "sha256": "55807d1695d243607f8a282f4d23f62765e36ba781fcefd22a4c2ae7956ececc",
+      "bytes": 78
+    }
+  ],
+  "missing": [
+    {
+      "id": "IMHZR.jpg",
+      "path": "D:\\HZR.jpg"
+    },
+    {
+      "id": "IMUntitled.004",
+      "path": "Untitled"
+    }
+  ]
+}

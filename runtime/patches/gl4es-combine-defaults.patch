@@ -1,0 +1,21 @@
+diff --git a/src/gl/glstate.c b/src/gl/glstate.c
+index 1469cd3..918da93 100644
+--- a/src/gl/glstate.c
++++ b/src/gl/glstate.c
+@@ -329,6 +329,8 @@ void* NewGLState(void* shared_glstate, int es2only) {
+     // TexEnv
+     for (int i=0; i<hardext.maxtex; i++) {
+         glstate->texenv[i].env.mode = GL_MODULATE;
++        glstate->texenv[i].env.combine_rgb = GL_MODULATE;
++        glstate->texenv[i].env.combine_alpha = GL_MODULATE;
+         glstate->texenv[i].env.rgb_scale = 1.0f;
+         glstate->texenv[i].env.alpha_scale = 1.0f;
+         glstate->texenv[i].env.src0_rgb = glstate->texenv[i].env.src0_alpha = GL_TEXTURE;
+@@ -359,6 +361,7 @@ void* NewGLState(void* shared_glstate, int es2only) {
+         // some default are not 0...
+         for (int i=0; i<MAX_TEX; i++) {
+             //TexEnv Combine that are not 0
++            glstate->fpe_state->texcombine[i] = FPE_CR_MODULATE | (FPE_CR_MODULATE << 4);
+             glstate->fpe_state->texenv[i].texsrcrgb0 = FPE_SRC_TEXTURE;
+             glstate->fpe_state->texenv[i].texsrcalpha0 = FPE_SRC_TEXTURE;
+             glstate->fpe_state->texenv[i].texsrcrgb1 = FPE_SRC_PREVIOUS;

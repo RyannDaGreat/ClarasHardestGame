@@ -1,0 +1,52 @@
+{
+  "emscripten_version": "3.1.74",
+  "emscripten_release": "c2655005234810c7c42e02a18e4696554abe0352",
+  "archives": [
+    {
+      "name": "Blender 2.49b",
+      "url": "https://download.blender.org/source/blender-2.49b.tar.gz",
+      "file": "blender-2.49b.tar.gz",
+      "directory": "blender-2.49b",
+      "sha256": "23554db4aa10b00e0e760a8bf9c4a9f749670d815c8bc874a04746adc4752488"
+    },
+    {
+      "name": "CPython 2.6.2",
+      "url": "https://www.python.org/ftp/python/2.6.2/Python-2.6.2.tgz",
+      "file": "Python-2.6.2.tgz",
+      "directory": "Python-2.6.2",
+      "sha256": "e37ecdf249f248f4fea227adbca09c778670b64fcb5e45947ec3e093cbc12c86"
+    },
+    {
+      "name": "libtiff 3.9.7 (compile headers)",
+      "url": "https://download.osgeo.org/libtiff/tiff-3.9.7.tar.gz",
+      "file": "tiff-3.9.7.tar.gz",
+      "directory": "tiff-3.9.7",
+      "sha256": "f5d64dd4ce61c55f5e9f6dc3920fbe5a41e02c2e607da7117a35eb5c320cef6a"
+    }
+  ],
+  "emscripten_ports": [
+    {"name": "libpng", "version": "1.6.39", "sha512": "19851afffbe2ffde62d918f7e9017dec778a7ce9c60c75cdc65072f086e6cdc9d9895eb7b207535a84cb5f4ead77ebc2aa9d80025f153662903023e1f7ab9bae"},
+    {"name": "libjpeg", "version": "9c", "sha512": "b2affe9a1688bd49fc033f4682c4a242d4ee612f1affaef532f5adcb4602efc4433c4a52a4b3d69e7440ff1f6413b1b041b419bc90efd6d697999961a9a6afb7"},
+    {"name": "zlib", "version": "1.2.13", "sha512": "44b834fbfb50cca229209b8dbe1f96b258f19a49f5df23b80970b716371d856a4adf525edb4c6e0e645b180ea949cb90f5365a1d896160f297f56794dd888659"}
+  ],
+  "repositories": [
+    {
+      "name": "Emscripten SDK",
+      "url": "https://github.com/emscripten-core/emsdk.git",
+      "directory": "emsdk",
+      "revision": "96c657fc60920d2a6a82318aa50e0abf82749604"
+    },
+    {
+      "name": "GL4ES",
+      "url": "https://github.com/ptitSeb/gl4es.git",
+      "directory": "gl4es",
+      "revision": "a444cc94b17c672c66c3e6ce07428dc603034db1"
+    },
+    {
+      "name": "SGI GLU",
+      "url": "https://github.com/ptitSeb/GLU.git",
+      "directory": "GLU",
+      "revision": "2fed2bda2b725d2b9e32c435b48d5141cc95827f"
+    }
+  ]
+}

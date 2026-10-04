@@ -1,0 +1,19 @@
+diff --git a/src/gl/listdraw.c b/src/gl/listdraw.c
+index d616b3b..3de1224 100644
+--- a/src/gl/listdraw.c
++++ b/src/gl/listdraw.c
+@@ -271,6 +271,14 @@ int fill_lineIndices(modeinit_t *modes, int length, GLenum mode, GLushort* indic
+                             ind_line[k++] = ind(i+0); ind_line[k++] = ind(i+1);
+                         }
+                     }
++                } else if(mode_init==GL_QUADS) {
++                    // A single quad is stored as a fan, but its diagonal is not an edge.
++                    for (; i+3<len; i+=4) {
++                        ind_line[k++] = ind(i+0); ind_line[k++] = ind(i+1);
++                        ind_line[k++] = ind(i+1); ind_line[k++] = ind(i+2);
++                        ind_line[k++] = ind(i+2); ind_line[k++] = ind(i+3);
++                        ind_line[k++] = ind(i+3); ind_line[k++] = ind(i+0);
++                    }
+                 } else if(mode_init==GL_POLYGON) {
+                     if (len) {
+                         int z = i;

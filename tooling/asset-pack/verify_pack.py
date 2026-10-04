@@ -20,7 +20,7 @@ def verify():
     manifest_path = output / 'assets.json'
     manifest_bytes = manifest_path.read_bytes()
     manifest = json.loads(manifest_bytes)
-    fixture = json.loads(Path('.frenzy/browser-port/assets.json').read_text())
+    fixture = json.loads(Path(__file__).with_name('fixtures').joinpath('original.json').read_text())
     combined = hashlib.sha256()
     game_size = 0
     for index, chunk in enumerate(manifest['game']['chunks']):

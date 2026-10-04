@@ -1,0 +1,331 @@
+{
+  "files": [
+    {
+      "bytes": 22997922,
+      "sha256": "ce4a428f155b1d014523611f6fce30ae8ec0b90e95cb68149f7ebaed09e1fe51",
+      "url": "objects/ce4a428f155b1d014523611f6fce30ae8ec0b90e95cb68149f7ebaed09e1fe51.bin",
+      "virtual": "/game/samples/msuic.wav"
+    },
+    {
+      "bytes": 47711,
+      "sha256": "8784589b8a4e4a0df76b2bd17ba67e70751ab6c074c3ff7531bbd7e348e6c695",
+      "url": "objects/8784589b8a4e4a0df76b2bd17ba67e70751ab6c074c3ff7531bbd7e348e6c695.bin",
+      "virtual": "/game/textures/1211.jpg"
+    },
+    {
+      "bytes": 65536,
+      "sha256": "bf834151300edc9f6434f78d4ba0760bd17c20a1ea78671a81bcec151c1e6a03",
+      "url": "objects/bf834151300edc9f6434f78d4ba0760bd17c20a1ea78671a81bcec151c1e6a03.bin",
+      "virtual": "/game/textures/6619-v1.jpg"
+    },
+    {
+      "bytes": 65536,
+      "sha256": "086c4906d20e68bd0253e2dc62cb7b2526abbfc06b079ce65a58af88b8657995",
+      "url": "objects/086c4906d20e68bd0253e2dc62cb7b2526abbfc06b079ce65a58af88b8657995.bin",
+      "virtual": "/game/textures/6619-v4.jpg"
+    },
+    {
+      "bytes": 65536,
+      "sha256": "2acdc46927058598b6d7ef20bf42b1f7a3ad6f76ca7b7601d31be038184aef17",
+      "url": "objects/2acdc46927058598b6d7ef20bf42b1f7a3ad6f76ca7b7601d31be038184aef17.bin",
+      "virtual": "/game/textures/7350.jpg"
+    },
+    {
+      "bytes": 3590,
+      "sha256": "299c68cd504b0fbe42077604ac567842f8201b7c34396828ec176b79e8beadd0",
+      "url": "objects/299c68cd504b0fbe42077604ac567842f8201b7c34396828ec176b79e8beadd0.bin",
+      "virtual": "/game/textures/Guide.png"
+    },
+    {
+      "bytes": 41367,
+      "sha256": "b6939437d13e3d063af9fe039c3bdcb83f7d34dbf9c264c00b954a78df9eda4c",
+      "url": "objects/b6939437d13e3d063af9fe039c3bdcb83f7d34dbf9c264c00b954a78df9eda4c.bin",
+      "virtual": "/game/textures/HoverRing.png"
+    },
+    {
+      "bytes": 2005294,
+      "sha256": "5efe9aea6f3e88e170372fc0064848eb2f0e9e2daee4002e98fb99c7b74c549b",
+      "url": "objects/5efe9aea6f3e88e170372fc0064848eb2f0e9e2daee4002e98fb99c7b74c549b.bin",
+      "virtual": "/game/textures/Muddy.tga"
+    },
+    {
+      "bytes": 54880,
+      "sha256": "5773ad3e3e893861d78fa00e103a5f50fd32dd807148f07d868ed85d73b8985c",
+      "url": "objects/5773ad3e3e893861d78fa00e103a5f50fd32dd807148f07d868ed85d73b8985c.bin",
+      "virtual": "/game/textures/Off.png"
+    },
+    {
+      "bytes": 57023,
+      "sha256": "1fee1fbe98bdc6cf22d5580d471f1332b50eba0f647265f9f0aea284e42e5436",
+      "url": "objects/1fee1fbe98bdc6cf22d5580d471f1332b50eba0f647265f9f0aea284e42e5436.bin",
+      "virtual": "/game/textures/On.png"
+    },
+    {
+      "bytes": 131072,
+      "sha256": "567cfeb748fc1f01ebf9f0a372de8da0c5a8e96cbd5f31a0e778de50f8d29a35",
+      "url": "objects/567cfeb748fc1f01ebf9f0a372de8da0c5a8e96cbd5f31a0e778de50f8d29a35.bin",
+      "virtual": "/game/textures/Stars1.jpg"
+    },
+    {
+      "bytes": 78,
+      "sha256": "55807d1695d243607f8a282f4d23f62765e36ba781fcefd22a4c2ae7956ececc",
+      "url": "objects/55807d1695d243607f8a282f4d23f62765e36ba781fcefd22a4c2ae7956ececc.bin",
+      "virtual": "/game/textures/Untitled"
+    },
+    {
+      "bytes": 1467404,
+      "sha256": "9e3941e38b7ff5607851cafd7f4894a050593cf79c05661f4180d25bac7770ee",
+      "url": "objects/9e3941e38b7ff5607851cafd7f4894a050593cf79c05661f4180d25bac7770ee.bin",
+      "virtual": "/game/textures/ice.png"
+    },
+    {
+      "bytes": 68680,
+      "sha256": "47a7bfaba497bdab76426549f5f97f0198e4abb30695da5b446427f5d04ec620",
+      "url": "objects/47a7bfaba497bdab76426549f5f97f0198e4abb30695da5b446427f5d04ec620.bin",
+      "virtual": "/game/textures/power.png"
+    },
+    {
+      "bytes": 131072,
+      "sha256": "6c39553dd54442e5f63d3489efddbda437ef31351041c61e2b566f9efc2cf80f",
+      "url": "objects/6c39553dd54442e5f63d3489efddbda437ef31351041c61e2b566f9efc2cf80f.bin",
+      "virtual": "/game/textures/star2.jpg"
+    },
+    {
+      "bytes": 47711,
+      "sha256": "8784589b8a4e4a0df76b2bd17ba67e70751ab6c074c3ff7531bbd7e348e6c695",
+      "url": "objects/8784589b8a4e4a0df76b2bd17ba67e70751ab6c074c3ff7531bbd7e348e6c695.bin",
+      "virtual": "/z/CleanCode/Personal/Projects/RyansHardestGame/textures/chrome.jpg"
+    },
+    {
+      "bytes": 1467404,
+      "sha256": "9e3941e38b7ff5607851cafd7f4894a050593cf79c05661f4180d25bac7770ee",
+      "url": "objects/9e3941e38b7ff5607851cafd7f4894a050593cf79c05661f4180d25bac7770ee.bin",
+      "virtual": "/z/CleanCode/Personal/Projects/RyansHardestGame/textures/ice.png"
+    }
+  ],
+  "game": {
+    "bytes": 351865072,
+    "chunks": [
+      {
+        "bytes": 16777216,
+        "sha256": "ace39e65e9cf3cb156965615054547b3403cfae27bb2026a09d38544817a107f",
+        "url": "objects/ace39e65e9cf3cb156965615054547b3403cfae27bb2026a09d38544817a107f.bin"
+      },
+      {
+        "bytes": 16777216,
+        "sha256": "2c1e9ae328b738ad4a3d5c5970c6e7b469e52d6c6b75f41ef0a50bd2dae066b2",
+        "url": "objects/2c1e9ae328b738ad4a3d5c5970c6e7b469e52d6c6b75f41ef0a50bd2dae066b2.bin"
+      },
+      {
+        "bytes": 16777216,
+        "sha256": "8946e762428e1cfbc3096a04a5795a8ccd72e129adf85fe8c014cc5113e5504d",
+        "url": "objects/8946e762428e1cfbc3096a04a5795a8ccd72e129adf85fe8c014cc5113e5504d.bin"
+      },
+      {
+        "bytes": 16777216,
+        "sha256": "f75221c3e76199d3132c0961b4e8d86023f2d4d3ab63222ca478bf8ff905f7f9",
+        "url": "objects/f75221c3e76199d3132c0961b4e8d86023f2d4d3ab63222ca478bf8ff905f7f9.bin"
+      },
+      {
+        "bytes": 16777216,
+        "sha256": "7c5d6c915a658e23135933847a91dc0378343953c0e08aaf2aef0a0955367ed4",
+        "url": "objects/7c5d6c915a658e23135933847a91dc0378343953c0e08aaf2aef0a0955367ed4.bin"
+      },
+      {
+        "bytes": 16777216,
+        "sha256": "420d775d2c2af5d45ca33d7851911160799d08c7e58cd0119af356c82029754c",
+        "url": "objects/420d775d2c2af5d45ca33d7851911160799d08c7e58cd0119af356c82029754c.bin"
+      },
+      {
+        "bytes": 16777216,
+        "sha256": "6f62836a61b2d7601c49f71cfda660ccd19c355ac8c80b2fb73a9e330fab9454",
+        "url": "objects/6f62836a61b2d7601c49f71cfda660ccd19c355ac8c80b2fb73a9e330fab9454.bin"
+      },
+      {
+        "bytes": 16777216,
+        "sha256": "d81bc8552156d934c24c3a3dd833019ad43a770677e86952002f34920b9429fe",
+        "url": "objects/d81bc8552156d934c24c3a3dd833019ad43a770677e86952002f34920b9429fe.bin"
+      },
+      {
+        "bytes": 16777216,
+        "sha256": "3446c4c04d35bca57ef303241685e3e9e9d5d3673d6d089badefa520b4255683",
+        "url": "objects/3446c4c04d35bca57ef303241685e3e9e9d5d3673d6d089badefa520b4255683.bin"
+      },
+      {
+        "bytes": 16777216,
+        "sha256": "7ad6e55337f6abd1edf87e3f086ecefcb5ee698d54b7f63184210c73b4f11024",
+        "url": "objects/7ad6e55337f6abd1edf87e3f086ecefcb5ee698d54b7f63184210c73b4f11024.bin"
+      },
+      {
+        "bytes": 16777216,
+        "sha256": "e2fa79e4370be3fab69a81bd95bf041bfacd6f1ca5a9f1600bade8364ed126f9",
+        "url": "objects/e2fa79e4370be3fab69a81bd95bf041bfacd6f1ca5a9f1600bade8364ed126f9.bin"
+      },
+      {
+        "bytes": 16777216,
+        "sha256": "a8aaebf99a9bdcfafa2e4875847d9601844ea7d50dbede3b9af99aed2b11fbd9",
+        "url": "objects/a8aaebf99a9bdcfafa2e4875847d9601844ea7d50dbede3b9af99aed2b11fbd9.bin"
+      },
+      {
+        "bytes": 16777216,
+        "sha256": "04feeaedd4e1772c43f8eee6cb50e19c2d99af7f453e7bff6e2402a5efecc30c",
+        "url": "objects/04feeaedd4e1772c43f8eee6cb50e19c2d99af7f453e7bff6e2402a5efecc30c.bin"
+      },
+      {
+        "bytes": 16777216,
+        "sha256": "c3087f48b034c170c58e8fbc78256941acd291cba1acaaca59d718af861d7069",
+        "url": "objects/c3087f48b034c170c58e8fbc78256941acd291cba1acaaca59d718af861d7069.bin"
+      },
+      {
+        "bytes": 16777216,
+        "sha256": "65abe05b46f9eac30c1e7fb1ed669aecd19b7c54312ea0293e8028f76e940f67",
+        "url": "objects/65abe05b46f9eac30c1e7fb1ed669aecd19b7c54312ea0293e8028f76e940f67.bin"
+      },
+      {
+        "bytes": 16777216,
+        "sha256": "bae066a3b085f3c3c2f0f1c5d86fe7d6ad708d5da7557d71fb2eaf90d22ca90e",
+        "url": "objects/bae066a3b085f3c3c2f0f1c5d86fe7d6ad708d5da7557d71fb2eaf90d22ca90e.bin"
+      },
+      {
+        "bytes": 16777216,
+        "sha256": "1e06dff4a0f836441b1e76c62d364de22d0b0468b98230e4acc878d102eb7a0c",
+        "url": "objects/1e06dff4a0f836441b1e76c62d364de22d0b0468b98230e4acc878d102eb7a0c.bin"
+      },
+      {
+        "bytes": 16777216,
+        "sha256": "adb0a9f6899a7dc9568076239438d7acbec286ef33d47f39ed2fed170c178021",
+        "url": "objects/adb0a9f6899a7dc9568076239438d7acbec286ef33d47f39ed2fed170c178021.bin"
+      },
+      {
+        "bytes": 16777216,
+        "sha256": "fdea39406882a8d4b55c636c8246d4cf73d4eebee243b86feb576b6811a1a095",
+        "url": "objects/fdea39406882a8d4b55c636c8246d4cf73d4eebee243b86feb576b6811a1a095.bin"
+      },
+      {
+        "bytes": 16777216,
+        "sha256": "ec0e481e5752a2f417da733696fa8e050325ce86e779fb23660f91c332dd9315",
+        "url": "objects/ec0e481e5752a2f417da733696fa8e050325ce86e779fb23660f91c332dd9315.bin"
+      },
+      {
+        "bytes": 16320752,
+        "sha256": "d690aed49f8d9e5ca1a6d9913bfc5acc21514b4a9003896e66e78fb66406190b",
+        "url": "objects/d690aed49f8d9e5ca1a6d9913bfc5acc21514b4a9003896e66e78fb66406190b.bin"
+      }
+    ],
+    "sha256": "e7f047be356346eebd166e1918ab854c9bf1494dbecd81f44174596f598a18ff"
+  },
+  "missing": [
+    {
+      "id": "IMHZR.jpg",
+      "path": "D:\\HZR.jpg"
+    },
+    {
+      "id": "IMUntitled.004",
+      "path": "Untitled"
+    }
+  ],
+  "packed": [
+    {
+      "bytes": 34020,
+      "id": "IMBlah",
+      "path": "//textures\\Blah"
+    },
+    {
+      "bytes": 47711,
+      "id": "IMChrome Curtain 1.jpg",
+      "path": "f:\\Pics and tex\\1211.jpg"
+    },
+    {
+      "bytes": 47711,
+      "id": "IMchrome.jpg",
+      "path": "Z:\\CleanCode\\Personal\\Projects\\RyansHardestGame\\textures\\chrome.jpg"
+    },
+    {
+      "bytes": 2034493,
+      "id": "IMGloop.tga",
+      "path": "C:\\Users\\Ryan\\Documents\\Textures\\Plain\\Gloop.tga"
+    },
+    {
+      "bytes": 2034493,
+      "id": "IMGloop.tga.002",
+      "path": "C:\\Users\\Ryan\\Documents\\Textures\\Plain\\Gloop.tga"
+    },
+    {
+      "bytes": 41367,
+      "id": "IMHoverRi.png.003",
+      "path": "//textures\\HoverRing.png"
+    },
+    {
+      "bytes": 41367,
+      "id": "IMHoverRi.png.004",
+      "path": "//textures\\HoverRing.png"
+    },
+    {
+      "bytes": 78,
+      "id": "IMUntitled",
+      "path": "Untitled"
+    },
+    {
+      "bytes": 70,
+      "id": "IMUntitled.001",
+      "path": "Untitled"
+    },
+    {
+      "bytes": 65455,
+      "id": "IMUntitled.003",
+      "path": "Untitled"
+    },
+    {
+      "bytes": 78,
+      "id": "IMUntitled.006",
+      "path": "Untitled"
+    },
+    {
+      "bytes": 22997922,
+      "id": "SOBertycoX-The Signal.w",
+      "path": "//samples\\msuic.wav"
+    },
+    {
+      "bytes": 41476692,
+      "id": "SOFinal_Music.wav",
+      "path": "C:\\Users\\Ryan B\\Documents\\Samples Temp\\Sine.wav"
+    },
+    {
+      "bytes": 31752044,
+      "id": "SOmessin_with_a_guitar_",
+      "path": "C:\\Users\\Ryan B\\Documents\\Samples Temp\\windym.wav"
+    },
+    {
+      "bytes": 31752044,
+      "id": "SOMusic2.wav",
+      "path": "C:\\Users\\Ryan B\\Documents\\Samples Temp\\utpress.wav"
+    },
+    {
+      "bytes": 31752044,
+      "id": "SOrastan (2).wav",
+      "path": "C:\\Users\\Ryan B\\Documents\\Samples Temp\\synthy_gGAME.wav"
+    },
+    {
+      "bytes": 187994,
+      "id": "SOSlam",
+      "path": "c:\\Users\\Ryan\\Google Drive\\Exobyte Stony Brook Nexus\\Personal\\Blender Files\\Ryan's Hardest Game\\samples\\DeathType1.wav"
+    },
+    {
+      "bytes": 40504454,
+      "id": "SOsynthy_gGAME.wav",
+      "path": "//samples\\Music2.wav"
+    },
+    {
+      "bytes": 49840294,
+      "id": "SOutpress.wav",
+      "path": "C:\\Users\\Ryan B\\Documents\\Samples Temp\\messin_with_a_guitar_sounds[1].wav"
+    },
+    {
+      "bytes": 73126134,
+      "id": "SOwindym.wav",
+      "path": "C:\\Users\\Ryan B\\Documents\\Samples Temp\\final (2).wav"
+    }
+  ],
+  "parser_sha256": "8d57232e05267fd9318a231324d0cd2040fb2e701bef4bafedd07fdccca67369",
+  "schema": 1
+}

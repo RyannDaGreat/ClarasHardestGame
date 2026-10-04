@@ -1,0 +1,7 @@
+{
+  "name": "original-bge-browser-validation",
+  "private": true,
+  "type": "module",
+  "scripts": {"smoke": "node browser-smoke.mjs"},
+  "devDependencies": {"puppeteer": "25.3.0"}
+}

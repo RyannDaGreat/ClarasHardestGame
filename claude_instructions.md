@@ -91,3 +91,16 @@ Interpretation: completion requires a live, playable deployment, and the notific
 
 ## Success criteria and unresolved work
 Research identified Blender 2.49b and CPython 2.6.2. Original Bullet and Python execute in WASM, 43 original engine archives compile, and GL4ES/GLU render their 1080p browser probe correctly. Full-game browser execution is now being integrated. Success still requires native-versus-browser behavior checks, audio and keyboard support, every level visually inspected, and a live static deployment. Component probes alone do not establish game fidelity.
+
+Validation and release continuation: `validation/` will retain portable browser smoke/replay tooling, reviewed evidence and explicit fidelity limits. Native/browser helper `.frenzy/baseline/capture-browser-motion.mjs` records before/after real keyboard input for each level; diagnostic direct-scene startup does not establish full progression equivalence. `README.md` documents play/update/build/deploy instructions. `.github/workflows/pages.yml` publishes the verified `tooling/build-site.sh` output through GitHub Pages Actions on master. No new hosting provider is introduced.
+
+Browser platform hardening: retain pressed-key state only to release keys on window blur (browser focus changes otherwise lose key-up events), scale pointer coordinates to the actual 1920×1080 drawing buffer, and expose engine startup/exit status so the page never labels a failed launch as playing. These are platform adapters, with no game logic edits.
+
+Editing workflow: `tooling/update-game.sh <edited.blend>` packages into a fresh temporary directory, then promotes the verified data to `assets/published/`; the reusable engine is not rebuilt. `tooling/asset-pack/fixtures/original.json` will retain the independent original asset audit needed for portable packaging regression tests, instead of depending on ignored research output. The source/recovered assets stay local and unchanged.
+
+Performance and baseline release requirements (verbatim):
+> its good but the framerate is low and keyboard lags by .1 sec which is hard for this game....can we optimimze it? its from 2008 and we're running on 2026 M1 pro lol surely it can be optimized
+>
+> push to github the first version and tag it tho
+
+Interpretation: publish and tag the working first version before performance changes, then profile and improve frame rate/input latency without replacing original gameplay or physics. Preserve the baseline for comparisons and rollback. Performance becomes an additional required objective; completion notification still waits until authorized work is complete.

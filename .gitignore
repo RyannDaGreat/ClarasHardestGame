@@ -28,3 +28,5 @@ __pycache__/
 .frenzy/baseline/windows/
 build/
 .cache/
+validation/node_modules/
+validation/output/
