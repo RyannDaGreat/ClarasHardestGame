@@ -9,3 +9,15 @@
 - Main `.blend` may have been saved by a different version than the remembered 2.49; inspect its header before choosing engine source.
 - User expanded authorization to persistent bulldog autopilot, reusable `.blend` loading, visual inspection of all levels, and notification when done.
 - Asset copy is waiting on iCloud retrieval; local destination is currently zero bytes. Do not treat it as a preserved asset until copy completion and hashing succeed.
+- Asset copy completed (716 MiB including external files); header is BLENDER_v249. Main SHA-256: e7f047be356346eebd166e1918ab854c9bf1494dbecd81f44174596f598a18ff.
+- Audit found 19 scenes, 1,720 objects, 2,867 sensors, 2,966 controllers, 3,384 actuators. All worlds select Bullet, with tick rates 50/60/70; display render FPS 25 is not the simulation frequency. Initial scene is Intro.
+- Research parser first assumed tuple field paths, but library also yields bytes; fixed after explicit AttributeError. Text extraction initially moved the shared file cursor by reading length after seeking text data; fixed evaluation order. Do not trust initial extracted text before this correction.
+- Asset audit identified unresolved HZR.jpg and power.png references and historic absolute Windows paths; determine whether reachable game materials use them. Never substitute invented textures.
+- 2026-10-04: Flash-drive ZIP contains power.png, Windows Runtime.exe and python26.dll. DLL strings confirm CPython 2.6.2 (r262), MSC v.1500 32-bit; Runtime.exe contains blender-2.49b-release source path and date 2009-09-01. This establishes a much stronger exact runtime baseline. Initial CPython 2.6.9 download superseded before compilation.
+
+## 2026-10-04 — build probes and baseline
+- Original Bullet 2.74 compiled to native and WASM; both limited 60-frame smoke tests produced z=4.916667461. This is not whole-game fidelity proof.
+- CPython 2.6.2 configure requires explicit cross answers for chflags/lchflags and printf size formatting, plus modern Emscripten's 64-bit time_t/off_t. Its internal posix_close callback collides with modern libc; renamed the internal callback, retaining the Python API.
+- Updating configure triggered make's automatic rerun without exported target facts; it detected macOS and could produce an incorrect configuration. Stopped that invocation, exported target facts in the build wrapper, restarted explicit cross configuration. Configure facts must survive make, not just its first invocation.
+- Native 1080p original-player captures show the title and levels. Direct-scene fixtures omit state normally inherited from previous scenes; these are renderer references, not full gameplay certification. Native audio remains unresolved.
+- Flash backup contains visual differences and Runtime.exe embeds a distinct older 28 MB game. Continue targeting the original iCloud file; use recovered assets only where their original identity is established.

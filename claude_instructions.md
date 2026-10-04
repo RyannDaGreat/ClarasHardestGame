@@ -33,6 +33,23 @@ Further requirements:
 
 Interpretation: persistent autonomous implementation after research; keep retrying viable approaches until completion or a genuine external blocker. Notify when fully done using speech and ntfy if available, with no unfinished agents/jobs. Deliver a reusable runtime loading replaceable `.blend` data, not a one-off game conversion. Visually inspect every level using image tools, and verify nonvisual behavior independently.
 
+Additional backup supplied:
+> /Users/ryan/Downloads/Ryan's Hardest Game-20261004T081520Z-1-001.zip this is a duplicate of the game i saved on a flash drive btw i made it in 2008 so i made backuops
+
+Interpretation: compare the backup with the current input, preserving both. Inspect archive metadata and hashes before selecting any older asset or runtime. The archive location is provenance, not a runtime dependency.
+
+Hosting setup:
+> i set up an origin + github pages that looks for ./index.html. If we wanna keep the toplevel clean and make a build/ folder or something with github actions plz use the api key in the origin
+
+Interpretation: use existing origin authentication for repository/Pages setup and deployment. Keep credentials out of displayed remote URLs, logs and committed files. Build static output in `build/` and deploy through GitHub Actions; credentials remain outside artifacts. Inspect existing configuration before changes.
+
+Completion notification:
+> once it's online and ready for me to play with notify me
+>
+> (with the URL)
+
+Interpretation: completion requires a live, playable deployment, and the notification must include its public URL.
+
 ## Working rules
 - Treat this repository as a movable, self-contained dump. Runtime paths must be relative to the repository; the historical source location above is provenance only.
 - Preserve originals. Inspect binary `.blend` content without opening/resaving it in modern Blender.
@@ -43,6 +60,18 @@ Interpretation: persistent autonomous implementation after research; keep retryi
 - No game remake, new physics engine, or silent missing-asset fallback.
 
 ## Initial investigation and planned structure
+- Configure's cross-target facts must also be exported during `make`, because its automatic configure reruns otherwise infer the macOS host and corrupt `pyconfig.h`. Browser CPython uses upstream `dynload_stub.o` (explicit unavailable native extensions) with required standard modules statically built.
+- CPython's internal `posix_close` callback must be renamed to avoid a newly standardized libc symbol with a different signature; this leaves Python `os.close` behavior unchanged. Compile with `-fno-strict-aliasing` as CPython's historical build expects.
+- `.frenzy/python-probe/build-wasm.sh` builds the exact CPython 2.6.2 static archive using unchanged release grammar/AST generated files; enables common standard modules statically, because browser loading cannot use native extension DLLs. `smoke.c` embeds the real interpreter to verify bytecode execution under Node before engine integration.
+- `.frenzy/engine-port/`: full original player-library build graph experiment; use authentic SCons player libraries, preserve upstream standalone-player editor exclusions, and document every compatibility patch. Root supplies exact CPython 2.6.2; agent supplies engine archives and eventually browser platform adapter.
+- CPython configure adaptations must explicitly set target ABI sizes (including modern Emscripten 64-bit time/off_t), disable unavailable chflags APIs, and retain original generated grammar/AST files. These are build/platform adaptations, not interpreter rewrites.
+- `.frenzy/github-inspect.py`: read-only GitHub API inspection using origin credentials held only in memory; prints safe repository and Pages metadata, never raw origin or credentials.
+- `assets/flash-backup/`: verbatim ZIP extraction, separate from original current copy. Archive contains Windows Runtime.exe, python26.dll, and additional textures, including power.png. Its main `.blend` differs in size by 344 bytes; selection awaits block/asset comparison.
+- `.frenzy/python-probe/`: isolated CPython 2.6.2 static WASM embedding experiment. Backup python26.dll explicitly identifies 2.6.2/r262 and MSC v.1500 32-bit, so pin that exact interpreter. Use existing local Emscripten SDK and original CPython source, with explicit cross-compilation adaptations only.
+- `.frenzy/baseline/`: reproducible Docker/Xvfb experiment using official original i386 player, native screenshots and keyboard automation. Container `rhg-baseline` is disposable; assets mounted read-only. This is a Linux reference, not proof of exact original Windows equivalence.
+- `.frenzy/build-probe/`: isolated original-source Emscripten compilation experiment and locally installed SDK; no system dependency is assumed without setup instructions.
+- `.frenzy/audit_blend.py`: read-only binary block/SDNA inspection, emits a JSON inventory without executing embedded code. Uses declared field sizes (including explicit padding) and validates structure sizes. Temporary research tooling, not a game reimplementation.
+- Confirmed input header `BLENDER_v249`: 32-bit little-endian Blender 2.49. Official 2.49b source downloaded for inspection; patch-level baseline still needs verification.
 - `assets/original/`: local unchanged copy of the main game and external sound/texture folders, excluded from Git because the main file exceeds GitHub's file size limit. Asset delivery strategy remains research work.
 - `.frenzy/`: ten research briefs, binary asset audit, and temporary research programs.
 - `claude_instructions.md`: current project state and reproduction guidance.
