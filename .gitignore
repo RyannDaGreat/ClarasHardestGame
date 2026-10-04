@@ -1,0 +1,5 @@
+assets/original/
+.claude_logs/
+__pycache__/
+.DS_Store
+.frenzy/downloads/
