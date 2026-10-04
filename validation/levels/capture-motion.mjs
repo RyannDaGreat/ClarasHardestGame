@@ -25,7 +25,6 @@ for (const scene of scenes) {
   try {
     await page.goto(url + '?scene=' + encodeURIComponent(scene), {timeout:120000});
     await page.waitForFunction(() => window.runtimeReady, {timeout:120000});
-    await page.click('#start');
     await page.waitForFunction(() => window.assetsReady, {timeout:120000});
     if (!await page.evaluate(() => Boolean(window.gameStarted))) await page.click('#start');
     await page.waitForFunction(() => window.gameStarted, {timeout:120000});

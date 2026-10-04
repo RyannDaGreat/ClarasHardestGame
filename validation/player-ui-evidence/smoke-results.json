@@ -1,0 +1,168 @@
+{
+  "url": "http://127.0.0.1:8766/build/",
+  "viewport": {
+    "width": 1920,
+    "height": 1180
+  },
+  "audio": [
+    {
+      "track": 1,
+      "state": "running",
+      "peak": 0.04822387546300888,
+      "rms": 0.015625145590611178,
+      "error": 0,
+      "sampleRate": 48000,
+      "playing": [
+        131
+      ]
+    },
+    {
+      "track": 2,
+      "state": "running",
+      "peak": 0.14619052410125732,
+      "rms": 0.04060094411538132,
+      "error": 0,
+      "sampleRate": 48000,
+      "playing": [
+        131,
+        132
+      ]
+    },
+    {
+      "track": 3,
+      "state": "running",
+      "peak": 0.2902989387512207,
+      "rms": 0.07866664709278288,
+      "error": 0,
+      "sampleRate": 48000,
+      "playing": [
+        131,
+        132,
+        133
+      ]
+    },
+    {
+      "track": 4,
+      "state": "running",
+      "peak": 0.5401217937469482,
+      "rms": 0.2067823239491049,
+      "error": 0,
+      "sampleRate": 48000,
+      "playing": [
+        131,
+        132,
+        133,
+        134
+      ]
+    },
+    {
+      "track": 5,
+      "state": "running",
+      "peak": 0.5818374752998352,
+      "rms": 0.19865449840878893,
+      "error": 0,
+      "sampleRate": 48000,
+      "playing": [
+        131,
+        132,
+        133,
+        134,
+        135
+      ]
+    },
+    {
+      "track": 6,
+      "state": "running",
+      "peak": 1.2200279235839844,
+      "rms": 0.2633120337363402,
+      "error": 0,
+      "sampleRate": 48000,
+      "playing": [
+        131,
+        132,
+        133,
+        134,
+        135,
+        136
+      ]
+    },
+    {
+      "track": 7,
+      "state": "running",
+      "peak": 1.1020941734313965,
+      "rms": 0.2937548208638152,
+      "error": 0,
+      "sampleRate": 48000,
+      "playing": [
+        131,
+        132,
+        133,
+        134,
+        135,
+        136,
+        137
+      ]
+    },
+    {
+      "track": 8,
+      "state": "running",
+      "peak": 1.2948083877563477,
+      "rms": 0.32453156912287995,
+      "error": 0,
+      "sampleRate": 48000,
+      "playing": [
+        131,
+        132,
+        133,
+        134,
+        135,
+        136,
+        137,
+        138
+      ]
+    },
+    {
+      "track": 9,
+      "state": "running",
+      "peak": 1.4898159503936768,
+      "rms": 0.3931114166795194,
+      "error": 0,
+      "sampleRate": 48000,
+      "playing": [
+        131,
+        132,
+        133,
+        134,
+        135,
+        136,
+        137,
+        138,
+        139
+      ]
+    }
+  ],
+  "errors": [],
+  "mutedAudio": {
+    "state": "running",
+    "peak": 0,
+    "rms": 0,
+    "error": 0,
+    "sampleRate": 48000,
+    "playing": []
+  },
+  "resumedAudio": {
+    "state": "running",
+    "peak": 0.04834766685962677,
+    "rms": 0.015544696421331196,
+    "error": 0,
+    "sampleRate": 48000,
+    "playing": [
+      139
+    ]
+  },
+  "canvas": {
+    "width": 1920,
+    "height": 1080
+  },
+  "pass": true
+}

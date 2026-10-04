@@ -15,7 +15,7 @@ try{
   const target=new URL(url);target.searchParams.set('scene',scene);
   await page.goto(target.href,{timeout:180000});
   await page.waitForFunction(()=>window.runtimeReady,{timeout:180000});
-  await page.click('#start');await page.waitForFunction(()=>window.assetsReady,{timeout:300000});
+  await page.waitForFunction(()=>window.assetsReady,{timeout:300000});
   await page.click('#start');await page.waitForFunction(()=>window.gameStarted,{timeout:120000});
   if(process.env.PERF_PATCH)await page.evaluate(await readFile(process.env.PERF_PATCH,'utf8'));
   await delay(3000);

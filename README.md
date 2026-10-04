@@ -4,7 +4,9 @@ This runs the original Blender 2.49b game engine, Bullet 2.74 and CPython 2.6.2 
 
 Published address: **https://ryanndagreat.github.io/ClarasHardestGame/**. The first playable engine baseline is tagged `v0.1.0`; the optimized release is `v0.1.1`. On Chrome/Apple M1 Max, Lv10 improved from 16.4 to 60.0 rendered FPS at 1080p. See [performance evidence](validation/performance/README.md) for measurements and limitations.
 
-Click **Load game**, then **Play**. The first download is approximately 391 MiB. The drawing buffer is 1920×1080; the original game's 4:3 framing is preserved with side bars. Use **Fullscreen** for the full display.
+The game downloads automatically and saves its verified game files in browser storage. Click the centered **Play** button when ready. The first download is approximately 391 MiB; later visits reuse saved game assets. Browsers can evict this cache, and storage restrictions are reported in the player. The drawing buffer is 1920×1080; the original game's 4:3 framing is preserved with side bars. Use the fullscreen icon for the full display.
+
+Each visit refreshes the small asset manifest, so publishing an edited `.blend` automatically downloads its changed chunks. Cached files are checked with SHA-256 before use; damaged entries are replaced. This is game-asset caching, not an offline installation: the page and engine still use ordinary HTTP caching. Icons are locally hosted Lucide assets distributed through Iconify, with their licenses in `web/icons/`.
 
 ## Edit and publish
 
@@ -42,6 +44,7 @@ See [`runtime/claude_instructions.md`](runtime/claude_instructions.md) for pinne
 ```sh
 npm ci --prefix validation
 node validation/browser-smoke.mjs http://localhost:8765/build/
+node validation/player-ui.mjs http://localhost:8765/build/
 ```
 
 The smoke test uses a real browser and actual keyboard events. It saves screenshots and audio measurements under `validation/output/`; browser logs go to `.claude_logs/`. Set `BROWSER_EXECUTABLE` to use an installed browser. All 12 saved level scenes were visually inspected against native Blender captures and exercised with keyboard input. See [`validation/levels/README.txt`](validation/levels/README.txt) for evidence and limits. These are startup/motion checks, not completed playthroughs or a claim of Windows bit-for-bit parity.

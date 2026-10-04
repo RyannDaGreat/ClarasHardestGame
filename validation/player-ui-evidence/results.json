@@ -1,0 +1,21 @@
+{
+  "firstLoad": {
+    "hits": 2,
+    "downloads": 36,
+    "started": false
+  },
+  "cachedLoad": {
+    "hits": 38,
+    "downloads": 0
+  },
+  "repairedLoad": {
+    "hits": 37,
+    "downloads": 1
+  },
+  "pass": true,
+  "storageDenied": {
+    "hits": 0,
+    "downloads": 38
+  },
+  "errors": []
+}

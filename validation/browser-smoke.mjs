@@ -33,7 +33,6 @@ try{
   await page.setViewport({...result.viewport,deviceScaleFactor:1});
   await page.goto(url,{timeout:180000});
   await page.waitForFunction(()=>window.runtimeReady,{timeout:180000});
-  await page.click('#start');
   await page.waitForFunction(()=>window.assetsReady,{timeout:300000});
   await page.click('#start');
   await page.waitForFunction(()=>window.gameStarted,{timeout:180000});

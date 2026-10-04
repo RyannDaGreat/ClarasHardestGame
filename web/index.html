@@ -1,10 +1,50 @@
 <!doctype html>
-<html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Ryan's Hardest Game — original engine</title>
-<link rel="icon" href="data:,">
-<style>
-:root{--bg:#080b12;--fg:#e8f0ff;--muted:#aabbd2;--accent:#71e4c8;--space:1rem;--edge:.6rem;--max:120rem;--line:1px;--zero:0;--full:100%;--font:16px;--small:12px;--log:12rem;--canvas-bg:#000;--canvas-ratio:16/9;--disabled-opacity:.5}
-*{box-sizing:border-box}body{margin:var(--zero);background:var(--bg);color:var(--fg);font:var(--font) system-ui}main{max-width:var(--max);margin:auto;padding:var(--space)}header{display:flex;gap:var(--space);align-items:center;flex-wrap:wrap}h1{font-size:var(--font)}button{background:var(--accent);color:var(--bg);border:var(--zero);padding:var(--edge) var(--space);border-radius:var(--edge);cursor:pointer}button:disabled{opacity:.5}canvas{display:block;width:var(--full);aspect-ratio:var(--canvas-ratio);background:var(--canvas-bg);outline:none;margin-top:var(--space)}pre{font-size:var(--small);color:var(--muted);max-height:var(--log);overflow:auto;white-space:pre-wrap}a{color:var(--accent)}#status{color:var(--muted)}
-</style>
-<main><header><h1>Ryan's Hardest Game</h1><button id="start" disabled>Loading engine…</button><button id="fullscreen">Fullscreen</button><span id="status" role="status">Preparing game</span></header><canvas id="canvas" width="1920" height="1080" tabindex="0" aria-label="Ryan's Hardest Game, keyboard controlled"></canvas><p>Press any key at the title. <strong>W / S</strong> selects a level; <strong>Enter</strong> plays. <strong>Arrow keys</strong> move and turn; <strong>WASD</strong> pans. <strong>1–9</strong> starts music tracks (they can overlap). <strong>M</strong> toggles music where supported. <strong>Backspace</strong> resets or returns to the title; <strong>Tab</strong> restarts; <strong>Home</strong> returns to the title.</p><details><summary>Runtime log</summary><pre id="log"></pre></details><p><a href="source/runtime-source.tar.gz">Engine source and licenses</a> · <a href="https://github.com/RyannDaGreat/ClarasHardestGame">Project and update instructions</a></p></main>
-<script src="loader.js"></script><script src="runtime/player.js"></script></html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#090c10">
+  <title>Ryan's Hardest Game</title>
+  <link rel="icon" href="icons/play.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<main>
+  <header>
+    <a class="brand" href="./">Ryan’s Hardest Game<span class="edition">THE ORIGINAL · IN YOUR BROWSER</span></a>
+    <nav aria-label="Game links">
+      <a class="icon-button" href="#controls" title="Keyboard controls" aria-label="Keyboard controls"><span class="icon keyboard" aria-hidden="true"></span></a>
+      <a class="icon-button" href="https://github.com/RyannDaGreat/ClarasHardestGame" target="_blank" rel="noopener" title="View on GitHub" aria-label="View source on GitHub"><span class="icon github" aria-hidden="true"></span></a>
+    </nav>
+  </header>
+  <section id="player" aria-label="Game player">
+    <canvas id="canvas" width="1920" height="1080" tabindex="0" aria-label="Ryan’s Hardest Game, keyboard controlled"></canvas>
+    <div id="overlay">
+      <div class="launch-card">
+        <span class="eyebrow">READY FOR A CHALLENGE?</span>
+        <button id="start" disabled aria-label="Play Ryan’s Hardest Game"><span class="icon play" aria-hidden="true"></span><span id="start-label">Loading</span></button>
+        <p id="status" role="status">Preparing game…</p>
+        <progress id="progress" aria-label="Game download progress"></progress>
+        <p id="storage-status">Downloads automatically. Saved here for next time.</p>
+        <p id="storage-warning" role="status" hidden></p>
+        <span class="keyboard-hint"><span class="icon keyboard" aria-hidden="true"></span> Keyboard required</span>
+      </div>
+    </div>
+    <button id="fullscreen" class="icon-button" title="Fullscreen" aria-label="Enter fullscreen"><span class="icon maximize" aria-hidden="true"></span></button>
+  </section>
+  <div class="below-player"><span>Arrows to move. W / S to choose a level. Enter to play.</span><a href="https://github.com/RyannDaGreat/ClarasHardestGame" target="_blank" rel="noopener"><span class="icon github" aria-hidden="true"></span> GitHub <span class="icon arrow" aria-hidden="true"></span></a></div>
+  <details id="controls">
+    <summary><span class="icon keyboard" aria-hidden="true"></span> How to play</summary>
+    <div class="controls-grid">
+      <p><kbd>Any key</kbd> Open the original title menu<br><kbd>W</kbd> <kbd>S</kbd> Choose a level · <kbd>Enter</kbd> Start</p>
+      <p><kbd>↑</kbd> <kbd>↓</kbd> <kbd>←</kbd> <kbd>→</kbd> Move and turn<br><kbd>W</kbd> <kbd>A</kbd> <kbd>S</kbd> <kbd>D</kbd> Pan</p>
+      <p><kbd>1–9</kbd> Music tracks (can overlap)<br><kbd>M</kbd> Toggle music where supported</p>
+      <p><kbd>Tab</kbd> Restart · <kbd>Home</kbd> Title<br><kbd>Backspace</kbd> Reset or return to title</p>
+    </div>
+  </details>
+  <footer><a href="source/runtime-source.tar.gz"><span class="icon code" aria-hidden="true"></span> Engine source &amp; licenses</a><details><summary>Runtime log</summary><pre id="log"></pre></details></footer>
+</main>
+<script src="loader.js"></script>
+<script src="runtime/player.js"></script>
+</body>
+</html>
