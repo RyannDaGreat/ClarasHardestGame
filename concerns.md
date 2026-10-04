@@ -21,3 +21,12 @@
 - Updating configure triggered make's automatic rerun without exported target facts; it detected macOS and could produce an incorrect configuration. Stopped that invocation, exported target facts in the build wrapper, restarted explicit cross configuration. Configure facts must survive make, not just its first invocation.
 - Native 1080p original-player captures show the title and levels. Direct-scene fixtures omit state normally inherited from previous scenes; these are renderer references, not full gameplay certification. Native audio remains unresolved.
 - Flash backup contains visual differences and Runtime.exe embeds a distinct older 28 MB game. Continue targeting the original iCloud file; use recovered assets only where their original identity is established.
+
+## 2026-10-04 — browser integration
+- Exact CPython 2.6.2 now executes its original standard library and bytecode in WASM. Emscripten's explicit function-pointer-cast adaptation is necessary for historical x86 callback signatures.
+- All 43 original player archives compile. Original GLEW resolves through GL4ES; direct GL calls route to its prefixed symbols. Full GLU includes original tessellation, NURBS and mipmaps, rather than incomplete substitutes.
+- The 1080p graphics probe rendered correctly and was visually inspected. This is a component result, not full-game fidelity.
+- Original Linux player produced VLM-reviewed screenshots for all twelve level scenes and actual Up-key movement. Software rendering under QEMU is very slow. Original Windows executable crashes inside Wine/QEMU startup before engine execution, so Windows parity remains unverified.
+- Browser asset harness uses the unchanged SHA-256-verified game plus 17 external virtual files, including recovered power.png. HZR.jpg and root-relative Untitled remain explicitly unavailable; no guessed texture is substituted.
+- Original Intro adds Music and DeathsCam, then transitions to LevelSelect. Any key starts the menu animation; W/S select and Enter begins a level. Normal progression still requires browser verification.
+- CPython without OS threads intentionally omits GIL-state routines. Guard only shader-node lock/unlock statements with WITH_THREAD, preserving all actual node execution and matching CPython's single-thread locking semantics.
