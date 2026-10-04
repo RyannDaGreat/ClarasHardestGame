@@ -38,3 +38,5 @@ It must report `passed: true`: 3,072 exact indexed pixel checks, two contexts, t
 `index-ring.js` is the original diagnostic injection, used only with `PERF_PATCH` against the baseline. `draw-stats.js` is an optional one-frame draw census. Neither is injected during linked-release measurements. `DETACH_LOG=1` records the rejected DOM-log hypothesis; it did not explain the slowdown.
 
 The accumulation experiment is deliberately excluded: the measured native player has zero accumulation bits. See `../graphics/native-accum/README.md`.
+
+After deployment, a fresh browser loaded the real GitHub Pages URL and measured Lv10 at59.64FPS, with ten arrow presses and no page exceptions. The live JavaScript hash exactly matched the linked candidate. `evidence/live-results.json` preserves that independent deployment check.

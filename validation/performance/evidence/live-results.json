@@ -1,0 +1,106 @@
+{
+  "url": "https://ryanndagreat.github.io/ClarasHardestGame/?scene=Lv10",
+  "scene": "Lv10",
+  "gpu": {
+    "vendor": "Google Inc. (Apple)",
+    "renderer": "ANGLE (Apple, ANGLE Metal Renderer: Apple M1 Max, Unspecified Version)"
+  },
+  "renderFPS": 59.64276469065493,
+  "rendered": {
+    "n": 577,
+    "mean": 4.0034662022334455,
+    "p50": 4,
+    "p95": 4.400000095367432,
+    "max": 6.299999952316284
+  },
+  "renderPeriods": {
+    "n": 576,
+    "mean": 16.766493055555557,
+    "p50": 16.600000023841858,
+    "p95": 18.799999952316284,
+    "max": 24.899999976158142
+  },
+  "keyboard": [
+    {
+      "code": "ArrowRight",
+      "eventTime": 19220,
+      "handlerTime": 19220.699999928474,
+      "queueDelay": 0.6999999284744263,
+      "untilNextFrame": 0.10000002384185791,
+      "untilFrameEnd": 4.199999928474426
+    },
+    {
+      "code": "ArrowLeft",
+      "eventTime": 19984.699999928474,
+      "handlerTime": 19984.899999976158,
+      "queueDelay": 0.20000004768371582,
+      "untilNextFrame": 6.200000047683716,
+      "untilFrameEnd": 10.600000023841858
+    },
+    {
+      "code": "ArrowRight",
+      "eventTime": 20749.600000023842,
+      "handlerTime": 20749.799999952316,
+      "queueDelay": 0.19999992847442627,
+      "untilNextFrame": 0.20000004768371582,
+      "untilFrameEnd": 4.799999952316284
+    },
+    {
+      "code": "ArrowLeft",
+      "eventTime": 21514.199999928474,
+      "handlerTime": 21514.399999976158,
+      "queueDelay": 0.20000004768371582,
+      "untilNextFrame": 2.299999952316284,
+      "untilFrameEnd": 6.800000071525574
+    },
+    {
+      "code": "ArrowRight",
+      "eventTime": 22278.199999928474,
+      "handlerTime": 22278.399999976158,
+      "queueDelay": 0.20000004768371582,
+      "untilNextFrame": 4.5,
+      "untilFrameEnd": 8.800000071525574
+    },
+    {
+      "code": "ArrowLeft",
+      "eventTime": 23041.699999928474,
+      "handlerTime": 23045.5,
+      "queueDelay": 3.8000000715255737,
+      "untilNextFrame": 13.199999928474426,
+      "untilFrameEnd": 21
+    },
+    {
+      "code": "ArrowRight",
+      "eventTime": 23808.199999928474,
+      "handlerTime": 23812.5,
+      "queueDelay": 4.300000071525574,
+      "untilNextFrame": 12.5,
+      "untilFrameEnd": 20.90000009536743
+    },
+    {
+      "code": "ArrowLeft",
+      "eventTime": 24579.600000023842,
+      "handlerTime": 24580,
+      "queueDelay": 0.3999999761581421,
+      "untilNextFrame": 12.699999928474426,
+      "untilFrameEnd": 17.09999990463257
+    },
+    {
+      "code": "ArrowRight",
+      "eventTime": 25348.5,
+      "handlerTime": 25349,
+      "queueDelay": 0.5,
+      "untilNextFrame": 8.799999952316284,
+      "untilFrameEnd": 13.399999976158142
+    },
+    {
+      "code": "ArrowLeft",
+      "eventTime": 26114.299999952316,
+      "handlerTime": 26114.600000023842,
+      "queueDelay": 0.30000007152557373,
+      "untilNextFrame": 10.5,
+      "untilFrameEnd": 14.899999976158142
+    }
+  ],
+  "errors": []
+}
