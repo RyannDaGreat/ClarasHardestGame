@@ -1,0 +1,40 @@
+{
+  "name": "Slingshot",
+  "origin": "http://127.0.0.1:54836/web/",
+  "input": "KeyD",
+  "before": {
+    "title": "Slingshot · Reforged",
+    "status": {
+      "ticks": 120,
+      "ships": [
+        {
+          "position": [
+            -76,
+            -58,
+            0
+          ],
+          "name": "OBWalrus.013"
+        }
+      ],
+      "won": false
+    },
+    "width": 1920,
+    "height": 1080
+  },
+  "after": {
+    "ticks": 168,
+    "ships": [
+      {
+        "position": [
+          -12.73077392578125,
+          -58,
+          0
+        ],
+        "name": "OBWalrus.013"
+      }
+    ],
+    "won": false
+  },
+  "errors": [],
+  "scope": "Editor schema, native startup, brief keyboard input and screenshots; not a completed playthrough."
+}

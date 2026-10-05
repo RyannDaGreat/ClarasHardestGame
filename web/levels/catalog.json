@@ -19,5 +19,75 @@
     "difficulty": "Portal puzzle",
     "description": "Connect the route through directional portals and the original movement mechanics.",
     "url": "../reforged/levels/Parallax.json"
+  },
+  {
+    "id": "relay",
+    "name": "Relay",
+    "difficulty": "Portal routing",
+    "description": "Climb three chambers, then discover a precision portal shortcut.",
+    "url": "../reforged/levels/Relay.json"
+  },
+  {
+    "id": "pinwheel",
+    "name": "Pinwheel",
+    "difficulty": "Circular dodging",
+    "description": "Choose your path around a rotating arrangement of hazards.",
+    "url": "../reforged/levels/Pinwheel.json"
+  },
+  {
+    "id": "undertow",
+    "name": "Undertow",
+    "difficulty": "Movement playground",
+    "description": "Read the currents and choose between speed and control.",
+    "url": "../reforged/levels/Undertow.json"
+  },
+  {
+    "id": "ricochet",
+    "name": "Ricochet",
+    "difficulty": "Patrol timing",
+    "description": "Hop between refuges as original ball patrols sweep the routes.",
+    "url": "../reforged/levels/Ricochet.json"
+  },
+  {
+    "id": "switchyard",
+    "name": "Switchyard",
+    "difficulty": "Switch puzzle",
+    "description": "Work the switches and find a route through the gates.",
+    "url": "../reforged/levels/Switchyard.json"
+  },
+  {
+    "id": "slingshot",
+    "name": "Slingshot",
+    "difficulty": "Portal islands",
+    "description": "Hop three laser islands, ride optional boosts, and bend around the last bumper into gold.",
+    "url": "../reforged/levels/Slingshot.json"
+  },
+  {
+    "id": "clockwork",
+    "name": "Clockwork",
+    "difficulty": "Rhythm and cover",
+    "description": "Read repeated volleys and move between safe waiting places.",
+    "url": "../reforged/levels/Clockwork.json"
+  },
+  {
+    "id": "honeycomb",
+    "name": "Honeycomb",
+    "difficulty": "Route choices",
+    "description": "Explore a compact network with several approaches to the finish.",
+    "url": "../reforged/levels/Honeycomb.json"
+  },
+  {
+    "id": "afterburn",
+    "name": "Afterburn",
+    "difficulty": "Speed challenge",
+    "description": "Commit to the fast line or take a more forgiving route.",
+    "url": "../reforged/levels/Afterburn.json"
+  },
+  {
+    "id": "crescendo",
+    "name": "Crescendo",
+    "difficulty": "Mixed challenge",
+    "description": "Bring movement, timing and route reading together for a final challenge.",
+    "url": "../reforged/levels/Crescendo.json"
   }
 ]

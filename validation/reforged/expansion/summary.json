@@ -1,0 +1,135 @@
+{
+  "scope": "Original engine startup, visual review and brief keyboard input; only Switchyard completed.",
+  "levels": [
+    {
+      "name": "Relay",
+      "sha256": "c9c4d71687c72e48420eca3cbc8c19c64906decf727dc2f24b97b10659d46feb",
+      "deterministic": true,
+      "canvas": [
+        1920,
+        1080
+      ],
+      "keyboardDisplacement": 20.971607208251953,
+      "errors": [],
+      "visualReview": "pass",
+      "completePlaythrough": false
+    },
+    {
+      "name": "Pinwheel",
+      "sha256": "7e03e26e0aa110287f6844af35d3c1612e24110a24fc97382876ca16843b0091",
+      "deterministic": true,
+      "canvas": [
+        1920,
+        1080
+      ],
+      "keyboardDisplacement": 19.748918533325195,
+      "errors": [],
+      "visualReview": "pass",
+      "completePlaythrough": false
+    },
+    {
+      "name": "Undertow",
+      "sha256": "11f1191fa8ac8506dd892a081ee5d3f49756a18c3733602114ad158a6f2793b6",
+      "deterministic": true,
+      "canvas": [
+        1920,
+        1080
+      ],
+      "keyboardDisplacement": 126.51557159423828,
+      "errors": [],
+      "visualReview": "pass",
+      "completePlaythrough": false
+    },
+    {
+      "name": "Ricochet",
+      "sha256": "93b4796714b0e55d8e06fc1f75aead32c8f61f346c4d146a5551bc22d8a23b3e",
+      "deterministic": true,
+      "canvas": [
+        1920,
+        1080
+      ],
+      "keyboardDisplacement": 20.639022827148438,
+      "errors": [],
+      "visualReview": "pass",
+      "completePlaythrough": false
+    },
+    {
+      "name": "Switchyard",
+      "sha256": "f45d53bbc134777533a33191443687bdb073b8619867ecf9c8fc2e03944b4c9b",
+      "deterministic": true,
+      "canvas": [
+        1920,
+        1080
+      ],
+      "keyboardDisplacement": 20.14011573791504,
+      "errors": [],
+      "visualReview": "pass",
+      "completePlaythrough": true
+    },
+    {
+      "name": "Slingshot",
+      "sha256": "3e19616cb46113b1dda76684e571430d5c5dc254403b891e6d7dcd3df8af2fb7",
+      "deterministic": true,
+      "canvas": [
+        1920,
+        1080
+      ],
+      "keyboardDisplacement": 63.26922607421875,
+      "errors": [],
+      "visualReview": "pass",
+      "completePlaythrough": false
+    },
+    {
+      "name": "Clockwork",
+      "sha256": "a833320e9198cc7df0ddc146ae220027eb84532013abe73ccb7f144422242f95",
+      "deterministic": true,
+      "canvas": [
+        1920,
+        1080
+      ],
+      "keyboardDisplacement": 20.97161102294922,
+      "errors": [],
+      "visualReview": "pass",
+      "completePlaythrough": false
+    },
+    {
+      "name": "Honeycomb",
+      "sha256": "fed1badf76812cd67a85a7cd2f8b066cd6dd90b8b0ef0077e3dafe5264a2c390",
+      "deterministic": true,
+      "canvas": [
+        1920,
+        1080
+      ],
+      "keyboardDisplacement": 20.14011573791504,
+      "errors": [],
+      "visualReview": "pass",
+      "completePlaythrough": false
+    },
+    {
+      "name": "Afterburn",
+      "sha256": "1999e4cfdefd240e64f78d849d93f50e31130d1132121f39efbc4a3124b31958",
+      "deterministic": true,
+      "canvas": [
+        1920,
+        1080
+      ],
+      "keyboardDisplacement": 66.8261022567749,
+      "errors": [],
+      "visualReview": "pass",
+      "completePlaythrough": false
+    },
+    {
+      "name": "Crescendo",
+      "sha256": "2e3f117b58a4fb4c8d81aee4448e85be1bc4b273c471270077585bc5477e0658",
+      "deterministic": true,
+      "canvas": [
+        1920,
+        1080
+      ],
+      "keyboardDisplacement": 19.748916625976562,
+      "errors": [],
+      "visualReview": "pass",
+      "completePlaythrough": false
+    }
+  ]
+}

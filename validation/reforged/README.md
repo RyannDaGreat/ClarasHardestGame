@@ -15,7 +15,9 @@ Install `npm ci --prefix validation`, build the candidate runtime and static ass
 | `coverage.mjs` | Every audited gameplay root in six late scenes can be selected, duplicated and undone; child properties/animation available |
 | `late-scenes.mjs` | Six original-engine reconstructions with explicit properties and animation; captures VLM-reviewed |
 | `themes.mjs` | Fifteen themes, cross-tab synchronization, reload persistence and layout |
-| `catalog-smoke.mjs` | Three named playable routes, visible previews, edit handoff; set `SITE_URL` to check the published site |
+| `catalog-smoke.mjs` | All catalogued playable routes, visible previews, edit handoff; set `SITE_URL` to check the published site; `SKIP_GAMES=1` checks catalog/editor only |
+| `expansion-smoke.mjs` | Editor validation, original-engine 1080p startup and real keyboard motion; `LEVEL_NAMES` selects names, `SITE_URL` selects deployed site |
+| `expansion-mechanics.mjs` | Read-only telemetry for spinning rods and rebounding patrols; real keyboard Switchyard route opens all three gates and reaches finish |
 | `switchback-route.mjs` | Real keyboard victory, four lanes/eight teeth/three original patrols |
 | `crossfire-route.mjs` | Real keyboard victory, three firing lanes/six original turrets, shelter pauses |
 | `parallax-route.mjs` | Real keyboard victory through three original portal transfers |

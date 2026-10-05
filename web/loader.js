@@ -143,8 +143,11 @@ async function prepareGame() {
       reforgedLevel = JSON.parse(saved);
     } else {
       const name = mode === 'challenge' ? 'Gauntlet' : mode;
-      if (!['Gauntlet', 'Crossfire', 'Switchback', 'Parallax'].includes(name)) throw new Error('Unknown bundled Reforged level');
-      const response = await fetch('reforged/levels/' + name + '.json');
+      const catalogResponse = await fetch('levels/catalog.json');
+      if (!catalogResponse.ok) throw new Error(`Level catalog: HTTP ${catalogResponse.status}`);
+      const entry = (await catalogResponse.json()).find(level => level.name === name);
+      if (!entry && name !== 'Gauntlet') throw new Error('Unknown bundled Reforged level');
+      const response = await fetch(entry ? 'levels/' + entry.url : 'reforged/levels/Gauntlet.json');
       if (!response.ok) throw new Error(`Challenge: HTTP ${response.status}`);
       reforgedLevel = await response.json();
     }

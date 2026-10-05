@@ -10,7 +10,7 @@ Each visit refreshes the small asset manifest, so publishing an edited `.blend` 
 
 ## Reforged level workshop
 
-[Choose a new level](https://ryanndagreat.github.io/ClarasHardestGame/levels/) or [open the editor](https://ryanndagreat.github.io/ClarasHardestGame/reforged/). Switchback, Crossfire and Parallax each have a verified real-key winning route. The workshop supports adjustable grids, textured walls and carving, component placement, portal and switch links, properties and existing animation keys, undo, JSON import/export and original-engine playtesting. Fifteen shared themes have restrained corners and chamfered primary controls.
+[Choose among thirteen levels](https://ryanndagreat.github.io/ClarasHardestGame/levels/) or [open the editor](https://ryanndagreat.github.io/ClarasHardestGame/reforged/). Ten new designs explore portals, rotating hazards, currents, rebounding balls, switches and route choices. Switchback, Crossfire, Parallax and Switchyard have verified real-key winning routes; the other new levels have startup, visual and movement checks. The workshop supports adjustable grids, textured walls and carving, component placement, portal and switch links, properties and existing animation keys, undo, JSON import/export and original-engine playtesting. Fifteen shared themes have restrained corners and chamfered primary controls.
 
 Use **Save to levels** to add a level to this browser’s catalog; export JSON to back it up or share it. Local saves do not upload to a community server. The original game remains available from navigation. See [construction research](research/reforged/README.md), [verification](validation/reforged/README.md), and [library regeneration](tooling/reforged/README.md).
 

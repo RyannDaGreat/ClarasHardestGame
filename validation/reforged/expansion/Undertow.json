@@ -1,0 +1,40 @@
+{
+  "name": "Undertow",
+  "origin": "http://127.0.0.1:54227/web/",
+  "input": "KeyD",
+  "before": {
+    "title": "Undertow · Reforged",
+    "status": {
+      "ticks": 120,
+      "ships": [
+        {
+          "position": [
+            -78,
+            -70,
+            0
+          ],
+          "name": "OBWalrus.013"
+        }
+      ],
+      "won": false
+    },
+    "width": 1920,
+    "height": 1080
+  },
+  "after": {
+    "ticks": 168,
+    "ships": [
+      {
+        "position": [
+          48.51557159423828,
+          -70,
+          0
+        ],
+        "name": "OBWalrus.013"
+      }
+    ],
+    "won": false
+  },
+  "errors": [],
+  "scope": "Editor schema, native startup, brief keyboard input and screenshots; not a completed playthrough."
+}
