@@ -22,6 +22,10 @@ for relative, patch_name in (
                    cwd=GL4ES, check=True)
 
 PATCHES = [
+    ("source/gameengine/Ketsji/KX_KetsjiEngine.cpp",
+     "\t\t\t\tscene->LogicEndFrame();",
+     "#ifdef __EMSCRIPTEN__\n\t\t\t\textern void browserObserveContacts(KX_Scene *scene);\n\t\t\t\tbrowserObserveContacts(scene);\n#endif\n\t\t\t\tscene->LogicEndFrame();",
+     "Observe optional authoring collision sensors before original end-frame cleanup"),
     ("intern/SoundSystem/SND_DependKludge.h",
      "#elif defined (__linux__) || (__FreeBSD__) || defined(__APPLE__) || defined(__sun)",
      "#elif defined (__linux__) || (__FreeBSD__) || defined(__APPLE__) || defined(__sun) || defined(__EMSCRIPTEN__)",

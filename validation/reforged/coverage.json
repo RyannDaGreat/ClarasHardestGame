@@ -1,0 +1,893 @@
+{
+  "scope": "Original-template gameplay roots: GUI inspection, duplicate and undo; see README for independent behavior checks and exclusions.",
+  "scenes": [
+    {
+      "scene": "Lv7",
+      "roots": 52,
+      "excluded": [
+        "OBArial.013",
+        "OBBounds.004",
+        "OBLamp.400",
+        "OBLamp.401",
+        "OBLamp.402",
+        "OBLamp.403",
+        "OBLamp.404",
+        "OBLamp.405",
+        "OBLamp.406",
+        "OBLamp.407",
+        "OBLamp.408",
+        "OBLamp.409",
+        "OBLamp.410",
+        "OBLamp.411",
+        "OBLamp.412",
+        "OBLamp.413",
+        "OBLamp.414",
+        "OBLamp.415",
+        "OBMainCam.006",
+        "OBPanPivot.006"
+      ],
+      "checked": [
+        {
+          "id": "OBBludgerator xD.015",
+          "members": 1
+        },
+        {
+          "id": "OBBludgerator xD.021",
+          "members": 1
+        },
+        {
+          "id": "OBCylinder.006",
+          "members": 1
+        },
+        {
+          "id": "OBDown Push.015",
+          "members": 1
+        },
+        {
+          "id": "OBDown Push.016",
+          "members": 1
+        },
+        {
+          "id": "OBEmpty.012",
+          "members": 9
+        },
+        {
+          "id": "OBFinish.005",
+          "members": 1
+        },
+        {
+          "id": "OBForcefield.006",
+          "members": 6
+        },
+        {
+          "id": "OBForcefield.007",
+          "members": 5
+        },
+        {
+          "id": "OBForcefield.008",
+          "members": 7
+        },
+        {
+          "id": "OBFury D.172",
+          "members": 1
+        },
+        {
+          "id": "OBFury D.105",
+          "members": 1
+        },
+        {
+          "id": "OBFury D.106",
+          "members": 1
+        },
+        {
+          "id": "OBFury D.173",
+          "members": 1
+        },
+        {
+          "id": "OBFury D.174",
+          "members": 1
+        },
+        {
+          "id": "OBFury D.175",
+          "members": 1
+        },
+        {
+          "id": "OBFury D.110",
+          "members": 1
+        },
+        {
+          "id": "OBGrid.019",
+          "members": 1
+        },
+        {
+          "id": "OBPillar.011",
+          "members": 1
+        },
+        {
+          "id": "OBPillar.012",
+          "members": 1
+        },
+        {
+          "id": "OBPillar.014",
+          "members": 1
+        },
+        {
+          "id": "OBPlane.031",
+          "members": 1
+        },
+        {
+          "id": "OBPlane.050",
+          "members": 1
+        },
+        {
+          "id": "OBPortal1.022",
+          "members": 3
+        },
+        {
+          "id": "OBPortal1.024",
+          "members": 3
+        },
+        {
+          "id": "OBPortal1.026",
+          "members": 3
+        },
+        {
+          "id": "OBPortal2.022",
+          "members": 3
+        },
+        {
+          "id": "OBPortal2.024",
+          "members": 3
+        },
+        {
+          "id": "OBPortal2.026",
+          "members": 3
+        },
+        {
+          "id": "OBSpawnPoint.007",
+          "members": 1
+        },
+        {
+          "id": "OBUp Push.005",
+          "members": 1
+        },
+        {
+          "id": "OBUp Push.006",
+          "members": 1
+        }
+      ],
+      "supported": 32,
+      "total": 32
+    },
+    {
+      "scene": "Lv8",
+      "roots": 50,
+      "excluded": [
+        "OBPanPivot.003",
+        "OBArial.010",
+        "OBLamp.416",
+        "OBLamp.417",
+        "OBLamp.418",
+        "OBLamp.419",
+        "OBLamp.420",
+        "OBLamp.421",
+        "OBLamp.422",
+        "OBLamp.423",
+        "OBLamp.424",
+        "OBLamp.425",
+        "OBLamp.426",
+        "OBLamp.427",
+        "OBLamp.428",
+        "OBLamp.429",
+        "OBLamp.430",
+        "OBLamp.431",
+        "OBMainCam.007"
+      ],
+      "checked": [
+        {
+          "id": "OBPlane.073",
+          "members": 1
+        },
+        {
+          "id": "OBPortal2.030",
+          "members": 3
+        },
+        {
+          "id": "OBPortal1.030",
+          "members": 3
+        },
+        {
+          "id": "OBSpawnPoint.006",
+          "members": 1
+        },
+        {
+          "id": "OBSplinters.010",
+          "members": 4
+        },
+        {
+          "id": "OBCube.180",
+          "members": 1
+        },
+        {
+          "id": "OBSplinters.008",
+          "members": 4
+        },
+        {
+          "id": "OBFury D.189",
+          "members": 1
+        },
+        {
+          "id": "OBFury D.188",
+          "members": 1
+        },
+        {
+          "id": "OBFury D.187",
+          "members": 1
+        },
+        {
+          "id": "OBFury D.186",
+          "members": 1
+        },
+        {
+          "id": "OBFury D.185",
+          "members": 1
+        },
+        {
+          "id": "OBFury D.180",
+          "members": 1
+        },
+        {
+          "id": "OBDot.189",
+          "members": 1
+        },
+        {
+          "id": "OBRed Dot.109",
+          "members": 1
+        },
+        {
+          "id": "OBFinish.008",
+          "members": 1
+        },
+        {
+          "id": "OBLaserRack.008",
+          "members": 13
+        },
+        {
+          "id": "OBPlane.057",
+          "members": 1
+        },
+        {
+          "id": "OBDown Push.022",
+          "members": 1
+        },
+        {
+          "id": "OBDown Push.021",
+          "members": 1
+        },
+        {
+          "id": "OBForcefield.011",
+          "members": 5
+        },
+        {
+          "id": "OBForcefield.010",
+          "members": 5
+        },
+        {
+          "id": "OBForcefield.009",
+          "members": 6
+        },
+        {
+          "id": "OBSplinters.006",
+          "members": 4
+        },
+        {
+          "id": "OBSplinters.004",
+          "members": 4
+        },
+        {
+          "id": "OBSplinters",
+          "members": 4
+        },
+        {
+          "id": "OBGrid.020",
+          "members": 1
+        },
+        {
+          "id": "OBKiller.006",
+          "members": 4
+        },
+        {
+          "id": "OBDot.188",
+          "members": 1
+        },
+        {
+          "id": "OBPortal2.010",
+          "members": 3
+        },
+        {
+          "id": "OBPortal1.010",
+          "members": 3
+        }
+      ],
+      "supported": 31,
+      "total": 31
+    },
+    {
+      "scene": "Lv9",
+      "roots": 50,
+      "excluded": [
+        "OBBounds.007",
+        "OBPanPivot.008",
+        "OBArial.015",
+        "OBLamp.448",
+        "OBLamp.449",
+        "OBLamp.450",
+        "OBLamp.451",
+        "OBLamp.452",
+        "OBLamp.453",
+        "OBLamp.454",
+        "OBLamp.455",
+        "OBLamp.456",
+        "OBLamp.457",
+        "OBLamp.458",
+        "OBLamp.459",
+        "OBLamp.460",
+        "OBLamp.461",
+        "OBLamp.462",
+        "OBLamp.463",
+        "OBMainCam.009"
+      ],
+      "checked": [
+        {
+          "id": "OBDown Push.024",
+          "members": 1
+        },
+        {
+          "id": "OBDown Push.023",
+          "members": 1
+        },
+        {
+          "id": "OBPlane.066",
+          "members": 1
+        },
+        {
+          "id": "OBFury D.204",
+          "members": 1
+        },
+        {
+          "id": "OBFury D.203",
+          "members": 1
+        },
+        {
+          "id": "OBForcefield.017",
+          "members": 8
+        },
+        {
+          "id": "OBPlane.065",
+          "members": 1
+        },
+        {
+          "id": "OBDot.194",
+          "members": 1
+        },
+        {
+          "id": "OBDot.193",
+          "members": 1
+        },
+        {
+          "id": "OBFury D.202",
+          "members": 1
+        },
+        {
+          "id": "OBFury D.201",
+          "members": 1
+        },
+        {
+          "id": "OBFury D.200",
+          "members": 1
+        },
+        {
+          "id": "OBFinish.012",
+          "members": 1
+        },
+        {
+          "id": "OBKiller.013",
+          "members": 4
+        },
+        {
+          "id": "OBKiller.012",
+          "members": 4
+        },
+        {
+          "id": "OBKiller.011",
+          "members": 4
+        },
+        {
+          "id": "OBKiller.010",
+          "members": 4
+        },
+        {
+          "id": "OBKiller.009",
+          "members": 4
+        },
+        {
+          "id": "OBSplinters.022",
+          "members": 4
+        },
+        {
+          "id": "OBGrid.022",
+          "members": 1
+        },
+        {
+          "id": "OBKiller.008",
+          "members": 4
+        },
+        {
+          "id": "OBDown Push.028",
+          "members": 1
+        },
+        {
+          "id": "OBForcefield.016",
+          "members": 9
+        },
+        {
+          "id": "OBDot.192",
+          "members": 1
+        },
+        {
+          "id": "OBPortal2.032",
+          "members": 3
+        },
+        {
+          "id": "OBPortal1.032",
+          "members": 3
+        },
+        {
+          "id": "OBLaserRack.012",
+          "members": 10
+        },
+        {
+          "id": "OBSpawnPoint.008",
+          "members": 1
+        },
+        {
+          "id": "OBRed Dot.112",
+          "members": 1
+        },
+        {
+          "id": "OBFury D.199",
+          "members": 1
+        }
+      ],
+      "supported": 30,
+      "total": 30
+    },
+    {
+      "scene": "Lv10",
+      "roots": 57,
+      "excluded": [
+        "OBSphere.001",
+        "OBLamp.518",
+        "OBLamp.519",
+        "OBLamp.520",
+        "OBBounds.009",
+        "OBPanPivot.011",
+        "OBArial.018",
+        "OBLamp.521",
+        "OBLamp.522",
+        "OBLamp.523",
+        "OBLamp.524",
+        "OBLamp.525",
+        "OBLamp.526",
+        "OBLamp.527",
+        "OBLamp.528",
+        "OBLamp.529",
+        "OBLamp.530",
+        "OBLamp.531",
+        "OBLamp.532",
+        "OBLamp.533",
+        "OBLamp.534",
+        "OBLamp.535",
+        "OBLamp.536",
+        "OBMainCam.012"
+      ],
+      "checked": [
+        {
+          "id": "OBPillar.029",
+          "members": 2
+        },
+        {
+          "id": "OBPillar.028",
+          "members": 2
+        },
+        {
+          "id": "OBRed Dot.132",
+          "members": 1
+        },
+        {
+          "id": "OBRed Dot.131",
+          "members": 1
+        },
+        {
+          "id": "OBRed Dot.130",
+          "members": 1
+        },
+        {
+          "id": "OBForcefield.019",
+          "members": 4
+        },
+        {
+          "id": "OBFinish.016",
+          "members": 1
+        },
+        {
+          "id": "OBKiller.025",
+          "members": 4
+        },
+        {
+          "id": "OBForcefield.018",
+          "members": 6
+        },
+        {
+          "id": "OBPlane.102",
+          "members": 1
+        },
+        {
+          "id": "OBPlane.101",
+          "members": 1
+        },
+        {
+          "id": "OBPlane.100",
+          "members": 1
+        },
+        {
+          "id": "OBPlane.012",
+          "members": 1
+        },
+        {
+          "id": "OBPortal1.042",
+          "members": 3
+        },
+        {
+          "id": "OBPortal2.042",
+          "members": 3
+        },
+        {
+          "id": "OBPortal2.044",
+          "members": 3
+        },
+        {
+          "id": "OBPortal1.044",
+          "members": 3
+        },
+        {
+          "id": "OBPortal1.046",
+          "members": 3
+        },
+        {
+          "id": "OBPortal2.046",
+          "members": 3
+        },
+        {
+          "id": "OBKiller.020",
+          "members": 4
+        },
+        {
+          "id": "OBKiller.021",
+          "members": 4
+        },
+        {
+          "id": "OBKiller.022",
+          "members": 4
+        },
+        {
+          "id": "OBKiller.023",
+          "members": 4
+        },
+        {
+          "id": "OBIcey.009",
+          "members": 1
+        },
+        {
+          "id": "OBIcey.010",
+          "members": 1
+        },
+        {
+          "id": "OBIcey.011",
+          "members": 1
+        },
+        {
+          "id": "OBSplinters.018",
+          "members": 4
+        },
+        {
+          "id": "OBGrid.014",
+          "members": 1
+        },
+        {
+          "id": "OBKiller.024",
+          "members": 4
+        },
+        {
+          "id": "OBDot.208",
+          "members": 1
+        },
+        {
+          "id": "OBSpawnPoint.011",
+          "members": 1
+        },
+        {
+          "id": "OBRed Dot.129",
+          "members": 1
+        },
+        {
+          "id": "OBFury D.225",
+          "members": 1
+        }
+      ],
+      "supported": 33,
+      "total": 33
+    },
+    {
+      "scene": "Lv1A",
+      "roots": 38,
+      "excluded": [
+        "OBBounds.005",
+        "OBPanPivot.007",
+        "OBArial.014",
+        "OBLamp.464",
+        "OBLamp.465",
+        "OBLamp.466",
+        "OBLamp.467",
+        "OBLamp.468",
+        "OBLamp.469",
+        "OBLamp.470",
+        "OBLamp.471",
+        "OBLamp.472",
+        "OBLamp.473",
+        "OBLamp.474",
+        "OBLamp.475",
+        "OBLamp.476",
+        "OBLamp.477",
+        "OBLamp.478",
+        "OBLamp.479",
+        "OBMainCam.008"
+      ],
+      "checked": [
+        {
+          "id": "OBFinish.010",
+          "members": 1
+        },
+        {
+          "id": "OBUp Push.012",
+          "members": 1
+        },
+        {
+          "id": "OBUp Push.011",
+          "members": 1
+        },
+        {
+          "id": "OBFury D.210",
+          "members": 1
+        },
+        {
+          "id": "OBFury D.209",
+          "members": 1
+        },
+        {
+          "id": "OBFury D.208",
+          "members": 1
+        },
+        {
+          "id": "OBFury D.207",
+          "members": 1
+        },
+        {
+          "id": "OBFury D.206",
+          "members": 1
+        },
+        {
+          "id": "OBDot.203",
+          "members": 1
+        },
+        {
+          "id": "OBDot.202",
+          "members": 1
+        },
+        {
+          "id": "OBDot.201",
+          "members": 1
+        },
+        {
+          "id": "OBDot.200",
+          "members": 1
+        },
+        {
+          "id": "OBDot.199",
+          "members": 1
+        },
+        {
+          "id": "OBDot.198",
+          "members": 1
+        },
+        {
+          "id": "OBDot.197",
+          "members": 1
+        },
+        {
+          "id": "OBDot.196",
+          "members": 1
+        },
+        {
+          "id": "OBGrid.012",
+          "members": 1
+        },
+        {
+          "id": "OBSpawnPoint.003",
+          "members": 1
+        }
+      ],
+      "supported": 18,
+      "total": 18
+    },
+    {
+      "scene": "Lv2A",
+      "roots": 51,
+      "excluded": [
+        "OBBounds.006",
+        "OBPanPivot.009",
+        "OBArial.016",
+        "OBLamp.480",
+        "OBLamp.481",
+        "OBLamp.482",
+        "OBLamp.483",
+        "OBLamp.484",
+        "OBLamp.485",
+        "OBLamp.486",
+        "OBLamp.487",
+        "OBLamp.488",
+        "OBLamp.489",
+        "OBLamp.490",
+        "OBLamp.491",
+        "OBLamp.492",
+        "OBLamp.493",
+        "OBLamp.494",
+        "OBLamp.495",
+        "OBMainCam.010"
+      ],
+      "checked": [
+        {
+          "id": "OBFury D.223",
+          "members": 1
+        },
+        {
+          "id": "OBFury D.222",
+          "members": 1
+        },
+        {
+          "id": "OBFury D.221",
+          "members": 1
+        },
+        {
+          "id": "OBFury D.220",
+          "members": 1
+        },
+        {
+          "id": "OBFury D.219",
+          "members": 1
+        },
+        {
+          "id": "OBFury D.218",
+          "members": 1
+        },
+        {
+          "id": "OBFury D.217",
+          "members": 1
+        },
+        {
+          "id": "OBFury D.216",
+          "members": 1
+        },
+        {
+          "id": "OBFury D.215",
+          "members": 1
+        },
+        {
+          "id": "OBFury D.213",
+          "members": 1
+        },
+        {
+          "id": "OBFury D.212",
+          "members": 1
+        },
+        {
+          "id": "OBDot.206",
+          "members": 1
+        },
+        {
+          "id": "OBDot.205",
+          "members": 1
+        },
+        {
+          "id": "OBLaserRack.014",
+          "members": 3
+        },
+        {
+          "id": "OBRed Dot.127",
+          "members": 1
+        },
+        {
+          "id": "OBRed Dot.126",
+          "members": 1
+        },
+        {
+          "id": "OBRed Dot.125",
+          "members": 1
+        },
+        {
+          "id": "OBRed Dot.124",
+          "members": 1
+        },
+        {
+          "id": "OBRed Dot.123",
+          "members": 1
+        },
+        {
+          "id": "OBRed Dot.122",
+          "members": 1
+        },
+        {
+          "id": "OBRed Dot.121",
+          "members": 1
+        },
+        {
+          "id": "OBRed Dot.120",
+          "members": 1
+        },
+        {
+          "id": "OBRed Dot.119",
+          "members": 1
+        },
+        {
+          "id": "OBForcefield.014",
+          "members": 5
+        },
+        {
+          "id": "OBRed Dot.118",
+          "members": 1
+        },
+        {
+          "id": "OBLaserRack.013",
+          "members": 3
+        },
+        {
+          "id": "OBSplinters.014",
+          "members": 4
+        },
+        {
+          "id": "OBGrid.021",
+          "members": 1
+        },
+        {
+          "id": "OBDot.204",
+          "members": 1
+        },
+        {
+          "id": "OBSpawnPoint.009",
+          "members": 1
+        },
+        {
+          "id": "OBFury D.211",
+          "members": 1
+        }
+      ],
+      "supported": 31,
+      "total": 31
+    }
+  ],
+  "placement": {
+    "portalChildren": 2,
+    "active": true
+  },
+  "errors": []
+}

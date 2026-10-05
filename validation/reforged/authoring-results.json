@@ -1,0 +1,43 @@
+{
+  "intact": {
+    "ticks": 120,
+    "ships": [
+      {
+        "position": [
+          0.000001894875822472386,
+          -6.1428399085998535,
+          -0.15562507510185242
+        ],
+        "name": "OBWalrus.013"
+      }
+    ],
+    "won": false
+  },
+  "removedFaces": [
+    15,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    29
+  ],
+  "carved": {
+    "ticks": 124,
+    "ships": [
+      {
+        "position": [
+          0,
+          79.71996307373047,
+          0
+        ],
+        "name": "OBWalrus.013"
+      }
+    ],
+    "won": true
+  },
+  "savedReload": true,
+  "imported": true,
+  "errors": []
+}

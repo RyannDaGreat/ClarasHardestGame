@@ -1,0 +1,23 @@
+[
+  {
+    "id": "switchback",
+    "name": "Switchback",
+    "difficulty": "Slalom maze",
+    "description": "Alternating passages and patrolling hazards reward careful changes of direction.",
+    "url": "../reforged/levels/Switchback.json"
+  },
+  {
+    "id": "crossfire",
+    "name": "Crossfire",
+    "difficulty": "Turret timing",
+    "description": "Read the firing lanes, find cover, and choose your moment to cross.",
+    "url": "../reforged/levels/Crossfire.json"
+  },
+  {
+    "id": "parallax",
+    "name": "Parallax",
+    "difficulty": "Portal puzzle",
+    "description": "Connect the route through directional portals and the original movement mechanics.",
+    "url": "../reforged/levels/Parallax.json"
+  }
+]

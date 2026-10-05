@@ -1,0 +1,639 @@
+{
+  "level": "Crossfire",
+  "input": "Browser keyboard only; no engine writes",
+  "errors": [],
+  "result": {
+    "won": true,
+    "respawns": 0,
+    "status": {
+      "ticks": 533,
+      "ships": [
+        {
+          "position": [
+            75.24747467041016,
+            0,
+            0
+          ],
+          "name": "OBWalrus.013"
+        }
+      ],
+      "won": true
+    }
+  },
+  "trace": [
+    {
+      "poll": 0,
+      "key": null,
+      "status": {
+        "ticks": 270,
+        "ships": [
+          {
+            "position": [
+              -82,
+              0,
+              0
+            ],
+            "name": "OBWalrus.013"
+          }
+        ],
+        "won": false
+      }
+    },
+    {
+      "poll": 1,
+      "key": "d",
+      "status": {
+        "ticks": 276,
+        "ships": [
+          {
+            "position": [
+              -79.00623321533203,
+              0,
+              0
+            ],
+            "name": "OBWalrus.013"
+          }
+        ],
+        "won": false
+      }
+    },
+    {
+      "poll": 2,
+      "key": "d",
+      "status": {
+        "ticks": 282,
+        "ships": [
+          {
+            "position": [
+              -74.57856750488281,
+              0,
+              0
+            ],
+            "name": "OBWalrus.013"
+          }
+        ],
+        "won": false
+      }
+    },
+    {
+      "poll": 3,
+      "key": "d",
+      "status": {
+        "ticks": 288,
+        "ships": [
+          {
+            "position": [
+              -69.67332458496094,
+              0,
+              0
+            ],
+            "name": "OBWalrus.013"
+          }
+        ],
+        "won": false
+      }
+    },
+    {
+      "poll": 4,
+      "key": "d",
+      "status": {
+        "ticks": 294,
+        "ships": [
+          {
+            "position": [
+              -64.52873229980469,
+              0,
+              0
+            ],
+            "name": "OBWalrus.013"
+          }
+        ],
+        "won": false
+      }
+    },
+    {
+      "poll": 5,
+      "key": "d",
+      "status": {
+        "ticks": 300,
+        "ships": [
+          {
+            "position": [
+              -59.264198303222656,
+              0,
+              0
+            ],
+            "name": "OBWalrus.013"
+          }
+        ],
+        "won": false
+      }
+    },
+    {
+      "poll": 6,
+      "key": "d",
+      "status": {
+        "ticks": 306,
+        "ships": [
+          {
+            "position": [
+              -53.939537048339844,
+              0,
+              0
+            ],
+            "name": "OBWalrus.013"
+          }
+        ],
+        "won": false
+      }
+    },
+    {
+      "poll": 7,
+      "key": "d",
+      "status": {
+        "ticks": 312,
+        "ships": [
+          {
+            "position": [
+              -48.58473587036133,
+              0,
+              0
+            ],
+            "name": "OBWalrus.013"
+          }
+        ],
+        "won": false
+      }
+    },
+    {
+      "poll": 8,
+      "key": "d",
+      "status": {
+        "ticks": 318,
+        "ships": [
+          {
+            "position": [
+              -43.21482849121094,
+              0,
+              0
+            ],
+            "name": "OBWalrus.013"
+          }
+        ],
+        "won": false
+      }
+    },
+    {
+      "poll": 9,
+      "key": "d",
+      "status": {
+        "ticks": 324,
+        "ships": [
+          {
+            "position": [
+              -37.83736801147461,
+              0,
+              0
+            ],
+            "name": "OBWalrus.013"
+          }
+        ],
+        "won": false
+      }
+    },
+    {
+      "poll": 10,
+      "key": "d",
+      "status": {
+        "ticks": 330,
+        "ships": [
+          {
+            "position": [
+              -32.456111907958984,
+              0,
+              0
+            ],
+            "name": "OBWalrus.013"
+          }
+        ],
+        "won": false
+      }
+    },
+    {
+      "poll": 11,
+      "key": "d",
+      "status": {
+        "ticks": 336,
+        "ships": [
+          {
+            "position": [
+              -27.07295799255371,
+              0,
+              0
+            ],
+            "name": "OBWalrus.013"
+          }
+        ],
+        "won": false
+      }
+    },
+    {
+      "poll": 12,
+      "key": "d",
+      "status": {
+        "ticks": 342,
+        "ships": [
+          {
+            "position": [
+              -20.79143714904785,
+              0,
+              0
+            ],
+            "name": "OBWalrus.013"
+          }
+        ],
+        "won": false
+      }
+    },
+    {
+      "action": "Wait in shelter",
+      "bay": 0,
+      "durationMs": 750,
+      "status": {
+        "ticks": 342,
+        "ships": [
+          {
+            "position": [
+              -20.79143714904785,
+              0,
+              0
+            ],
+            "name": "OBWalrus.013"
+          }
+        ],
+        "won": false
+      }
+    },
+    {
+      "poll": 13,
+      "key": null,
+      "status": {
+        "ticks": 384,
+        "ships": [
+          {
+            "position": [
+              -15.608288764953613,
+              0,
+              0
+            ],
+            "name": "OBWalrus.013"
+          }
+        ],
+        "won": false
+      }
+    },
+    {
+      "poll": 14,
+      "key": "d",
+      "status": {
+        "ticks": 390,
+        "ships": [
+          {
+            "position": [
+              -12.601149559020996,
+              0,
+              0
+            ],
+            "name": "OBWalrus.013"
+          }
+        ],
+        "won": false
+      }
+    },
+    {
+      "poll": 15,
+      "key": "d",
+      "status": {
+        "ticks": 396,
+        "ships": [
+          {
+            "position": [
+              -8.168092727661133,
+              0,
+              0
+            ],
+            "name": "OBWalrus.013"
+          }
+        ],
+        "won": false
+      }
+    },
+    {
+      "poll": 16,
+      "key": "d",
+      "status": {
+        "ticks": 402,
+        "ships": [
+          {
+            "position": [
+              -3.2601592540740967,
+              0,
+              0
+            ],
+            "name": "OBWalrus.013"
+          }
+        ],
+        "won": false
+      }
+    },
+    {
+      "poll": 17,
+      "key": "d",
+      "status": {
+        "ticks": 408,
+        "ships": [
+          {
+            "position": [
+              1.885776162147522,
+              0,
+              0
+            ],
+            "name": "OBWalrus.013"
+          }
+        ],
+        "won": false
+      }
+    },
+    {
+      "poll": 18,
+      "key": "d",
+      "status": {
+        "ticks": 414,
+        "ships": [
+          {
+            "position": [
+              8.035409927368164,
+              0,
+              0
+            ],
+            "name": "OBWalrus.013"
+          }
+        ],
+        "won": false
+      }
+    },
+    {
+      "poll": 19,
+      "key": "d",
+      "status": {
+        "ticks": 420,
+        "ships": [
+          {
+            "position": [
+              13.366944313049316,
+              0,
+              0
+            ],
+            "name": "OBWalrus.013"
+          }
+        ],
+        "won": false
+      }
+    },
+    {
+      "poll": 20,
+      "key": "d",
+      "status": {
+        "ticks": 426,
+        "ships": [
+          {
+            "position": [
+              18.72517967224121,
+              0,
+              0
+            ],
+            "name": "OBWalrus.013"
+          }
+        ],
+        "won": false
+      }
+    },
+    {
+      "poll": 21,
+      "key": "d",
+      "status": {
+        "ticks": 432,
+        "ships": [
+          {
+            "position": [
+              24.0968017578125,
+              0,
+              0
+            ],
+            "name": "OBWalrus.013"
+          }
+        ],
+        "won": false
+      }
+    },
+    {
+      "action": "Wait in shelter",
+      "bay": 1,
+      "durationMs": 750,
+      "status": {
+        "ticks": 432,
+        "ships": [
+          {
+            "position": [
+              24.0968017578125,
+              0,
+              0
+            ],
+            "name": "OBWalrus.013"
+          }
+        ],
+        "won": false
+      }
+    },
+    {
+      "poll": 22,
+      "key": null,
+      "status": {
+        "ticks": 474,
+        "ships": [
+          {
+            "position": [
+              29.261133193969727,
+              0,
+              0
+            ],
+            "name": "OBWalrus.013"
+          }
+        ],
+        "won": false
+      }
+    },
+    {
+      "poll": 23,
+      "key": "d",
+      "status": {
+        "ticks": 480,
+        "ships": [
+          {
+            "position": [
+              30.36929702758789,
+              0,
+              0
+            ],
+            "name": "OBWalrus.013"
+          }
+        ],
+        "won": false
+      }
+    },
+    {
+      "poll": 24,
+      "key": "d",
+      "status": {
+        "ticks": 486,
+        "ships": [
+          {
+            "position": [
+              34.40959548950195,
+              0,
+              0
+            ],
+            "name": "OBWalrus.013"
+          }
+        ],
+        "won": false
+      }
+    },
+    {
+      "poll": 25,
+      "key": "d",
+      "status": {
+        "ticks": 492,
+        "ships": [
+          {
+            "position": [
+              39.12067413330078,
+              0,
+              0
+            ],
+            "name": "OBWalrus.013"
+          }
+        ],
+        "won": false
+      }
+    },
+    {
+      "poll": 26,
+      "key": "d",
+      "status": {
+        "ticks": 498,
+        "ships": [
+          {
+            "position": [
+              44.16794967651367,
+              0,
+              0
+            ],
+            "name": "OBWalrus.013"
+          }
+        ],
+        "won": false
+      }
+    },
+    {
+      "poll": 27,
+      "key": "d",
+      "status": {
+        "ticks": 504,
+        "ships": [
+          {
+            "position": [
+              49.38372039794922,
+              0,
+              0
+            ],
+            "name": "OBWalrus.013"
+          }
+        ],
+        "won": false
+      }
+    },
+    {
+      "poll": 28,
+      "key": "d",
+      "status": {
+        "ticks": 510,
+        "ships": [
+          {
+            "position": [
+              54.68393325805664,
+              0,
+              0
+            ],
+            "name": "OBWalrus.013"
+          }
+        ],
+        "won": false
+      }
+    },
+    {
+      "poll": 29,
+      "key": "d",
+      "status": {
+        "ticks": 516,
+        "ships": [
+          {
+            "position": [
+              60.02647399902344,
+              0,
+              0
+            ],
+            "name": "OBWalrus.013"
+          }
+        ],
+        "won": false
+      }
+    },
+    {
+      "poll": 30,
+      "key": "d",
+      "status": {
+        "ticks": 522,
+        "ships": [
+          {
+            "position": [
+              65.3902359008789,
+              0,
+              0
+            ],
+            "name": "OBWalrus.013"
+          }
+        ],
+        "won": false
+      }
+    },
+    {
+      "poll": 31,
+      "key": "d",
+      "status": {
+        "ticks": 533,
+        "ships": [
+          {
+            "position": [
+              75.24747467041016,
+              0,
+              0
+            ],
+            "name": "OBWalrus.013"
+          }
+        ],
+        "won": true
+      }
+    }
+  ]
+}

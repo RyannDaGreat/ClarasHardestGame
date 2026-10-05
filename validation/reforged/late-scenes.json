@@ -1,0 +1,125 @@
+{
+  "results": [
+    {
+      "scene": "Lv7",
+      "objects": 130,
+      "propertyCount": 78,
+      "animationCount": 19,
+      "status": {
+        "ticks": 72,
+        "ships": [
+          {
+            "position": [
+              -76.52455139160156,
+              75.83495330810547,
+              0
+            ],
+            "name": "OBWalrus.030"
+          }
+        ],
+        "won": false
+      }
+    },
+    {
+      "scene": "Lv8",
+      "objects": 163,
+      "propertyCount": 97,
+      "animationCount": 21,
+      "status": {
+        "ticks": 72,
+        "ships": [
+          {
+            "position": [
+              -33.12028503417969,
+              44.52300262451172,
+              0
+            ],
+            "name": "OBWalrus.015"
+          }
+        ],
+        "won": false
+      }
+    },
+    {
+      "scene": "Lv9",
+      "objects": 147,
+      "propertyCount": 97,
+      "animationCount": 18,
+      "status": {
+        "ticks": 72,
+        "ships": [
+          {
+            "position": [
+              -79.86285400390625,
+              -78.00362396240234,
+              0
+            ],
+            "name": "OBWalrus.017"
+          }
+        ],
+        "won": false
+      }
+    },
+    {
+      "scene": "Lv10",
+      "objects": 176,
+      "propertyCount": 95,
+      "animationCount": 20,
+      "status": {
+        "ticks": 78,
+        "ships": [
+          {
+            "position": [
+              -85,
+              85,
+              0
+            ],
+            "name": "OBWalrus.007"
+          }
+        ],
+        "won": false
+      }
+    },
+    {
+      "scene": "Lv1A",
+      "objects": 127,
+      "propertyCount": 90,
+      "animationCount": 15,
+      "status": {
+        "ticks": 72,
+        "ships": [
+          {
+            "position": [
+              0,
+              -90,
+              0
+            ],
+            "name": "OBWalrus.016"
+          }
+        ],
+        "won": false
+      }
+    },
+    {
+      "scene": "Lv2A",
+      "objects": 137,
+      "propertyCount": 110,
+      "animationCount": 15,
+      "status": {
+        "ticks": 72,
+        "ships": [
+          {
+            "position": [
+              -75.4549789428711,
+              76.93869018554688,
+              0
+            ],
+            "name": "OBWalrus.018"
+          }
+        ],
+        "won": false
+      }
+    }
+  ],
+  "errors": []
+}

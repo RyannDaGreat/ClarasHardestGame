@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en" data-app="game">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Reforged · Choose a level</title>
+    <link rel="icon" href="../icons/play.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="../styles.css" />
+    <link rel="stylesheet" href="../themes.css" />
+    <link rel="stylesheet" href="levels.css" />
+    <script src="../themes.js"></script>
+  </head>
+  <body>
+    <main>
+      <header>
+        <a class="brand" href="./"
+          >Reforged<span class="edition">CHOOSE YOUR NEXT CHALLENGE</span></a
+        >
+        <label class="theme-control"
+          ><span>Theme</span
+          ><select data-theme-picker aria-label="Interface theme"></select
+        ></label>
+        <nav>
+          <a href="../">Original game ↗</a
+          ><a href="../reforged/">Level workshop ↗</a>
+        </nav>
+      </header>
+      <section class="intro">
+        <div>
+          <h1>Pick a level. Make it yours.</h1>
+          <p>
+            Original game components, new challenges. Play a level or open it in
+            the workshop.
+          </p>
+        </div>
+        <button id="import" class="primary">Import level JSON</button>
+        <input id="file" type="file" accept=".json,application/json" hidden />
+      </section>
+      <p id="notice" role="alert" hidden></p>
+      <h2>Built for Reforged</h2>
+      <div id="bundled" class="cards" aria-label="Bundled levels"></div>
+      <h2>Your levels</h2>
+      <p>
+        Imported levels stay in this browser. Export a copy to keep or share
+        them.
+      </p>
+      <div id="saved" class="cards" aria-label="Your levels"></div>
+      <p id="empty">
+        No imported levels yet. Import a JSON file, or save a level from the
+        workshop.
+      </p>
+    </main>
+    <script type="module" src="levels.js"></script>
+  </body>
+</html>

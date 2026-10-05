@@ -1,0 +1,83 @@
+:root {
+  --card-min: 18rem;
+  --card-gap: 1.25rem;
+  --card-pad: 1.5rem;
+  --card-title: 1.5rem;
+  --catalog-space: 2rem;
+  --catalog-zero: 0;
+  --card-description-height: 3em;
+  --card-line-height: 1.6;
+  --card-thumbnail-ratio: 16 / 9;
+  --card-thumbnail-width: 100%;
+}
+.intro {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: var(--card-gap);
+  margin-block: var(--catalog-space);
+}
+.intro h1 {
+  margin: var(--catalog-zero);
+}
+.cards {
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(min(var(--card-min), var(--card-thumbnail-width)), 1fr)
+  );
+  gap: var(--card-gap);
+  margin-block: var(--card-gap) var(--catalog-space);
+}
+.card {
+  background: var(--theme-panel);
+  border: var(--theme-border) solid var(--theme-line);
+  border-radius: var(--theme-radius);
+  padding: var(--card-pad);
+  box-shadow: var(--theme-shadow);
+}
+.card h3 {
+  font-size: var(--card-title);
+  margin-block: var(--catalog-zero) var(--card-gap);
+}
+.card p {
+  line-height: var(--card-line-height);
+  min-height: var(--card-description-height);
+  color: var(--muted);
+}
+.card .meta {
+  color: var(--accent);
+}
+.card .actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--gap);
+}
+button {
+  padding: var(--gap);
+  color: var(--fg);
+  background: var(--theme-raised);
+  border: var(--theme-border) solid var(--theme-line);
+  border-radius: var(--theme-radius);
+  font: inherit;
+  cursor: pointer;
+}
+button.primary {
+  color: var(--theme-on-accent);
+  background: var(--theme-accent);
+}
+button:focus-visible {
+  outline: var(--theme-focus) solid var(--theme-accent);
+}
+#notice {
+  padding: var(--card-pad);
+  border: var(--theme-border) solid var(--theme-accent);
+}
+.card img {
+  width: var(--card-thumbnail-width);
+  aspect-ratio: var(--card-thumbnail-ratio);
+  object-fit: cover;
+  border-radius: var(--theme-radius);
+  margin-block-end: var(--card-gap);
+}

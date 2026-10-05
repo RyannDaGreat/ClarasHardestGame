@@ -8,6 +8,12 @@ The game downloads automatically and saves its verified game files in browser st
 
 Each visit refreshes the small asset manifest, so publishing an edited `.blend` automatically downloads its changed chunks. Cached files are checked with SHA-256 before use; damaged entries are replaced. This is game-asset caching, not an offline installation: the page and engine still use ordinary HTTP caching. Icons are locally hosted Lucide assets distributed through Iconify, with their licenses in `web/icons/`.
 
+## Reforged level workshop
+
+[Choose a new level](https://ryanndagreat.github.io/ClarasHardestGame/levels/) or [open the editor](https://ryanndagreat.github.io/ClarasHardestGame/reforged/). Switchback, Crossfire and Parallax each have a verified real-key winning route. The workshop supports adjustable grids, textured walls and carving, component placement, portal and switch links, properties and existing animation keys, undo, JSON import/export and original-engine playtesting. Fifteen shared themes have restrained corners and chamfered primary controls.
+
+Use **Save to levels** to add a level to this browser’s catalog; export JSON to back it up or share it. Local saves do not upload to a community server. The original game remains available from navigation. See [construction research](research/reforged/README.md), [verification](validation/reforged/README.md), and [library regeneration](tooling/reforged/README.md).
+
 ## Edit and publish
 
 Save your changes using Blender 2.49. Install the asset packer's dependency once:
@@ -34,6 +40,8 @@ The original 351,865,072-byte game is split losslessly into 21 chunks because it
 ```sh
 bash runtime/build.sh
 cp runtime/build/engine/player.js runtime/build/engine/player.wasm runtime/build/engine/player.data web/runtime/
+python3.10 runtime/source_bundle.py
+cp runtime/build/runtime-source.tar.gz web/source/runtime-source.tar.gz
 bash tooling/build-site.sh
 ```
 

@@ -18,6 +18,7 @@ let assetsReady = false;
 let failed = false;
 let loadedBytes = 0;
 let totalBytes = 0;
+let reforgedLevel = null;
 window.cacheStats = {hits:0, downloads:0};
 
 function log(message) {
@@ -49,6 +50,14 @@ var Module = {
   print:log,
   printErr:message => {console.error(message); logElement.textContent += message + '\n';},
   onAbort:failure,
+  onReforgedStatus:text => {
+    const status = JSON.parse(text);
+    window.reforgedStatus = status;
+    if (status.won) {
+      statusElement.textContent = 'Level complete!';
+      document.querySelector('#reforged-win').hidden = false;
+    }
+  },
   onGameExit:code => {
     window.gameStarted = false;
     failed = true;
@@ -126,6 +135,30 @@ async function loadGame(game) {
   return result;
 }
 async function prepareGame() {
+  if (params.has('reforged')) {
+    const mode = params.get('reforged');
+    if (mode === 'editor') {
+      const saved = localStorage.getItem('reforged-play-v1');
+      if (!saved) throw new Error('No editor playtest is saved. Open the workshop first.');
+      reforgedLevel = JSON.parse(saved);
+    } else {
+      const name = mode === 'challenge' ? 'Gauntlet' : mode;
+      if (!['Gauntlet', 'Crossfire', 'Switchback', 'Parallax'].includes(name)) throw new Error('Unknown bundled Reforged level');
+      const response = await fetch('reforged/levels/' + name + '.json');
+      if (!response.ok) throw new Error(`Challenge: HTTP ${response.status}`);
+      reforgedLevel = await response.json();
+    }
+    if (reforgedLevel.format !== 'reforged' || reforgedLevel.version !== 1) throw new Error('Unsupported Reforged level');
+    const response = await fetch('reforged/play.py');
+    if (!response.ok) throw new Error(`Playtest observer: HTTP ${response.status}`);
+    writeFile('/game/reforged.py', await response.text());
+    writeFile('/game/level.json', JSON.stringify(reforgedLevel));
+    document.title = reforgedLevel.name + ' · Reforged';
+    document.querySelector('.below-player > span').textContent = 'WASD to move · Arrow keys to move and turn · Backspace to respawn';
+    document.querySelector('.controls-grid').innerHTML = '<p><kbd>W</kbd> <kbd>A</kbd> <kbd>S</kbd> <kbd>D</kbd> Move in world directions</p><p><kbd>↑</kbd> <kbd>↓</kbd> Move forward/back<br><kbd>←</kbd> <kbd>→</kbd> Turn</p><p><kbd>Backspace</kbd> Respawn at the start</p><p>Reach the gold finish. Use the level browser to choose another challenge.</p>';
+    document.querySelector('.brand').firstChild.textContent = reforgedLevel.name;
+    document.querySelector('.edition').textContent = 'REFORGED · ORIGINAL ENGINE';
+  }
   statusElement.textContent = 'Checking saved game…';
   if ('caches' in window) {
     try { assetCache = await caches.open(cacheName); }
@@ -180,7 +213,9 @@ startButton.addEventListener('click', () => {
     }
     statusElement.textContent = 'Starting game…';
     const args = ['/game/game.blend'];
-    if (params.has('scene')) {
+    if (reforgedLevel) {
+      args.push(reforgedLevel.scene, '/game/reforged.py', '/game/level.json');
+    } else if (params.has('scene')) {
       args.push(params.get('scene'));
       log('Diagnostic scene startup omits earlier scene state.');
     }

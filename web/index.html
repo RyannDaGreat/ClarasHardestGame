@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-app="game">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -7,12 +7,14 @@
   <title>Ryan's Hardest Game</title>
   <link rel="icon" href="icons/play.svg" type="image/svg+xml">
   <link rel="stylesheet" href="styles.css">
-</head>
+<link rel="stylesheet" href="themes.css"><script src="themes.js"></script></head>
 <body>
 <main>
   <header>
     <a class="brand" href="./">Ryan’s Hardest Game<span class="edition">THE ORIGINAL · IN YOUR BROWSER</span></a>
-    <nav aria-label="Game links">
+    <label class="theme-control"><span>Theme</span><select data-theme-picker aria-label="Interface theme"></select></label><nav aria-label="Game links">
+      <a href="levels/">Play Reforged levels ↗</a>
+      <a href="reforged/">Workshop ↗</a>
       <a class="icon-button" href="#controls" title="Keyboard controls" aria-label="Keyboard controls"><span class="icon keyboard" aria-hidden="true"></span></a>
       <a class="icon-button" href="https://github.com/RyannDaGreat/ClarasHardestGame" target="_blank" rel="noopener" title="View on GitHub" aria-label="View source on GitHub"><span class="icon github" aria-hidden="true"></span></a>
     </nav>
@@ -32,6 +34,7 @@
     </div>
     <button id="fullscreen" class="icon-button" title="Fullscreen" aria-label="Enter fullscreen"><span class="icon maximize" aria-hidden="true"></span></button>
   </section>
+  <p id="reforged-win" role="status" hidden>Level complete! <a href="levels/">Choose another level ↗</a> · <a href="reforged/">Open the workshop ↗</a></p>
   <div class="below-player"><span>Arrows to move. W / S to choose a level. Enter to play.</span><a href="https://github.com/RyannDaGreat/ClarasHardestGame" target="_blank" rel="noopener"><span class="icon github" aria-hidden="true"></span> GitHub <span class="icon arrow" aria-hidden="true"></span></a></div>
   <details id="controls">
     <summary><span class="icon keyboard" aria-hidden="true"></span> How to play</summary>

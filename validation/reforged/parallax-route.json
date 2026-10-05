@@ -1,0 +1,1274 @@
+{
+  "level": "Parallax",
+  "route": [
+    {
+      "target": [
+        -24,
+        -78
+      ]
+    },
+    {
+      "target": [
+        -24,
+        -24
+      ],
+      "destination": "northeast"
+    },
+    {
+      "target": [
+        24,
+        72
+      ]
+    },
+    {
+      "target": [
+        24,
+        24
+      ],
+      "destination": "northwest"
+    },
+    {
+      "target": [
+        -24,
+        63
+      ]
+    },
+    {
+      "target": [
+        -24,
+        24
+      ],
+      "destination": "southeast"
+    },
+    {
+      "target": [
+        24,
+        -72
+      ]
+    },
+    {
+      "target": [
+        24,
+        -24
+      ],
+      "finish": true
+    }
+  ],
+  "errors": [],
+  "events": [
+    "('REFORGED_WIN', 596, 'OBFinish.002', 'OBWalrus.013')"
+  ],
+  "result": {
+    "ticks": 613,
+    "ships": [
+      {
+        "position": [
+          25.30596923828125,
+          -5.559197902679443,
+          -0.009337490424513817
+        ],
+        "name": "OBWalrus.013"
+      }
+    ],
+    "won": true
+  },
+  "trace": [
+    {
+      "stage": 0,
+      "target": [
+        -24,
+        -78
+      ],
+      "status": {
+        "ticks": 12,
+        "ships": [
+          {
+            "position": [
+              -78,
+              -78,
+              0
+            ],
+            "name": "OBWalrus.013"
+          }
+        ],
+        "won": false
+      }
+    },
+    {
+      "stage": 0,
+      "target": [
+        -24,
+        -78
+      ],
+      "status": {
+        "ticks": 24,
+        "ships": [
+          {
+            "position": [
+              -71.88504028320312,
+              -78,
+              0
+            ],
+            "name": "OBWalrus.013"
+          }
+        ],
+        "won": false
+      }
+    },
+    {
+      "stage": 0,
+      "target": [
+        -24,
+        -78
+      ],
+      "status": {
+        "ticks": 36,
+        "ships": [
+          {
+            "position": [
+              -65.28962707519531,
+              -78,
+              0
+            ],
+            "name": "OBWalrus.013"
+          }
+        ],
+        "won": false
+      }
+    },
+    {
+      "stage": 0,
+      "target": [
+        -24,
+        -78
+      ],
+      "status": {
+        "ticks": 54,
+        "ships": [
+          {
+            "position": [
+              -56.37483596801758,
+              -78,
+              0
+            ],
+            "name": "OBWalrus.013"
+          }
+        ],
+        "won": false
+      }
+    },
+    {
+      "stage": 0,
+      "target": [
+        -24,
+        -78
+      ],
+      "status": {
+        "ticks": 66,
+        "ships": [
+          {
+            "position": [
+              -49.36854553222656,
+              -78,
+              0
+            ],
+            "name": "OBWalrus.013"
+          }
+        ],
+        "won": false
+      }
+    },
+    {
+      "stage": 0,
+      "target": [
+        -24,
+        -78
+      ],
+      "status": {
+        "ticks": 78,
+        "ships": [
+          {
+            "position": [
+              -41.84284591674805,
+              -78,
+              0
+            ],
+            "name": "OBWalrus.013"
+          }
+        ],
+        "won": false
+      }
+    },
+    {
+      "stage": 0,
+      "target": [
+        -24,
+        -78
+      ],
+      "status": {
+        "ticks": 90,
+        "ships": [
+          {
+            "position": [
+              -34.893089294433594,
+              -78,
+              0
+            ],
+            "name": "OBWalrus.013"
+          }
+        ],
+        "won": false
+      }
+    },
+    {
+      "stage": 0,
+      "target": [
+        -24,
+        -78
+      ],
+      "status": {
+        "ticks": 102,
+        "ships": [
+          {
+            "position": [
+              -30.833024978637695,
+              -78,
+              0
+            ],
+            "name": "OBWalrus.013"
+          }
+        ],
+        "won": false
+      }
+    },
+    {
+      "stage": 0,
+      "target": [
+        -24,
+        -78
+      ],
+      "status": {
+        "ticks": 108,
+        "ships": [
+          {
+            "position": [
+              -28.887176513671875,
+              -78,
+              0
+            ],
+            "name": "OBWalrus.013"
+          }
+        ],
+        "won": false
+      }
+    },
+    {
+      "stage": 0,
+      "target": [
+        -24,
+        -78
+      ],
+      "status": {
+        "ticks": 114,
+        "ships": [
+          {
+            "position": [
+              -27.07720184326172,
+              -78,
+              0
+            ],
+            "name": "OBWalrus.013"
+          }
+        ],
+        "won": false
+      }
+    },
+    {
+      "stage": 0,
+      "target": [
+        -24,
+        -78
+      ],
+      "status": {
+        "ticks": 120,
+        "ships": [
+          {
+            "position": [
+              -25.212932586669922,
+              -78,
+              0
+            ],
+            "name": "OBWalrus.013"
+          }
+        ],
+        "won": false
+      }
+    },
+    {
+      "stage": 1,
+      "target": [
+        -24,
+        -24
+      ],
+      "status": {
+        "ticks": 126,
+        "ships": [
+          {
+            "position": [
+              -24.6823673248291,
+              -78,
+              0
+            ],
+            "name": "OBWalrus.013"
+          }
+        ],
+        "won": false
+      }
+    },
+    {
+      "stage": 1,
+      "target": [
+        -24,
+        -24
+      ],
+      "status": {
+        "ticks": 144,
+        "ships": [
+          {
+            "position": [
+              -24.216392517089844,
+              -66.9723892211914,
+              0
+            ],
+            "name": "OBWalrus.013"
+          }
+        ],
+        "won": false
+      }
+    },
+    {
+      "stage": 1,
+      "target": [
+        -24,
+        -24
+      ],
+      "status": {
+        "ticks": 156,
+        "ships": [
+          {
+            "position": [
+              63,
+              72,
+              0
+            ],
+            "name": "OBWalrus.013"
+          }
+        ],
+        "won": false
+      }
+    },
+    {
+      "stage": 2,
+      "target": [
+        24,
+        72
+      ],
+      "status": {
+        "ticks": 162,
+        "ships": [
+          {
+            "position": [
+              63,
+              72,
+              0
+            ],
+            "name": "OBWalrus.013"
+          }
+        ],
+        "won": false
+      }
+    },
+    {
+      "stage": 2,
+      "target": [
+        24,
+        72
+      ],
+      "status": {
+        "ticks": 174,
+        "ships": [
+          {
+            "position": [
+              57.65083312988281,
+              72,
+              0
+            ],
+            "name": "OBWalrus.013"
+          }
+        ],
+        "won": false
+      }
+    },
+    {
+      "stage": 2,
+      "target": [
+        24,
+        72
+      ],
+      "status": {
+        "ticks": 192,
+        "ships": [
+          {
+            "position": [
+              49.211124420166016,
+              72,
+              0
+            ],
+            "name": "OBWalrus.013"
+          }
+        ],
+        "won": false
+      }
+    },
+    {
+      "stage": 2,
+      "target": [
+        24,
+        72
+      ],
+      "status": {
+        "ticks": 204,
+        "ships": [
+          {
+            "position": [
+              41.592620849609375,
+              72,
+              0
+            ],
+            "name": "OBWalrus.013"
+          }
+        ],
+        "won": false
+      }
+    },
+    {
+      "stage": 2,
+      "target": [
+        24,
+        72
+      ],
+      "status": {
+        "ticks": 216,
+        "ships": [
+          {
+            "position": [
+              34.6006965637207,
+              72,
+              0
+            ],
+            "name": "OBWalrus.013"
+          }
+        ],
+        "won": false
+      }
+    },
+    {
+      "stage": 2,
+      "target": [
+        24,
+        72
+      ],
+      "status": {
+        "ticks": 222,
+        "ships": [
+          {
+            "position": [
+              31.84943962097168,
+              72,
+              0
+            ],
+            "name": "OBWalrus.013"
+          }
+        ],
+        "won": false
+      }
+    },
+    {
+      "stage": 2,
+      "target": [
+        24,
+        72
+      ],
+      "status": {
+        "ticks": 234,
+        "ships": [
+          {
+            "position": [
+              28.90859031677246,
+              72,
+              0
+            ],
+            "name": "OBWalrus.013"
+          }
+        ],
+        "won": false
+      }
+    },
+    {
+      "stage": 2,
+      "target": [
+        24,
+        72
+      ],
+      "status": {
+        "ticks": 240,
+        "ships": [
+          {
+            "position": [
+              27.101804733276367,
+              72,
+              0
+            ],
+            "name": "OBWalrus.013"
+          }
+        ],
+        "won": false
+      }
+    },
+    {
+      "stage": 2,
+      "target": [
+        24,
+        72
+      ],
+      "status": {
+        "ticks": 246,
+        "ships": [
+          {
+            "position": [
+              25.354930877685547,
+              72,
+              0
+            ],
+            "name": "OBWalrus.013"
+          }
+        ],
+        "won": false
+      }
+    },
+    {
+      "stage": 3,
+      "target": [
+        24,
+        24
+      ],
+      "status": {
+        "ticks": 252,
+        "ships": [
+          {
+            "position": [
+              24.830425262451172,
+              72,
+              0
+            ],
+            "name": "OBWalrus.013"
+          }
+        ],
+        "won": false
+      }
+    },
+    {
+      "stage": 3,
+      "target": [
+        24,
+        24
+      ],
+      "status": {
+        "ticks": 264,
+        "ships": [
+          {
+            "position": [
+              24.513355255126953,
+              66.27427673339844,
+              0
+            ],
+            "name": "OBWalrus.013"
+          }
+        ],
+        "won": false
+      }
+    },
+    {
+      "stage": 3,
+      "target": [
+        24,
+        24
+      ],
+      "status": {
+        "ticks": 276,
+        "ships": [
+          {
+            "position": [
+              24.43370819091797,
+              58.29215621948242,
+              0
+            ],
+            "name": "OBWalrus.013"
+          }
+        ],
+        "won": false
+      }
+    },
+    {
+      "stage": 3,
+      "target": [
+        24,
+        24
+      ],
+      "status": {
+        "ticks": 288,
+        "ships": [
+          {
+            "position": [
+              -72,
+              61.30429458618164,
+              0
+            ],
+            "name": "OBWalrus.013"
+          }
+        ],
+        "won": false
+      }
+    },
+    {
+      "stage": 4,
+      "target": [
+        -24,
+        63
+      ],
+      "status": {
+        "ticks": 294,
+        "ships": [
+          {
+            "position": [
+              -72,
+              60.80706787109375,
+              0
+            ],
+            "name": "OBWalrus.013"
+          }
+        ],
+        "won": false
+      }
+    },
+    {
+      "stage": 4,
+      "target": [
+        -24,
+        63
+      ],
+      "status": {
+        "ticks": 306,
+        "ships": [
+          {
+            "position": [
+              -66.87425994873047,
+              60.41932678222656,
+              0
+            ],
+            "name": "OBWalrus.013"
+          }
+        ],
+        "won": false
+      }
+    },
+    {
+      "stage": 4,
+      "target": [
+        -24,
+        63
+      ],
+      "status": {
+        "ticks": 318,
+        "ships": [
+          {
+            "position": [
+              -58.19820785522461,
+              60.327388763427734,
+              0
+            ],
+            "name": "OBWalrus.013"
+          }
+        ],
+        "won": false
+      }
+    },
+    {
+      "stage": 4,
+      "target": [
+        -24,
+        63
+      ],
+      "status": {
+        "ticks": 336,
+        "ships": [
+          {
+            "position": [
+              -49.13491439819336,
+              60.30973434448242,
+              0
+            ],
+            "name": "OBWalrus.013"
+          }
+        ],
+        "won": false
+      }
+    },
+    {
+      "stage": 4,
+      "target": [
+        -24,
+        63
+      ],
+      "status": {
+        "ticks": 342,
+        "ships": [
+          {
+            "position": [
+              -44.77012634277344,
+              60.308624267578125,
+              0
+            ],
+            "name": "OBWalrus.013"
+          }
+        ],
+        "won": false
+      }
+    },
+    {
+      "stage": 4,
+      "target": [
+        -24,
+        63
+      ],
+      "status": {
+        "ticks": 354,
+        "ships": [
+          {
+            "position": [
+              -36.918426513671875,
+              60.30772399902344,
+              0
+            ],
+            "name": "OBWalrus.013"
+          }
+        ],
+        "won": false
+      }
+    },
+    {
+      "stage": 4,
+      "target": [
+        -24,
+        63
+      ],
+      "status": {
+        "ticks": 360,
+        "ships": [
+          {
+            "position": [
+              -33.52037811279297,
+              60.30757141113281,
+              0
+            ],
+            "name": "OBWalrus.013"
+          }
+        ],
+        "won": false
+      }
+    },
+    {
+      "stage": 4,
+      "target": [
+        -24,
+        63
+      ],
+      "status": {
+        "ticks": 372,
+        "ships": [
+          {
+            "position": [
+              -30.027759552001953,
+              60.307559967041016,
+              0
+            ],
+            "name": "OBWalrus.013"
+          }
+        ],
+        "won": false
+      }
+    },
+    {
+      "stage": 4,
+      "target": [
+        -24,
+        63
+      ],
+      "status": {
+        "ticks": 378,
+        "ships": [
+          {
+            "position": [
+              -28.176860809326172,
+              60.307559967041016,
+              0
+            ],
+            "name": "OBWalrus.013"
+          }
+        ],
+        "won": false
+      }
+    },
+    {
+      "stage": 4,
+      "target": [
+        -24,
+        63
+      ],
+      "status": {
+        "ticks": 384,
+        "ships": [
+          {
+            "position": [
+              -26.414474487304688,
+              60.307559967041016,
+              0
+            ],
+            "name": "OBWalrus.013"
+          }
+        ],
+        "won": false
+      }
+    },
+    {
+      "stage": 4,
+      "target": [
+        -24,
+        63
+      ],
+      "status": {
+        "ticks": 390,
+        "ships": [
+          {
+            "position": [
+              -25.87322235107422,
+              61.476924896240234,
+              0
+            ],
+            "name": "OBWalrus.013"
+          }
+        ],
+        "won": false
+      }
+    },
+    {
+      "stage": 5,
+      "target": [
+        -24,
+        24
+      ],
+      "status": {
+        "ticks": 396,
+        "ships": [
+          {
+            "position": [
+              -25.57231330871582,
+              61.82310485839844,
+              0
+            ],
+            "name": "OBWalrus.013"
+          }
+        ],
+        "won": false
+      }
+    },
+    {
+      "stage": 5,
+      "target": [
+        -24,
+        24
+      ],
+      "status": {
+        "ticks": 414,
+        "ships": [
+          {
+            "position": [
+              -25.359981536865234,
+              55.22812271118164,
+              0
+            ],
+            "name": "OBWalrus.013"
+          }
+        ],
+        "won": false
+      }
+    },
+    {
+      "stage": 5,
+      "target": [
+        -24,
+        24
+      ],
+      "status": {
+        "ticks": 426,
+        "ships": [
+          {
+            "position": [
+              -25.337072372436523,
+              48.44329833984375,
+              0
+            ],
+            "name": "OBWalrus.013"
+          }
+        ],
+        "won": false
+      }
+    },
+    {
+      "stage": 5,
+      "target": [
+        -24,
+        24
+      ],
+      "status": {
+        "ticks": 438,
+        "ships": [
+          {
+            "position": [
+              -25.331314086914062,
+              40.91798400878906,
+              0
+            ],
+            "name": "OBWalrus.013"
+          }
+        ],
+        "won": false
+      }
+    },
+    {
+      "stage": 5,
+      "target": [
+        -24,
+        24
+      ],
+      "status": {
+        "ticks": 450,
+        "ships": [
+          {
+            "position": [
+              -25.329866409301758,
+              33.958351135253906,
+              0
+            ],
+            "name": "OBWalrus.013"
+          }
+        ],
+        "won": false
+      }
+    },
+    {
+      "stage": 5,
+      "target": [
+        -24,
+        24
+      ],
+      "status": {
+        "ticks": 456,
+        "ships": [
+          {
+            "position": [
+              -25.329626083374023,
+              31.68254852294922,
+              0
+            ],
+            "name": "OBWalrus.013"
+          }
+        ],
+        "won": false
+      }
+    },
+    {
+      "stage": 5,
+      "target": [
+        -24,
+        24
+      ],
+      "status": {
+        "ticks": 468,
+        "ships": [
+          {
+            "position": [
+              63,
+              -73.35210418701172,
+              0
+            ],
+            "name": "OBWalrus.013"
+          }
+        ],
+        "won": false
+      }
+    },
+    {
+      "stage": 6,
+      "target": [
+        24,
+        -72
+      ],
+      "status": {
+        "ticks": 474,
+        "ships": [
+          {
+            "position": [
+              63,
+              -73.57302856445312,
+              0
+            ],
+            "name": "OBWalrus.013"
+          }
+        ],
+        "won": false
+      }
+    },
+    {
+      "stage": 6,
+      "target": [
+        24,
+        -72
+      ],
+      "status": {
+        "ticks": 486,
+        "ships": [
+          {
+            "position": [
+              57.45172119140625,
+              -73.73925018310547,
+              0
+            ],
+            "name": "OBWalrus.013"
+          }
+        ],
+        "won": false
+      }
+    },
+    {
+      "stage": 6,
+      "target": [
+        24,
+        -72
+      ],
+      "status": {
+        "ticks": 498,
+        "ships": [
+          {
+            "position": [
+              50.636932373046875,
+              -73.78251647949219,
+              0
+            ],
+            "name": "OBWalrus.013"
+          }
+        ],
+        "won": false
+      }
+    },
+    {
+      "stage": 6,
+      "target": [
+        24,
+        -72
+      ],
+      "status": {
+        "ticks": 510,
+        "ships": [
+          {
+            "position": [
+              43.49000549316406,
+              -73.79251098632812,
+              0
+            ],
+            "name": "OBWalrus.013"
+          }
+        ],
+        "won": false
+      }
+    },
+    {
+      "stage": 6,
+      "target": [
+        24,
+        -72
+      ],
+      "status": {
+        "ticks": 522,
+        "ships": [
+          {
+            "position": [
+              35.79924774169922,
+              -73.79444122314453,
+              0
+            ],
+            "name": "OBWalrus.013"
+          }
+        ],
+        "won": false
+      }
+    },
+    {
+      "stage": 6,
+      "target": [
+        24,
+        -72
+      ],
+      "status": {
+        "ticks": 528,
+        "ships": [
+          {
+            "position": [
+              33.50050735473633,
+              -73.79470825195312,
+              0
+            ],
+            "name": "OBWalrus.013"
+          }
+        ],
+        "won": false
+      }
+    },
+    {
+      "stage": 6,
+      "target": [
+        24,
+        -72
+      ],
+      "status": {
+        "ticks": 534,
+        "ships": [
+          {
+            "position": [
+              31.348735809326172,
+              -73.79488372802734,
+              0
+            ],
+            "name": "OBWalrus.013"
+          }
+        ],
+        "won": false
+      }
+    },
+    {
+      "stage": 6,
+      "target": [
+        24,
+        -72
+      ],
+      "status": {
+        "ticks": 540,
+        "ships": [
+          {
+            "position": [
+              30.045907974243164,
+              -73.79488372802734,
+              0
+            ],
+            "name": "OBWalrus.013"
+          }
+        ],
+        "won": false
+      }
+    },
+    {
+      "stage": 6,
+      "target": [
+        24,
+        -72
+      ],
+      "status": {
+        "ticks": 552,
+        "ships": [
+          {
+            "position": [
+              26.28444480895996,
+              -73.79488372802734,
+              0
+            ],
+            "name": "OBWalrus.013"
+          }
+        ],
+        "won": false
+      }
+    },
+    {
+      "stage": 7,
+      "target": [
+        24,
+        -24
+      ],
+      "status": {
+        "ticks": 558,
+        "ships": [
+          {
+            "position": [
+              25.795629501342773,
+              -73.79488372802734,
+              0
+            ],
+            "name": "OBWalrus.013"
+          }
+        ],
+        "won": false
+      }
+    },
+    {
+      "stage": 7,
+      "target": [
+        24,
+        -24
+      ],
+      "status": {
+        "ticks": 570,
+        "ships": [
+          {
+            "position": [
+              25.427860260009766,
+              -68.44573974609375,
+              0
+            ],
+            "name": "OBWalrus.013"
+          }
+        ],
+        "won": false
+      }
+    },
+    {
+      "stage": 7,
+      "target": [
+        24,
+        -24
+      ],
+      "status": {
+        "ticks": 582,
+        "ships": [
+          {
+            "position": [
+              25.33210563659668,
+              -61.89893341064453,
+              0
+            ],
+            "name": "OBWalrus.013"
+          }
+        ],
+        "won": false
+      }
+    }
+  ]
+}

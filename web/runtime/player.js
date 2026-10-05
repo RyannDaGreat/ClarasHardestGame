@@ -29,7 +29,7 @@ if (ENVIRONMENT_IS_NODE) {}
 
 // --pre-jses are emitted after the Module integration code, so that they can
 // refer to Module (if they choose; they can also define Module)
-// include: /var/folders/pm/461ntwb12b7bbqcjw1s6t0kw0000gn/T/tmp4dnzkryp.js
+// include: /var/folders/pm/461ntwb12b7bbqcjw1s6t0kw0000gn/T/tmps1vyon66.js
 Module["expectedDataFileDownloads"] ??= 0;
 
 Module["expectedDataFileDownloads"]++;
@@ -7143,7 +7143,7 @@ Module["expectedDataFileDownloads"]++;
   });
 })();
 
-// end include: /var/folders/pm/461ntwb12b7bbqcjw1s6t0kw0000gn/T/tmp4dnzkryp.js
+// end include: /var/folders/pm/461ntwb12b7bbqcjw1s6t0kw0000gn/T/tmps1vyon66.js
 // Sometimes an existing Module object exists with properties
 // meant to overwrite the default module functionality. Here
 // we collect those properties and reapply _after_ we configure
@@ -7577,10 +7577,10 @@ async function createWasm() {
   // performing other necessary setup
   /** @param {WebAssembly.Module=} module*/ function receiveInstance(instance, module) {
     wasmExports = instance.exports;
-    wasmMemory = wasmExports["ve"];
+    wasmMemory = wasmExports["we"];
     updateMemoryViews();
     wasmTable = wasmExports["ye"];
-    addOnInit(wasmExports["we"]);
+    addOnInit(wasmExports["xe"]);
     removeRunDependency("wasm-instantiate");
     return wasmExports;
   }
@@ -7624,13 +7624,19 @@ var tempI64;
 // end include: runtime_debug.js
 // === Body ===
 var ASM_CONSTS = {
-  985896: () => {
+  993960: () => {
     Module.originalEngineStarted = true;
   },
-  985937: $0 => {
+  994001: $0 => {
     if (Module.onGameExit) Module.onGameExit($0);
   },
-  985987: $0 => {
+  994051: () => {
+    if (Module.onGameExit) Module.onGameExit(1);
+  },
+  994100: $0 => {
+    if (Module.onReforgedStatus) Module.onReforgedStatus(UTF8ToString($0));
+  },
+  994176: $0 => {
     Module.canvas.style.cursor = $0 == 1 ? "none" : ($0 == 2 ? "wait" : "default");
   }
 };
@@ -15597,6 +15603,11 @@ var _emscripten_cancel_main_loop = () => {
   MainLoop.func = null;
 };
 
+var _emscripten_force_exit = status => {
+  __emscripten_runtime_keepalive_clear();
+  _exit(status);
+};
+
 var JSEvents = {
   memcpy(target, src, size) {
     HEAP8.set(HEAP8.subarray(src, src + size), target);
@@ -18488,348 +18499,349 @@ for (/**@suppress{duplicate}*/ var i = 0; i <= 288; ++i) {
 }
 
 var wasmImports = {
-  /** @export */ ue: _SDL_InitSubSystem,
+  /** @export */ ve: _SDL_InitSubSystem,
   /** @export */ j: _SDL_JoystickClose,
-  /** @export */ te: _SDL_JoystickEventState,
-  /** @export */ K: _SDL_JoystickGetButton,
-  /** @export */ se: _SDL_JoystickNumAxes,
-  /** @export */ re: _SDL_JoystickNumButtons,
-  /** @export */ qe: _SDL_JoystickNumHats,
-  /** @export */ pe: _SDL_JoystickOpen,
+  /** @export */ ue: _SDL_JoystickEventState,
+  /** @export */ L: _SDL_JoystickGetButton,
+  /** @export */ te: _SDL_JoystickNumAxes,
+  /** @export */ se: _SDL_JoystickNumButtons,
+  /** @export */ re: _SDL_JoystickNumHats,
+  /** @export */ qe: _SDL_JoystickOpen,
   /** @export */ g: _SDL_JoystickOpened,
-  /** @export */ oe: _SDL_NumJoysticks,
-  /** @export */ J: _SDL_PollEvent,
-  /** @export */ ne: _SDL_QuitSubSystem,
-  /** @export */ me: ___call_sighandler,
+  /** @export */ pe: _SDL_NumJoysticks,
+  /** @export */ K: _SDL_PollEvent,
+  /** @export */ oe: _SDL_QuitSubSystem,
+  /** @export */ ne: ___call_sighandler,
   /** @export */ x: ___cxa_throw,
-  /** @export */ le: ___syscall__newselect,
-  /** @export */ I: ___syscall_chdir,
-  /** @export */ H: ___syscall_chmod,
-  /** @export */ ke: ___syscall_dup,
-  /** @export */ je: ___syscall_dup3,
-  /** @export */ ie: ___syscall_faccessat,
-  /** @export */ he: ___syscall_fchdir,
-  /** @export */ ge: ___syscall_fchmod,
-  /** @export */ G: ___syscall_fchmodat2,
-  /** @export */ fe: ___syscall_fchown32,
-  /** @export */ F: ___syscall_fchownat,
+  /** @export */ me: ___syscall__newselect,
+  /** @export */ J: ___syscall_chdir,
+  /** @export */ I: ___syscall_chmod,
+  /** @export */ le: ___syscall_dup,
+  /** @export */ ke: ___syscall_dup3,
+  /** @export */ je: ___syscall_faccessat,
+  /** @export */ ie: ___syscall_fchdir,
+  /** @export */ he: ___syscall_fchmod,
+  /** @export */ H: ___syscall_fchmodat2,
+  /** @export */ ge: ___syscall_fchown32,
+  /** @export */ G: ___syscall_fchownat,
   /** @export */ f: ___syscall_fcntl64,
-  /** @export */ ee: ___syscall_fdatasync,
-  /** @export */ de: ___syscall_fstat64,
-  /** @export */ ce: ___syscall_fstatfs64,
-  /** @export */ S: ___syscall_ftruncate64,
-  /** @export */ be: ___syscall_getcwd,
-  /** @export */ ae: ___syscall_getdents64,
+  /** @export */ fe: ___syscall_fdatasync,
+  /** @export */ ee: ___syscall_fstat64,
+  /** @export */ de: ___syscall_fstatfs64,
+  /** @export */ T: ___syscall_ftruncate64,
+  /** @export */ ce: ___syscall_getcwd,
+  /** @export */ be: ___syscall_getdents64,
   /** @export */ w: ___syscall_ioctl,
-  /** @export */ $d: ___syscall_lstat64,
-  /** @export */ _d: ___syscall_mkdirat,
-  /** @export */ Zd: ___syscall_mknodat,
-  /** @export */ Yd: ___syscall_newfstatat,
-  /** @export */ m: ___syscall_openat,
-  /** @export */ Xd: ___syscall_pipe,
+  /** @export */ ae: ___syscall_lstat64,
+  /** @export */ $d: ___syscall_mkdirat,
+  /** @export */ _d: ___syscall_mknodat,
+  /** @export */ Zd: ___syscall_newfstatat,
+  /** @export */ n: ___syscall_openat,
+  /** @export */ Yd: ___syscall_pipe,
   /** @export */ v: ___syscall_readlinkat,
-  /** @export */ Wd: ___syscall_renameat,
-  /** @export */ E: ___syscall_rmdir,
-  /** @export */ Vd: ___syscall_stat64,
-  /** @export */ Ud: ___syscall_statfs64,
-  /** @export */ Td: ___syscall_symlinkat,
+  /** @export */ Xd: ___syscall_renameat,
+  /** @export */ F: ___syscall_rmdir,
+  /** @export */ Wd: ___syscall_stat64,
+  /** @export */ Vd: ___syscall_statfs64,
+  /** @export */ Ud: ___syscall_symlinkat,
   /** @export */ u: ___syscall_unlinkat,
-  /** @export */ Sd: ___syscall_utimensat,
-  /** @export */ Nd: __abort_js,
-  /** @export */ Md: __emscripten_memcpy_js,
-  /** @export */ Ld: __emscripten_runtime_keepalive_clear,
-  /** @export */ Kd: __emscripten_system,
-  /** @export */ Jd: __emscripten_throw_longjmp,
-  /** @export */ P: __gmtime_js,
-  /** @export */ O: __localtime_js,
-  /** @export */ N: __mktime_js,
-  /** @export */ M: __mmap_js,
-  /** @export */ L: __munmap_js,
-  /** @export */ Id: __tzset_js,
-  /** @export */ Hd: _alBufferData,
-  /** @export */ Gd: _alDeleteBuffers,
-  /** @export */ Fd: _alDeleteSources,
-  /** @export */ Ed: _alDopplerFactor,
-  /** @export */ Dd: _alDopplerVelocity,
-  /** @export */ Cd: _alGenBuffers,
-  /** @export */ Bd: _alGenSources,
-  /** @export */ B: _alGetError,
-  /** @export */ Ad: _alGetSourceiv,
-  /** @export */ zd: _alIsBuffer,
-  /** @export */ yd: _alListenerf,
+  /** @export */ Td: ___syscall_utimensat,
+  /** @export */ Od: __abort_js,
+  /** @export */ Nd: __emscripten_memcpy_js,
+  /** @export */ Md: __emscripten_runtime_keepalive_clear,
+  /** @export */ Ld: __emscripten_system,
+  /** @export */ Kd: __emscripten_throw_longjmp,
+  /** @export */ Q: __gmtime_js,
+  /** @export */ P: __localtime_js,
+  /** @export */ O: __mktime_js,
+  /** @export */ N: __mmap_js,
+  /** @export */ M: __munmap_js,
+  /** @export */ Jd: __tzset_js,
+  /** @export */ Id: _alBufferData,
+  /** @export */ Hd: _alDeleteBuffers,
+  /** @export */ Gd: _alDeleteSources,
+  /** @export */ Fd: _alDopplerFactor,
+  /** @export */ Ed: _alDopplerVelocity,
+  /** @export */ Dd: _alGenBuffers,
+  /** @export */ Cd: _alGenSources,
+  /** @export */ C: _alGetError,
+  /** @export */ Bd: _alGetSourceiv,
+  /** @export */ Ad: _alIsBuffer,
+  /** @export */ zd: _alListenerf,
   /** @export */ s: _alListenerfv,
-  /** @export */ xd: _alSourcePause,
-  /** @export */ wd: _alSourcePlay,
+  /** @export */ yd: _alSourcePause,
+  /** @export */ xd: _alSourcePlay,
   /** @export */ b: _alSourceStop,
-  /** @export */ vd: _alSourceStopv,
+  /** @export */ wd: _alSourceStopv,
   /** @export */ i: _alSourcef,
   /** @export */ l: _alSourcefv,
   /** @export */ r: _alSourcei,
-  /** @export */ ud: _alcCloseDevice,
-  /** @export */ td: _alcCreateContext,
-  /** @export */ sd: _alcDestroyContext,
-  /** @export */ rd: _alcGetError,
-  /** @export */ qd: _alcMakeContextCurrent,
-  /** @export */ pd: _alcOpenDevice,
-  /** @export */ R: _clock_time_get,
-  /** @export */ q: _emscripten_asm_const_int,
-  /** @export */ od: _emscripten_cancel_main_loop,
+  /** @export */ vd: _alcCloseDevice,
+  /** @export */ ud: _alcCreateContext,
+  /** @export */ td: _alcDestroyContext,
+  /** @export */ sd: _alcGetError,
+  /** @export */ rd: _alcMakeContextCurrent,
+  /** @export */ qd: _alcOpenDevice,
+  /** @export */ S: _clock_time_get,
+  /** @export */ m: _emscripten_asm_const_int,
+  /** @export */ B: _emscripten_cancel_main_loop,
   /** @export */ A: _emscripten_date_now,
-  /** @export */ nd: _emscripten_get_canvas_element_size,
-  /** @export */ md: _emscripten_get_element_css_size,
-  /** @export */ ld: _emscripten_get_heap_max,
-  /** @export */ kd: _emscripten_get_now,
-  /** @export */ jd: _emscripten_glActiveTexture,
-  /** @export */ id: _emscripten_glAttachShader,
-  /** @export */ hd: _emscripten_glBeginQueryEXT,
-  /** @export */ gd: _emscripten_glBindAttribLocation,
-  /** @export */ fd: _emscripten_glBindBuffer,
-  /** @export */ ed: _emscripten_glBindFramebuffer,
-  /** @export */ dd: _emscripten_glBindRenderbuffer,
-  /** @export */ cd: _emscripten_glBindTexture,
-  /** @export */ bd: _emscripten_glBindVertexArrayOES,
-  /** @export */ ad: _emscripten_glBlendColor,
-  /** @export */ $c: _emscripten_glBlendEquation,
-  /** @export */ _c: _emscripten_glBlendEquationSeparate,
-  /** @export */ Zc: _emscripten_glBlendFunc,
-  /** @export */ Yc: _emscripten_glBlendFuncSeparate,
-  /** @export */ Xc: _emscripten_glBufferData,
-  /** @export */ Wc: _emscripten_glBufferSubData,
-  /** @export */ Vc: _emscripten_glCheckFramebufferStatus,
-  /** @export */ Uc: _emscripten_glClear,
-  /** @export */ Tc: _emscripten_glClearColor,
-  /** @export */ Sc: _emscripten_glClearDepthf,
-  /** @export */ Rc: _emscripten_glClearStencil,
-  /** @export */ Qc: _emscripten_glClipControlEXT,
-  /** @export */ Pc: _emscripten_glColorMask,
-  /** @export */ Oc: _emscripten_glCompileShader,
-  /** @export */ Nc: _emscripten_glCompressedTexImage2D,
-  /** @export */ Mc: _emscripten_glCompressedTexSubImage2D,
-  /** @export */ Lc: _emscripten_glCopyTexImage2D,
-  /** @export */ Kc: _emscripten_glCopyTexSubImage2D,
-  /** @export */ Jc: _emscripten_glCreateProgram,
-  /** @export */ Ic: _emscripten_glCreateShader,
-  /** @export */ Hc: _emscripten_glCullFace,
-  /** @export */ Gc: _emscripten_glDeleteBuffers,
-  /** @export */ Fc: _emscripten_glDeleteFramebuffers,
-  /** @export */ Ec: _emscripten_glDeleteProgram,
-  /** @export */ Dc: _emscripten_glDeleteQueriesEXT,
-  /** @export */ Cc: _emscripten_glDeleteRenderbuffers,
-  /** @export */ Bc: _emscripten_glDeleteShader,
-  /** @export */ Ac: _emscripten_glDeleteTextures,
-  /** @export */ zc: _emscripten_glDeleteVertexArraysOES,
-  /** @export */ yc: _emscripten_glDepthFunc,
-  /** @export */ xc: _emscripten_glDepthMask,
-  /** @export */ wc: _emscripten_glDepthRangef,
-  /** @export */ vc: _emscripten_glDetachShader,
-  /** @export */ uc: _emscripten_glDisable,
-  /** @export */ tc: _emscripten_glDisableVertexAttribArray,
-  /** @export */ sc: _emscripten_glDrawArrays,
-  /** @export */ rc: _emscripten_glDrawArraysInstancedANGLE,
-  /** @export */ qc: _emscripten_glDrawBuffersWEBGL,
-  /** @export */ pc: _emscripten_glDrawElements,
-  /** @export */ oc: _emscripten_glDrawElementsInstancedANGLE,
-  /** @export */ nc: _emscripten_glEnable,
-  /** @export */ mc: _emscripten_glEnableVertexAttribArray,
-  /** @export */ lc: _emscripten_glEndQueryEXT,
-  /** @export */ kc: _emscripten_glFinish,
-  /** @export */ jc: _emscripten_glFlush,
-  /** @export */ ic: _emscripten_glFramebufferRenderbuffer,
-  /** @export */ hc: _emscripten_glFramebufferTexture2D,
-  /** @export */ gc: _emscripten_glFrontFace,
-  /** @export */ fc: _emscripten_glGenBuffers,
-  /** @export */ ec: _emscripten_glGenFramebuffers,
-  /** @export */ dc: _emscripten_glGenQueriesEXT,
-  /** @export */ cc: _emscripten_glGenRenderbuffers,
-  /** @export */ bc: _emscripten_glGenTextures,
-  /** @export */ ac: _emscripten_glGenVertexArraysOES,
-  /** @export */ $b: _emscripten_glGenerateMipmap,
-  /** @export */ _b: _emscripten_glGetActiveAttrib,
-  /** @export */ Zb: _emscripten_glGetActiveUniform,
-  /** @export */ Yb: _emscripten_glGetAttachedShaders,
-  /** @export */ Xb: _emscripten_glGetAttribLocation,
-  /** @export */ Wb: _emscripten_glGetBooleanv,
-  /** @export */ Vb: _emscripten_glGetBufferParameteriv,
-  /** @export */ Ub: _emscripten_glGetError,
-  /** @export */ Tb: _emscripten_glGetFloatv,
-  /** @export */ Sb: _emscripten_glGetFramebufferAttachmentParameteriv,
-  /** @export */ Rb: _emscripten_glGetIntegerv,
-  /** @export */ Qb: _emscripten_glGetProgramInfoLog,
-  /** @export */ Pb: _emscripten_glGetProgramiv,
-  /** @export */ Ob: _emscripten_glGetQueryObjecti64vEXT,
-  /** @export */ Nb: _emscripten_glGetQueryObjectivEXT,
-  /** @export */ Mb: _emscripten_glGetQueryObjectui64vEXT,
-  /** @export */ Lb: _emscripten_glGetQueryObjectuivEXT,
-  /** @export */ Kb: _emscripten_glGetQueryivEXT,
-  /** @export */ Jb: _emscripten_glGetRenderbufferParameteriv,
-  /** @export */ Ib: _emscripten_glGetShaderInfoLog,
-  /** @export */ Hb: _emscripten_glGetShaderPrecisionFormat,
-  /** @export */ Gb: _emscripten_glGetShaderSource,
-  /** @export */ Fb: _emscripten_glGetShaderiv,
-  /** @export */ Eb: _emscripten_glGetString,
-  /** @export */ Db: _emscripten_glGetTexParameterfv,
-  /** @export */ Cb: _emscripten_glGetTexParameteriv,
-  /** @export */ Bb: _emscripten_glGetUniformLocation,
-  /** @export */ Ab: _emscripten_glGetUniformfv,
-  /** @export */ zb: _emscripten_glGetUniformiv,
-  /** @export */ yb: _emscripten_glGetVertexAttribPointerv,
-  /** @export */ xb: _emscripten_glGetVertexAttribfv,
-  /** @export */ wb: _emscripten_glGetVertexAttribiv,
-  /** @export */ vb: _emscripten_glHint,
-  /** @export */ ub: _emscripten_glIsBuffer,
-  /** @export */ tb: _emscripten_glIsEnabled,
-  /** @export */ sb: _emscripten_glIsFramebuffer,
-  /** @export */ rb: _emscripten_glIsProgram,
-  /** @export */ qb: _emscripten_glIsQueryEXT,
-  /** @export */ pb: _emscripten_glIsRenderbuffer,
-  /** @export */ ob: _emscripten_glIsShader,
-  /** @export */ nb: _emscripten_glIsTexture,
-  /** @export */ mb: _emscripten_glIsVertexArrayOES,
-  /** @export */ lb: _emscripten_glLineWidth,
-  /** @export */ kb: _emscripten_glLinkProgram,
-  /** @export */ jb: _emscripten_glPixelStorei,
-  /** @export */ ib: _emscripten_glPolygonModeWEBGL,
-  /** @export */ hb: _emscripten_glPolygonOffset,
-  /** @export */ gb: _emscripten_glPolygonOffsetClampEXT,
-  /** @export */ fb: _emscripten_glQueryCounterEXT,
-  /** @export */ eb: _emscripten_glReadPixels,
-  /** @export */ db: _emscripten_glReleaseShaderCompiler,
-  /** @export */ cb: _emscripten_glRenderbufferStorage,
-  /** @export */ bb: _emscripten_glSampleCoverage,
-  /** @export */ ab: _emscripten_glScissor,
-  /** @export */ $a: _emscripten_glShaderBinary,
-  /** @export */ _a: _emscripten_glShaderSource,
-  /** @export */ Za: _emscripten_glStencilFunc,
-  /** @export */ Ya: _emscripten_glStencilFuncSeparate,
-  /** @export */ Xa: _emscripten_glStencilMask,
-  /** @export */ Wa: _emscripten_glStencilMaskSeparate,
-  /** @export */ Va: _emscripten_glStencilOp,
-  /** @export */ Ua: _emscripten_glStencilOpSeparate,
-  /** @export */ Ta: _emscripten_glTexImage2D,
-  /** @export */ Sa: _emscripten_glTexParameterf,
-  /** @export */ Ra: _emscripten_glTexParameterfv,
-  /** @export */ Qa: _emscripten_glTexParameteri,
-  /** @export */ Pa: _emscripten_glTexParameteriv,
-  /** @export */ Oa: _emscripten_glTexSubImage2D,
-  /** @export */ Na: _emscripten_glUniform1f,
-  /** @export */ Ma: _emscripten_glUniform1fv,
-  /** @export */ La: _emscripten_glUniform1i,
-  /** @export */ Ka: _emscripten_glUniform1iv,
-  /** @export */ Ja: _emscripten_glUniform2f,
-  /** @export */ Ia: _emscripten_glUniform2fv,
-  /** @export */ Ha: _emscripten_glUniform2i,
-  /** @export */ Ga: _emscripten_glUniform2iv,
-  /** @export */ Fa: _emscripten_glUniform3f,
-  /** @export */ Ea: _emscripten_glUniform3fv,
-  /** @export */ Da: _emscripten_glUniform3i,
-  /** @export */ Ca: _emscripten_glUniform3iv,
-  /** @export */ Ba: _emscripten_glUniform4f,
-  /** @export */ Aa: _emscripten_glUniform4fv,
-  /** @export */ za: _emscripten_glUniform4i,
-  /** @export */ ya: _emscripten_glUniform4iv,
-  /** @export */ xa: _emscripten_glUniformMatrix2fv,
-  /** @export */ wa: _emscripten_glUniformMatrix3fv,
-  /** @export */ va: _emscripten_glUniformMatrix4fv,
-  /** @export */ ua: _emscripten_glUseProgram,
-  /** @export */ ta: _emscripten_glValidateProgram,
-  /** @export */ sa: _emscripten_glVertexAttrib1f,
-  /** @export */ ra: _emscripten_glVertexAttrib1fv,
-  /** @export */ qa: _emscripten_glVertexAttrib2f,
-  /** @export */ pa: _emscripten_glVertexAttrib2fv,
-  /** @export */ oa: _emscripten_glVertexAttrib3f,
-  /** @export */ na: _emscripten_glVertexAttrib3fv,
-  /** @export */ ma: _emscripten_glVertexAttrib4f,
-  /** @export */ la: _emscripten_glVertexAttrib4fv,
-  /** @export */ ka: _emscripten_glVertexAttribDivisorANGLE,
-  /** @export */ ja: _emscripten_glVertexAttribPointer,
-  /** @export */ ia: _emscripten_glViewport,
-  /** @export */ ha: _emscripten_resize_heap,
-  /** @export */ ga: _emscripten_set_blur_callback_on_thread,
-  /** @export */ fa: _emscripten_set_canvas_element_size,
-  /** @export */ ea: _emscripten_set_keydown_callback_on_thread,
-  /** @export */ da: _emscripten_set_keyup_callback_on_thread,
-  /** @export */ ca: _emscripten_set_main_loop,
-  /** @export */ ba: _emscripten_set_mousedown_callback_on_thread,
-  /** @export */ aa: _emscripten_set_mousemove_callback_on_thread,
-  /** @export */ $: _emscripten_set_mouseup_callback_on_thread,
-  /** @export */ _: _emscripten_webgl_create_context,
+  /** @export */ pd: _emscripten_force_exit,
+  /** @export */ od: _emscripten_get_canvas_element_size,
+  /** @export */ nd: _emscripten_get_element_css_size,
+  /** @export */ md: _emscripten_get_heap_max,
+  /** @export */ ld: _emscripten_get_now,
+  /** @export */ kd: _emscripten_glActiveTexture,
+  /** @export */ jd: _emscripten_glAttachShader,
+  /** @export */ id: _emscripten_glBeginQueryEXT,
+  /** @export */ hd: _emscripten_glBindAttribLocation,
+  /** @export */ gd: _emscripten_glBindBuffer,
+  /** @export */ fd: _emscripten_glBindFramebuffer,
+  /** @export */ ed: _emscripten_glBindRenderbuffer,
+  /** @export */ dd: _emscripten_glBindTexture,
+  /** @export */ cd: _emscripten_glBindVertexArrayOES,
+  /** @export */ bd: _emscripten_glBlendColor,
+  /** @export */ ad: _emscripten_glBlendEquation,
+  /** @export */ $c: _emscripten_glBlendEquationSeparate,
+  /** @export */ _c: _emscripten_glBlendFunc,
+  /** @export */ Zc: _emscripten_glBlendFuncSeparate,
+  /** @export */ Yc: _emscripten_glBufferData,
+  /** @export */ Xc: _emscripten_glBufferSubData,
+  /** @export */ Wc: _emscripten_glCheckFramebufferStatus,
+  /** @export */ Vc: _emscripten_glClear,
+  /** @export */ Uc: _emscripten_glClearColor,
+  /** @export */ Tc: _emscripten_glClearDepthf,
+  /** @export */ Sc: _emscripten_glClearStencil,
+  /** @export */ Rc: _emscripten_glClipControlEXT,
+  /** @export */ Qc: _emscripten_glColorMask,
+  /** @export */ Pc: _emscripten_glCompileShader,
+  /** @export */ Oc: _emscripten_glCompressedTexImage2D,
+  /** @export */ Nc: _emscripten_glCompressedTexSubImage2D,
+  /** @export */ Mc: _emscripten_glCopyTexImage2D,
+  /** @export */ Lc: _emscripten_glCopyTexSubImage2D,
+  /** @export */ Kc: _emscripten_glCreateProgram,
+  /** @export */ Jc: _emscripten_glCreateShader,
+  /** @export */ Ic: _emscripten_glCullFace,
+  /** @export */ Hc: _emscripten_glDeleteBuffers,
+  /** @export */ Gc: _emscripten_glDeleteFramebuffers,
+  /** @export */ Fc: _emscripten_glDeleteProgram,
+  /** @export */ Ec: _emscripten_glDeleteQueriesEXT,
+  /** @export */ Dc: _emscripten_glDeleteRenderbuffers,
+  /** @export */ Cc: _emscripten_glDeleteShader,
+  /** @export */ Bc: _emscripten_glDeleteTextures,
+  /** @export */ Ac: _emscripten_glDeleteVertexArraysOES,
+  /** @export */ zc: _emscripten_glDepthFunc,
+  /** @export */ yc: _emscripten_glDepthMask,
+  /** @export */ xc: _emscripten_glDepthRangef,
+  /** @export */ wc: _emscripten_glDetachShader,
+  /** @export */ vc: _emscripten_glDisable,
+  /** @export */ uc: _emscripten_glDisableVertexAttribArray,
+  /** @export */ tc: _emscripten_glDrawArrays,
+  /** @export */ sc: _emscripten_glDrawArraysInstancedANGLE,
+  /** @export */ rc: _emscripten_glDrawBuffersWEBGL,
+  /** @export */ qc: _emscripten_glDrawElements,
+  /** @export */ pc: _emscripten_glDrawElementsInstancedANGLE,
+  /** @export */ oc: _emscripten_glEnable,
+  /** @export */ nc: _emscripten_glEnableVertexAttribArray,
+  /** @export */ mc: _emscripten_glEndQueryEXT,
+  /** @export */ lc: _emscripten_glFinish,
+  /** @export */ kc: _emscripten_glFlush,
+  /** @export */ jc: _emscripten_glFramebufferRenderbuffer,
+  /** @export */ ic: _emscripten_glFramebufferTexture2D,
+  /** @export */ hc: _emscripten_glFrontFace,
+  /** @export */ gc: _emscripten_glGenBuffers,
+  /** @export */ fc: _emscripten_glGenFramebuffers,
+  /** @export */ ec: _emscripten_glGenQueriesEXT,
+  /** @export */ dc: _emscripten_glGenRenderbuffers,
+  /** @export */ cc: _emscripten_glGenTextures,
+  /** @export */ bc: _emscripten_glGenVertexArraysOES,
+  /** @export */ ac: _emscripten_glGenerateMipmap,
+  /** @export */ $b: _emscripten_glGetActiveAttrib,
+  /** @export */ _b: _emscripten_glGetActiveUniform,
+  /** @export */ Zb: _emscripten_glGetAttachedShaders,
+  /** @export */ Yb: _emscripten_glGetAttribLocation,
+  /** @export */ Xb: _emscripten_glGetBooleanv,
+  /** @export */ Wb: _emscripten_glGetBufferParameteriv,
+  /** @export */ Vb: _emscripten_glGetError,
+  /** @export */ Ub: _emscripten_glGetFloatv,
+  /** @export */ Tb: _emscripten_glGetFramebufferAttachmentParameteriv,
+  /** @export */ Sb: _emscripten_glGetIntegerv,
+  /** @export */ Rb: _emscripten_glGetProgramInfoLog,
+  /** @export */ Qb: _emscripten_glGetProgramiv,
+  /** @export */ Pb: _emscripten_glGetQueryObjecti64vEXT,
+  /** @export */ Ob: _emscripten_glGetQueryObjectivEXT,
+  /** @export */ Nb: _emscripten_glGetQueryObjectui64vEXT,
+  /** @export */ Mb: _emscripten_glGetQueryObjectuivEXT,
+  /** @export */ Lb: _emscripten_glGetQueryivEXT,
+  /** @export */ Kb: _emscripten_glGetRenderbufferParameteriv,
+  /** @export */ Jb: _emscripten_glGetShaderInfoLog,
+  /** @export */ Ib: _emscripten_glGetShaderPrecisionFormat,
+  /** @export */ Hb: _emscripten_glGetShaderSource,
+  /** @export */ Gb: _emscripten_glGetShaderiv,
+  /** @export */ Fb: _emscripten_glGetString,
+  /** @export */ Eb: _emscripten_glGetTexParameterfv,
+  /** @export */ Db: _emscripten_glGetTexParameteriv,
+  /** @export */ Cb: _emscripten_glGetUniformLocation,
+  /** @export */ Bb: _emscripten_glGetUniformfv,
+  /** @export */ Ab: _emscripten_glGetUniformiv,
+  /** @export */ zb: _emscripten_glGetVertexAttribPointerv,
+  /** @export */ yb: _emscripten_glGetVertexAttribfv,
+  /** @export */ xb: _emscripten_glGetVertexAttribiv,
+  /** @export */ wb: _emscripten_glHint,
+  /** @export */ vb: _emscripten_glIsBuffer,
+  /** @export */ ub: _emscripten_glIsEnabled,
+  /** @export */ tb: _emscripten_glIsFramebuffer,
+  /** @export */ sb: _emscripten_glIsProgram,
+  /** @export */ rb: _emscripten_glIsQueryEXT,
+  /** @export */ qb: _emscripten_glIsRenderbuffer,
+  /** @export */ pb: _emscripten_glIsShader,
+  /** @export */ ob: _emscripten_glIsTexture,
+  /** @export */ nb: _emscripten_glIsVertexArrayOES,
+  /** @export */ mb: _emscripten_glLineWidth,
+  /** @export */ lb: _emscripten_glLinkProgram,
+  /** @export */ kb: _emscripten_glPixelStorei,
+  /** @export */ jb: _emscripten_glPolygonModeWEBGL,
+  /** @export */ ib: _emscripten_glPolygonOffset,
+  /** @export */ hb: _emscripten_glPolygonOffsetClampEXT,
+  /** @export */ gb: _emscripten_glQueryCounterEXT,
+  /** @export */ fb: _emscripten_glReadPixels,
+  /** @export */ eb: _emscripten_glReleaseShaderCompiler,
+  /** @export */ db: _emscripten_glRenderbufferStorage,
+  /** @export */ cb: _emscripten_glSampleCoverage,
+  /** @export */ bb: _emscripten_glScissor,
+  /** @export */ ab: _emscripten_glShaderBinary,
+  /** @export */ $a: _emscripten_glShaderSource,
+  /** @export */ _a: _emscripten_glStencilFunc,
+  /** @export */ Za: _emscripten_glStencilFuncSeparate,
+  /** @export */ Ya: _emscripten_glStencilMask,
+  /** @export */ Xa: _emscripten_glStencilMaskSeparate,
+  /** @export */ Wa: _emscripten_glStencilOp,
+  /** @export */ Va: _emscripten_glStencilOpSeparate,
+  /** @export */ Ua: _emscripten_glTexImage2D,
+  /** @export */ Ta: _emscripten_glTexParameterf,
+  /** @export */ Sa: _emscripten_glTexParameterfv,
+  /** @export */ Ra: _emscripten_glTexParameteri,
+  /** @export */ Qa: _emscripten_glTexParameteriv,
+  /** @export */ Pa: _emscripten_glTexSubImage2D,
+  /** @export */ Oa: _emscripten_glUniform1f,
+  /** @export */ Na: _emscripten_glUniform1fv,
+  /** @export */ Ma: _emscripten_glUniform1i,
+  /** @export */ La: _emscripten_glUniform1iv,
+  /** @export */ Ka: _emscripten_glUniform2f,
+  /** @export */ Ja: _emscripten_glUniform2fv,
+  /** @export */ Ia: _emscripten_glUniform2i,
+  /** @export */ Ha: _emscripten_glUniform2iv,
+  /** @export */ Ga: _emscripten_glUniform3f,
+  /** @export */ Fa: _emscripten_glUniform3fv,
+  /** @export */ Ea: _emscripten_glUniform3i,
+  /** @export */ Da: _emscripten_glUniform3iv,
+  /** @export */ Ca: _emscripten_glUniform4f,
+  /** @export */ Ba: _emscripten_glUniform4fv,
+  /** @export */ Aa: _emscripten_glUniform4i,
+  /** @export */ za: _emscripten_glUniform4iv,
+  /** @export */ ya: _emscripten_glUniformMatrix2fv,
+  /** @export */ xa: _emscripten_glUniformMatrix3fv,
+  /** @export */ wa: _emscripten_glUniformMatrix4fv,
+  /** @export */ va: _emscripten_glUseProgram,
+  /** @export */ ua: _emscripten_glValidateProgram,
+  /** @export */ ta: _emscripten_glVertexAttrib1f,
+  /** @export */ sa: _emscripten_glVertexAttrib1fv,
+  /** @export */ ra: _emscripten_glVertexAttrib2f,
+  /** @export */ qa: _emscripten_glVertexAttrib2fv,
+  /** @export */ pa: _emscripten_glVertexAttrib3f,
+  /** @export */ oa: _emscripten_glVertexAttrib3fv,
+  /** @export */ na: _emscripten_glVertexAttrib4f,
+  /** @export */ ma: _emscripten_glVertexAttrib4fv,
+  /** @export */ la: _emscripten_glVertexAttribDivisorANGLE,
+  /** @export */ ka: _emscripten_glVertexAttribPointer,
+  /** @export */ ja: _emscripten_glViewport,
+  /** @export */ ia: _emscripten_resize_heap,
+  /** @export */ ha: _emscripten_set_blur_callback_on_thread,
+  /** @export */ ga: _emscripten_set_canvas_element_size,
+  /** @export */ fa: _emscripten_set_keydown_callback_on_thread,
+  /** @export */ ea: _emscripten_set_keyup_callback_on_thread,
+  /** @export */ da: _emscripten_set_main_loop,
+  /** @export */ ca: _emscripten_set_mousedown_callback_on_thread,
+  /** @export */ ba: _emscripten_set_mousemove_callback_on_thread,
+  /** @export */ aa: _emscripten_set_mouseup_callback_on_thread,
+  /** @export */ $: _emscripten_webgl_create_context,
   /** @export */ z: _emscripten_webgl_make_context_current,
-  /** @export */ Rd: _environ_get,
-  /** @export */ Qd: _environ_sizes_get,
+  /** @export */ Sd: _environ_get,
+  /** @export */ Rd: _environ_sizes_get,
   /** @export */ h: _exit,
   /** @export */ k: _fd_close,
-  /** @export */ D: _fd_fdstat_get,
-  /** @export */ C: _fd_read,
-  /** @export */ Q: _fd_seek,
-  /** @export */ Pd: _fd_sync,
+  /** @export */ E: _fd_fdstat_get,
+  /** @export */ D: _fd_read,
+  /** @export */ R: _fd_seek,
+  /** @export */ Qd: _fd_sync,
   /** @export */ t: _fd_write,
-  /** @export */ Z: _glGetFloatv,
-  /** @export */ Y: _glStencilFunc,
-  /** @export */ X: _glStencilOp,
+  /** @export */ _: _glGetFloatv,
+  /** @export */ Z: _glStencilFunc,
+  /** @export */ Y: _glStencilOp,
   /** @export */ a: invoke_ii,
   /** @export */ d: invoke_iii,
   /** @export */ e: invoke_iiii,
-  /** @export */ p: invoke_iiiii,
-  /** @export */ W: invoke_iiiiii,
-  /** @export */ V: invoke_iiiiiiiiii,
-  /** @export */ o: invoke_vi,
+  /** @export */ q: invoke_iiiii,
+  /** @export */ X: invoke_iiiiii,
+  /** @export */ W: invoke_iiiiiiiiii,
+  /** @export */ p: invoke_vi,
   /** @export */ c: invoke_vii,
-  /** @export */ n: invoke_viii,
-  /** @export */ U: invoke_viiii,
-  /** @export */ T: invoke_viiiiiii,
+  /** @export */ o: invoke_viii,
+  /** @export */ V: invoke_viiii,
+  /** @export */ U: invoke_viiiiiii,
   /** @export */ y: invoke_viiiiiiiii,
-  /** @export */ Od: _proc_exit
+  /** @export */ Pd: _proc_exit
 };
 
 var wasmExports;
 
 createWasm();
 
-var ___wasm_call_ctors = () => (___wasm_call_ctors = wasmExports["we"])();
+var ___wasm_call_ctors = () => (___wasm_call_ctors = wasmExports["xe"])();
 
-var _main = Module["_main"] = (a0, a1) => (_main = Module["_main"] = wasmExports["xe"])(a0, a1);
+var _main = Module["_main"] = (a0, a1) => (_main = Module["_main"] = wasmExports["ze"])(a0, a1);
 
-var _malloc = a0 => (_malloc = wasmExports["ze"])(a0);
+var _malloc = a0 => (_malloc = wasmExports["Ae"])(a0);
 
-var _free = a0 => (_free = wasmExports["Ae"])(a0);
+var _free = a0 => (_free = wasmExports["Be"])(a0);
 
-var _emscripten_builtin_memalign = (a0, a1) => (_emscripten_builtin_memalign = wasmExports["Be"])(a0, a1);
+var _emscripten_builtin_memalign = (a0, a1) => (_emscripten_builtin_memalign = wasmExports["Ce"])(a0, a1);
 
-var _setThrew = (a0, a1) => (_setThrew = wasmExports["Ce"])(a0, a1);
+var _setThrew = (a0, a1) => (_setThrew = wasmExports["De"])(a0, a1);
 
-var __emscripten_tempret_set = a0 => (__emscripten_tempret_set = wasmExports["De"])(a0);
+var __emscripten_tempret_set = a0 => (__emscripten_tempret_set = wasmExports["Ee"])(a0);
 
-var __emscripten_stack_restore = a0 => (__emscripten_stack_restore = wasmExports["Ee"])(a0);
+var __emscripten_stack_restore = a0 => (__emscripten_stack_restore = wasmExports["Fe"])(a0);
 
-var __emscripten_stack_alloc = a0 => (__emscripten_stack_alloc = wasmExports["Fe"])(a0);
+var __emscripten_stack_alloc = a0 => (__emscripten_stack_alloc = wasmExports["Ge"])(a0);
 
-var _emscripten_stack_get_current = () => (_emscripten_stack_get_current = wasmExports["Ge"])();
+var _emscripten_stack_get_current = () => (_emscripten_stack_get_current = wasmExports["He"])();
 
-var dynCall_ii = Module["dynCall_ii"] = (a0, a1) => (dynCall_ii = Module["dynCall_ii"] = wasmExports["He"])(a0, a1);
+var dynCall_ii = Module["dynCall_ii"] = (a0, a1) => (dynCall_ii = Module["dynCall_ii"] = wasmExports["Ie"])(a0, a1);
 
-var dynCall_vii = Module["dynCall_vii"] = (a0, a1, a2) => (dynCall_vii = Module["dynCall_vii"] = wasmExports["Ie"])(a0, a1, a2);
+var dynCall_vii = Module["dynCall_vii"] = (a0, a1, a2) => (dynCall_vii = Module["dynCall_vii"] = wasmExports["Je"])(a0, a1, a2);
 
-var dynCall_iiii = Module["dynCall_iiii"] = (a0, a1, a2, a3) => (dynCall_iiii = Module["dynCall_iiii"] = wasmExports["Je"])(a0, a1, a2, a3);
+var dynCall_iiii = Module["dynCall_iiii"] = (a0, a1, a2, a3) => (dynCall_iiii = Module["dynCall_iiii"] = wasmExports["Ke"])(a0, a1, a2, a3);
 
-var dynCall_v = Module["dynCall_v"] = a0 => (dynCall_v = Module["dynCall_v"] = wasmExports["Ke"])(a0);
+var dynCall_v = Module["dynCall_v"] = a0 => (dynCall_v = Module["dynCall_v"] = wasmExports["Le"])(a0);
 
-var dynCall_vi = Module["dynCall_vi"] = (a0, a1) => (dynCall_vi = Module["dynCall_vi"] = wasmExports["Le"])(a0, a1);
+var dynCall_vi = Module["dynCall_vi"] = (a0, a1) => (dynCall_vi = Module["dynCall_vi"] = wasmExports["Me"])(a0, a1);
 
-var dynCall_viii = Module["dynCall_viii"] = (a0, a1, a2, a3) => (dynCall_viii = Module["dynCall_viii"] = wasmExports["Me"])(a0, a1, a2, a3);
+var dynCall_viii = Module["dynCall_viii"] = (a0, a1, a2, a3) => (dynCall_viii = Module["dynCall_viii"] = wasmExports["Ne"])(a0, a1, a2, a3);
 
-var dynCall_iii = Module["dynCall_iii"] = (a0, a1, a2) => (dynCall_iii = Module["dynCall_iii"] = wasmExports["Ne"])(a0, a1, a2);
+var dynCall_iii = Module["dynCall_iii"] = (a0, a1, a2) => (dynCall_iii = Module["dynCall_iii"] = wasmExports["Oe"])(a0, a1, a2);
 
-var dynCall_iiiii = Module["dynCall_iiiii"] = (a0, a1, a2, a3, a4) => (dynCall_iiiii = Module["dynCall_iiiii"] = wasmExports["Oe"])(a0, a1, a2, a3, a4);
+var dynCall_iiiii = Module["dynCall_iiiii"] = (a0, a1, a2, a3, a4) => (dynCall_iiiii = Module["dynCall_iiiii"] = wasmExports["Pe"])(a0, a1, a2, a3, a4);
 
-var dynCall_viiii = Module["dynCall_viiii"] = (a0, a1, a2, a3, a4) => (dynCall_viiii = Module["dynCall_viiii"] = wasmExports["Pe"])(a0, a1, a2, a3, a4);
+var dynCall_viiii = Module["dynCall_viiii"] = (a0, a1, a2, a3, a4) => (dynCall_viiii = Module["dynCall_viiii"] = wasmExports["Qe"])(a0, a1, a2, a3, a4);
 
-var dynCall_viiiiiii = Module["dynCall_viiiiiii"] = (a0, a1, a2, a3, a4, a5, a6, a7) => (dynCall_viiiiiii = Module["dynCall_viiiiiii"] = wasmExports["Qe"])(a0, a1, a2, a3, a4, a5, a6, a7);
+var dynCall_viiiiiii = Module["dynCall_viiiiiii"] = (a0, a1, a2, a3, a4, a5, a6, a7) => (dynCall_viiiiiii = Module["dynCall_viiiiiii"] = wasmExports["Re"])(a0, a1, a2, a3, a4, a5, a6, a7);
 
-var dynCall_iiiiiiiiii = Module["dynCall_iiiiiiiiii"] = (a0, a1, a2, a3, a4, a5, a6, a7, a8, a9) => (dynCall_iiiiiiiiii = Module["dynCall_iiiiiiiiii"] = wasmExports["Re"])(a0, a1, a2, a3, a4, a5, a6, a7, a8, a9);
+var dynCall_iiiiiiiiii = Module["dynCall_iiiiiiiiii"] = (a0, a1, a2, a3, a4, a5, a6, a7, a8, a9) => (dynCall_iiiiiiiiii = Module["dynCall_iiiiiiiiii"] = wasmExports["Se"])(a0, a1, a2, a3, a4, a5, a6, a7, a8, a9);
 
-var dynCall_iiiiii = Module["dynCall_iiiiii"] = (a0, a1, a2, a3, a4, a5) => (dynCall_iiiiii = Module["dynCall_iiiiii"] = wasmExports["Se"])(a0, a1, a2, a3, a4, a5);
+var dynCall_iiiiii = Module["dynCall_iiiiii"] = (a0, a1, a2, a3, a4, a5) => (dynCall_iiiiii = Module["dynCall_iiiiii"] = wasmExports["Te"])(a0, a1, a2, a3, a4, a5);
 
-var dynCall_viiiiiiiii = Module["dynCall_viiiiiiiii"] = (a0, a1, a2, a3, a4, a5, a6, a7, a8, a9) => (dynCall_viiiiiiiii = Module["dynCall_viiiiiiiii"] = wasmExports["Te"])(a0, a1, a2, a3, a4, a5, a6, a7, a8, a9);
+var dynCall_viiiiiiiii = Module["dynCall_viiiiiiiii"] = (a0, a1, a2, a3, a4, a5, a6, a7, a8, a9) => (dynCall_viiiiiiiii = Module["dynCall_viiiiiiiii"] = wasmExports["Ue"])(a0, a1, a2, a3, a4, a5, a6, a7, a8, a9);
 
 function invoke_iii(index, a1, a2) {
   var sp = stackSave();

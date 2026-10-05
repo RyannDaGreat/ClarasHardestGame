@@ -1,0 +1,150 @@
+/* One vocabulary for both interfaces. Component layout stays in its own sheet. */
+:root {
+  --theme-picker-width: 10rem;
+  --theme-picker-font: 0.75rem;
+  --theme-picker-gap: 0.4rem;
+  --theme-picker-pad: 0.45rem;
+  --theme-picker-label: 0.65rem;
+  --theme-focus: 2px;
+  --theme-zero: 0;
+  --theme-heading-size: 1.1em;
+  --theme-overlay-ink: #eef5f3;
+  --theme-overlay-muted: #bbc8ca;
+}
+:root[data-app] {
+  --bg: var(--theme-bg);
+  --panel: var(--theme-panel);
+  --muted: var(--theme-muted);
+  --accent: var(--theme-accent);
+  --accent-hover: var(--theme-accent);
+  --radius: var(--theme-radius);
+  --small-radius: var(--theme-radius);
+}
+:root[data-app="game"] {
+  --fg: var(--theme-ink);
+  --border: var(--theme-line);
+  --line: var(--theme-border);
+}
+:root[data-app="editor"] {
+  --ink: var(--theme-ink);
+  --panel-raised: var(--theme-raised);
+  --line: var(--theme-line);
+  --accent-dark: var(--theme-raised);
+  --one: var(--theme-border);
+  --map-grid: var(--theme-line);
+  --shadow: var(--theme-shadow);
+}
+body {
+  font-family: var(--theme-font);
+  background-image: var(--theme-decor);
+  background-size: var(--theme-pattern);
+}
+header,
+.toolbar,
+aside {
+  background-color: var(--theme-panel);
+  background-image: var(--theme-surface);
+  backdrop-filter: var(--theme-blur);
+}
+.brand,
+.wordmark {
+  font-family: var(--theme-font);
+  font-weight: var(--theme-weight);
+  letter-spacing: var(--theme-tracking);
+  text-transform: var(--theme-caps);
+}
+.theme-control {
+  display: flex;
+  align-items: center;
+  gap: var(--theme-picker-gap);
+  margin: var(--theme-zero);
+  flex-shrink: 0;
+}
+.theme-control > span {
+  font: var(--theme-picker-label) var(--theme-font);
+  color: var(--theme-muted);
+  text-transform: uppercase;
+}
+.theme-control select {
+  width: var(--theme-picker-width);
+  margin: var(--theme-zero);
+  padding: var(--theme-picker-pad);
+  color: var(--theme-ink);
+  background: var(--theme-raised);
+  border: var(--theme-border) solid var(--theme-line);
+  border-radius: var(--theme-radius);
+  font: var(--theme-picker-font) var(--theme-font);
+}
+.theme-control select:focus-visible {
+  outline: var(--theme-focus) solid var(--theme-accent);
+}
+button.primary,
+#start {
+  background: var(--theme-accent);
+  color: var(--theme-on-accent);
+  border-radius: var(--theme-radius);
+  box-shadow: var(--theme-shadow);
+}
+[data-app="game"] header {
+  padding: var(--gap);
+  border: var(--theme-border) solid var(--theme-line);
+  border-radius: var(--theme-radius);
+  box-shadow: var(--theme-shadow);
+  flex-wrap: wrap;
+}
+[data-app="game"] nav {
+  flex-wrap: wrap;
+}
+[data-app="game"] #player {
+  box-shadow: var(--theme-shadow);
+}
+[data-app="game"] .launch-card {
+  color: var(--theme-overlay-ink);
+  --muted: var(--theme-overlay-muted);
+  --accent: var(--theme-accent);
+}
+[data-app="editor"] .workspace {
+  background: var(--theme-bg);
+}
+[data-app="editor"] button {
+  font-family: var(--theme-font);
+}
+[data-theme="brutalist"] .wordmark,
+[data-theme="swiss"] .wordmark {
+  font-weight: 900;
+}
+[data-theme="crt"] .wordmark,
+[data-theme="synthwave"] .wordmark {
+  text-shadow: var(--theme-shadow);
+}
+
+/* Cut only prominent surfaces; ordinary inputs remain square and unclipped. */
+:root {
+  --theme-cut: 8px;
+  --theme-card-cut: 12px;
+  --theme-full: 100%;
+  --theme-focus-inset: -4px;
+  --theme-cut-shape: polygon(
+    var(--theme-cut) var(--theme-zero),
+    var(--theme-full) var(--theme-zero),
+    var(--theme-full) calc(var(--theme-full) - var(--theme-cut)),
+    calc(var(--theme-full) - var(--theme-cut)) var(--theme-full),
+    var(--theme-zero) var(--theme-full),
+    var(--theme-zero) var(--theme-cut)
+  );
+}
+button.primary,
+#start {
+  border-radius: var(--theme-zero);
+  clip-path: var(--theme-cut-shape);
+}
+button.primary:focus-visible,
+#start:focus-visible {
+  outline: var(--theme-focus) solid var(--theme-on-accent);
+  outline-offset: var(--theme-focus-inset);
+}
+.card {
+  --theme-cut: var(--theme-card-cut);
+  border-radius: var(--theme-zero);
+  clip-path: var(--theme-cut-shape);
+}

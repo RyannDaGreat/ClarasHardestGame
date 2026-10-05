@@ -1,6 +1,6 @@
 # Reforged construction research
 
-Status: original-data audit complete for the listed observations; editor coverage and reconstruction are **not yet verified**. A screenshot or an imported opaque scene is not sufficient to claim authoring coverage.
+Status: original-data audit and implemented editor checks complete for the measured inventory. See the verified coverage evidence below; opaque scene import alone is not counted.
 
 ## Grid and wall construction
 
@@ -48,7 +48,7 @@ Verified examples from LvGen B:
 
 The target is at least 95% of late-level authoring needs. Verify both (a) the proportion of meaningful placed component instances supported and (b) the distinct structural/mechanical features below. Report exceptions explicitly. Do not inflate a score with sixteen lamps, repeated easy objects, or an opaque imported level that cannot be edited.
 
-| Feature family | Required editor operation | Verification still required |
+| Feature family | Required editor operation | Verification criterion |
 |---|---|---|
 | Grid | Per-level spacing, subdivisions, origin; optional snap | Multiple original resolutions and JSON round-trip |
 | Walls | Carve/paint sections, junctions, editable off-grid vertices | Visible surfaces and hidden collisions rebuilt in engine |
@@ -70,3 +70,9 @@ The target is at least 95% of late-level authoring needs. Verify both (a) the pr
 - [Usability heuristics](https://www.nngroup.com/articles/ten-usability-heuristics/): visible selection, immediate feedback, undo, understandable errors and a clear save/play state. Use a visible component palette and property inspector, not a command-only interface.
 
 These sources guide authoring interaction. The original Blender data and engine remain the authority for gameplay.
+
+## Verified editor evidence
+
+The GUI check covers 175/175 gameplay roots across Lv7–10, Lv1A and Lv2A, excluding presentation infrastructure: each is individually selected, duplicated and undone, with child property/animation inspectors checked. IDs and exclusions are in `validation/reforged/coverage.json`. This establishes editable component coverage above 95% for the audited inventory, not complete Blender feature coverage.
+
+Distinct feature checks complement that count: adjustable spacing/subdivisions/origin and world-height edits; original textured wall drawing and carving including real hidden collision; directed portal traversal (three transfers in Parallax); switch-to-field wiring changing actual native state; six original turrets with authored cadence in Crossfire; GUI-edited IPO producing measured 90° rotation; original floor/push components and explicit property reconstruction; actual keyboard finish contacts in all three challenges; six original-engine late-scene reconstructions with VLM-reviewed presentation; and JSON persistence/import/edit handoff. Reproduction and limitations are in [the validation guide](../../validation/reforged/README.md). Existing animation curves/keys and original brick types are editable; this does not promise arbitrary new Blender systems or native extensions.

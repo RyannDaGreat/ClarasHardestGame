@@ -61,6 +61,7 @@ get_property(PLAYER_LIBRARIES GLOBAL PROPERTY PLAYER_LIBRARIES)
 file(GENERATE OUTPUT "${CMAKE_BINARY_DIR}/player-libraries.txt" CONTENT "${PLAYER_LIBRARIES};bf_dna\n")
   add_executable(player
     "${CMAKE_CURRENT_SOURCE_DIR}/player.cpp"
+    "${CMAKE_CURRENT_SOURCE_DIR}/reforged.cpp"
     "${UPSTREAM}/source/gameengine/GamePlayer/ghost/GPG_KeyboardDevice.cpp")
   target_include_directories(player BEFORE PRIVATE "${UPSTREAM}/intern/moto/include")
   foreach(library ${PLAYER_LIBRARIES})

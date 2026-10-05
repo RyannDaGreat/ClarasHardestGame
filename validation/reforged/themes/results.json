@@ -1,0 +1,111 @@
+{
+  "results": [
+    {
+      "theme": "glass",
+      "font": "system-ui, sans-serif",
+      "background": "rgb(9, 14, 35)",
+      "overflow": false,
+      "selected": "glass"
+    },
+    {
+      "theme": "brutalist",
+      "font": "ui-monospace, SFMono-Regular, Menlo, monospace",
+      "background": "rgb(255, 228, 69)",
+      "overflow": false,
+      "selected": "brutalist"
+    },
+    {
+      "theme": "synthwave",
+      "font": "system-ui, sans-serif",
+      "background": "rgb(17, 11, 37)",
+      "overflow": false,
+      "selected": "synthwave"
+    },
+    {
+      "theme": "crt",
+      "font": "ui-monospace, SFMono-Regular, Menlo, monospace",
+      "background": "rgb(2, 12, 5)",
+      "overflow": false,
+      "selected": "crt"
+    },
+    {
+      "theme": "paper",
+      "font": "Georgia, Cambria, serif",
+      "background": "rgb(234, 230, 223)",
+      "overflow": false,
+      "selected": "paper"
+    },
+    {
+      "theme": "blueprint",
+      "font": "ui-monospace, SFMono-Regular, Menlo, monospace",
+      "background": "rgb(20, 39, 77)",
+      "overflow": false,
+      "selected": "blueprint"
+    },
+    {
+      "theme": "swiss",
+      "font": "Helvetica, Arial, sans-serif",
+      "background": "rgb(238, 234, 226)",
+      "overflow": false,
+      "selected": "swiss"
+    },
+    {
+      "theme": "contrast",
+      "font": "system-ui, sans-serif",
+      "background": "rgb(0, 0, 0)",
+      "overflow": false,
+      "selected": "contrast"
+    },
+    {
+      "theme": "hardware",
+      "font": "ui-monospace, SFMono-Regular, Menlo, monospace",
+      "background": "rgb(24, 25, 28)",
+      "overflow": false,
+      "selected": "hardware"
+    },
+    {
+      "theme": "pastel",
+      "font": "system-ui, sans-serif",
+      "background": "rgb(243, 238, 250)",
+      "overflow": false,
+      "selected": "pastel"
+    },
+    {
+      "theme": "linear",
+      "font": "system-ui, sans-serif",
+      "background": "rgb(12, 13, 16)",
+      "overflow": false,
+      "selected": "linear"
+    },
+    {
+      "theme": "vercel",
+      "font": "system-ui, sans-serif",
+      "background": "rgb(0, 0, 0)",
+      "overflow": false,
+      "selected": "vercel"
+    },
+    {
+      "theme": "nord",
+      "font": "system-ui, sans-serif",
+      "background": "rgb(46, 52, 64)",
+      "overflow": false,
+      "selected": "nord"
+    },
+    {
+      "theme": "mono",
+      "font": "system-ui, sans-serif",
+      "background": "rgb(241, 241, 241)",
+      "overflow": false,
+      "selected": "mono"
+    },
+    {
+      "theme": "sky",
+      "font": "system-ui, sans-serif",
+      "background": "rgb(241, 245, 250)",
+      "overflow": false,
+      "selected": "sky"
+    }
+  ],
+  "errors": [],
+  "persistence": true
+}

@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="en" data-app="editor">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Reforged · Level workshop</title>
+    <link rel="icon" href="../icons/play.svg" />
+    <link rel="stylesheet" href="editor.css" />
+    <link rel="stylesheet" href="../themes.css" />
+    <script src="../themes.js"></script>
+  </head>
+  <body>
+    <header>
+      <a class="wordmark" href="./">Reforged<span>THE LEVEL WORKSHOP</span></a
+      ><a class="original" href="../levels/">Browse levels ↗</a>
+      <div class="spacer"></div>
+      <label class="theme-control"
+        ><span>Theme</span
+        ><select data-theme-picker aria-label="Interface theme"></select></label
+      ><span id="save-state" role="status">Opening workshop…</span
+      ><button id="undo" title="Undo (⌘Z)" disabled>↶</button
+      ><button id="redo" title="Redo (⌘⇧Z)" disabled>↷</button
+      ><button id="import">Import JSON</button
+      ><button id="save-level">Save to levels</button
+      ><button id="export">Export JSON</button
+      ><button id="play" class="primary">▶ Playtest</button>
+    </header>
+    <div class="workspace">
+      <aside class="palette">
+        <h1>Build something brutal.</h1>
+        <p class="muted">Original components. Your rules.</p>
+        <label>Start from a level<select id="blueprint"></select></label
+        ><input id="name" aria-label="Level name" placeholder="Level name" />
+        <details><summary>Grid origin</summary><div class="row">
+          <label>X<input id="origin-x" type="number" step="any" value="0" /></label>
+          <label>Y<input id="origin-y" type="number" step="any" value="0" /></label>
+        </div></details>
+        <div class="section-title">COMPONENTS</div>
+        <input
+          id="search"
+          type="search"
+          placeholder="Find a component…"
+          aria-label="Find a component"
+        />
+        <div id="components"></div>
+        <details>
+          <summary>All scene objects</summary>
+          <label
+            ><input id="show-inactive" type="checkbox" /> Show inactive
+            templates</label
+          >
+          <div id="objects"></div>
+        </details>
+      </aside>
+      <main>
+        <div class="toolbar">
+          <div class="tools">
+            <button
+              data-tool="select"
+              class="active"
+              title="Select and move (V)"
+            >
+              ↖ Select</button
+            ><button
+              data-tool="wall"
+              title="Drag a wall with original textures and collision"
+            >
+              ＋ Wall</button
+            ><button data-tool="vertex" title="Move wall vertices (E)">
+              ◇ Shape</button
+            ><button
+              data-tool="carve"
+              title="Remove a wall face and its collision"
+            >
+              ▱ Carve</button
+            ><button id="fit" title="Fit level (F)">⊞ Fit</button>
+          </div>
+          <label class="inline"
+            ><input id="snap" type="checkbox" checked /> Snap</label
+          ><label class="inline"
+            >Grid
+            <input
+              id="spacing"
+              type="number"
+              min="0.001"
+              step="any"
+              value="6.4516129" /></label
+          ><label class="inline"
+            >÷
+            <input
+              id="subdivisions"
+              type="number"
+              min="1"
+              max="64"
+              value="1" /></label
+          ><label class="inline"
+            ><input id="links" type="checkbox" checked /> Links</label
+          >
+        </div>
+        <div id="viewport">
+          <canvas
+            id="map"
+            tabindex="0"
+            aria-label="Editable level map"
+          ></canvas>
+          <div id="hint">
+            Drag to move · Wheel to zoom · Middle-drag or Space-drag to pan
+          </div>
+          <div id="placement" hidden></div>
+        </div>
+        <div class="statusbar">
+          <span id="selection-status">Nothing selected</span
+          ><span id="coordinates">0, 0</span><span id="zoom-label">100%</span>
+        </div>
+      </main>
+      <aside class="inspector">
+        <div class="section-title">INSPECTOR</div>
+        <div id="inspector">
+          <p class="empty">
+            Select a component on the map.<br /><br />Place components from the
+            palette. Connect portals and switches here.
+          </p>
+        </div>
+      </aside>
+    </div>
+    <div id="notice" role="alert" hidden></div>
+    <input type="file" id="file" accept="application/json,.json" hidden />
+    <dialog id="play-dialog">
+      <div class="play-header">
+        <strong id="play-title">Playtest</strong
+        ><span>WASD move · Arrows steer · Backspace respawns</span
+        ><button id="close-play">Back to editing ✕</button>
+      </div>
+      <iframe
+        id="play-frame"
+        title="Original-engine playtest"
+        allow="autoplay; fullscreen"
+      ></iframe>
+    </dialog>
+    <script type="module" src="editor.js"></script>
+  </body>
+</html>

@@ -77,6 +77,22 @@ static GPG_KeyboardDevice *keyboard;
 static GPC_MouseDevice *mouse;
 static std::set<int> pressedKeys;
 static PyObject *authoringTick = NULL;
+static PyObject *authoringContacts = NULL;
+bool applyReforgedLevel(const char *path);
+
+void browserObserveContacts(KX_Scene *scene) {
+    if (!authoringContacts) return;
+    PyObject *proxy = scene->GetProxy();
+    PyObject *result = PyObject_CallFunctionObjArgs(authoringContacts, proxy, NULL);
+    Py_DECREF(proxy);
+    if (!result) {
+        PyErr_Print();
+        fprintf(stderr, "Authoring Python contact observation failed.\n");
+        emscripten_force_exit(1);
+        return;
+    }
+    Py_DECREF(result);
+}
 
 static int browserKey(const EmscriptenKeyboardEvent *event) {
     const char *code = event->code;
@@ -165,6 +181,9 @@ static void frame() {
                 EM_ASM({ if (Module.onGameExit) Module.onGameExit(1); });
                 return;
             }
+            if (PyString_Check(result)) {
+                EM_ASM({ if (Module.onReforgedStatus) Module.onReforgedStatus(UTF8ToString($0)); }, PyString_AsString(result));
+            }
             Py_DECREF(result);
         }
         engine->Render();
@@ -172,7 +191,7 @@ static void frame() {
 }
 
 int main(int argc, char **argv) {
-    if (argc < 2 || argc > 4) { fprintf(stderr, "Usage: player game.blend [scene [authoring-script]]\n"); return 1; }
+    if (argc < 2 || argc > 5) { fprintf(stderr, "Usage: player game.blend [scene [authoring-script [level.json]]]\n"); return 1; }
     init_nodesystem();
     initglobals();
     GEN_init_messaging_system();
@@ -255,9 +274,12 @@ int main(int argc, char **argv) {
     initMathutils();
     initGeometry();
     initBGL();
+    if (argc == 5 && !applyReforgedLevel(argv[4])) {
+        PyErr_Print(); fprintf(stderr, "Reforged JSON assembly failed.\n"); return 1;
+    }
     converter->ConvertScene(scene, dictionary, renderTools, canvas);
     engine->AddScene(scene);
-    if (argc == 4) {
+    if (argc >= 4) {
         KX_SetActiveScene(scene);
         FILE *script = fopen(argv[3], "r");
         if (!script) { fprintf(stderr, "Authoring script not found: %s\n", argv[3]); return 1; }
@@ -265,6 +287,12 @@ int main(int argc, char **argv) {
         fclose(script);
         if (!result) { PyErr_Print(); fprintf(stderr, "Authoring Python startup failed.\n"); return 1; }
         Py_DECREF(result);
+        PyObject *contacts = PyDict_GetItemString(dictionary, "reforged_contacts");
+        if (contacts) {
+            if (!PyCallable_Check(contacts)) { fprintf(stderr, "reforged_contacts must be callable.\n"); return 1; }
+            Py_INCREF(contacts);
+            authoringContacts = contacts;
+        }
         PyObject *tick = PyDict_GetItemString(dictionary, "reforged_tick");
         if (tick) {
             if (!PyCallable_Check(tick)) { fprintf(stderr, "reforged_tick must be callable.\n"); return 1; }
