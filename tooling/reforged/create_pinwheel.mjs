@@ -25,7 +25,10 @@ level.objects.find((object) => object.id === 'OBFinish.002').position = [
   0, 72, 0,
 ];
 
-// Copy every brick and remap references before changing authored parameters.
+/** Append a clone to level.objects, remap its bricks and return the new object.
+ * >>> cloneComponent('OBDot.116', 'OBExample').id
+ * 'OBExample'
+ */
 function cloneComponent(source, id, parent = null) {
   const object = structuredClone(originals.get(source));
   if (!object) throw Error('Unknown original component: ' + source);

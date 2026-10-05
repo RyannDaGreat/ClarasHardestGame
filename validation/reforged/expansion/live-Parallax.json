@@ -1,0 +1,40 @@
+{
+  "name": "Parallax",
+  "origin": "https://ryanndagreat.github.io/ClarasHardestGame/",
+  "input": "KeyD",
+  "before": {
+    "title": "Parallax · Reforged",
+    "status": {
+      "ticks": 120,
+      "ships": [
+        {
+          "position": [
+            -78,
+            -78,
+            0
+          ],
+          "name": "OBWalrus.013"
+        }
+      ],
+      "won": false
+    },
+    "width": 1920,
+    "height": 1080
+  },
+  "after": {
+    "ticks": 162,
+    "ships": [
+      {
+        "position": [
+          -57.92119216918945,
+          -78,
+          0
+        ],
+        "name": "OBWalrus.013"
+      }
+    ],
+    "won": false
+  },
+  "errors": [],
+  "scope": "Editor schema, native startup, brief keyboard input and screenshots; not a completed playthrough."
+}

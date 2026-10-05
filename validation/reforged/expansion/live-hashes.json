@@ -1,0 +1,66 @@
+{
+  "origin": "https://ryanndagreat.github.io/ClarasHardestGame/",
+  "release": "1889d4e8600d7ce002295bcac0006540c8ba7d45",
+  "files": [
+    {
+      "path": "loader.js",
+      "bytes": 10868,
+      "sha256": "f630993b925103fadc001606101ee84521f7b9c75db6d1bcaa50b8ab6963810c"
+    },
+    {
+      "path": "levels/catalog.json",
+      "bytes": 2967,
+      "sha256": "f10284ea77bca272f4fc6b16d5c149a9b6dd8130fea7e49bf63ffc7569e1a68a"
+    },
+    {
+      "path": "reforged/levels/Relay.json",
+      "bytes": 1677711,
+      "sha256": "c9c4d71687c72e48420eca3cbc8c19c64906decf727dc2f24b97b10659d46feb"
+    },
+    {
+      "path": "reforged/levels/Pinwheel.json",
+      "bytes": 1289999,
+      "sha256": "7e03e26e0aa110287f6844af35d3c1612e24110a24fc97382876ca16843b0091"
+    },
+    {
+      "path": "reforged/levels/Undertow.json",
+      "bytes": 1522416,
+      "sha256": "11f1191fa8ac8506dd892a081ee5d3f49756a18c3733602114ad158a6f2793b6"
+    },
+    {
+      "path": "reforged/levels/Ricochet.json",
+      "bytes": 1590898,
+      "sha256": "93b4796714b0e55d8e06fc1f75aead32c8f61f346c4d146a5551bc22d8a23b3e"
+    },
+    {
+      "path": "reforged/levels/Switchyard.json",
+      "bytes": 1587246,
+      "sha256": "f45d53bbc134777533a33191443687bdb073b8619867ecf9c8fc2e03944b4c9b"
+    },
+    {
+      "path": "reforged/levels/Slingshot.json",
+      "bytes": 1537345,
+      "sha256": "3e19616cb46113b1dda76684e571430d5c5dc254403b891e6d7dcd3df8af2fb7"
+    },
+    {
+      "path": "reforged/levels/Clockwork.json",
+      "bytes": 1992359,
+      "sha256": "a833320e9198cc7df0ddc146ae220027eb84532013abe73ccb7f144422242f95"
+    },
+    {
+      "path": "reforged/levels/Honeycomb.json",
+      "bytes": 1687299,
+      "sha256": "fed1badf76812cd67a85a7cd2f8b066cd6dd90b8b0ef0077e3dafe5264a2c390"
+    },
+    {
+      "path": "reforged/levels/Afterburn.json",
+      "bytes": 1317461,
+      "sha256": "1999e4cfdefd240e64f78d849d93f50e31130d1132121f39efbc4a3124b31958"
+    },
+    {
+      "path": "reforged/levels/Crescendo.json",
+      "bytes": 1552870,
+      "sha256": "2e3f117b58a4fb4c8d81aee4448e85be1bc4b273c471270077585bc5477e0658"
+    }
+  ]
+}

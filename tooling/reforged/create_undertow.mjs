@@ -25,7 +25,10 @@ level.objects.find((object) => object.id === 'OBFinish.002').position = [
   76, 72, 0,
 ];
 
-/** Append a placed original instance and remap its internal logic links. */
+/** Append a placed original to level.objects and remap its internal logic links.
+ * >>> place('OBPlane.022', 'OBExample', [0,0,0], [2,2,1], 'Ice').scale
+ * [2,2,1]
+ */
 function place(source, id, position, scale, label) {
   const object = structuredClone(originals.get(source));
   if (!object) throw Error('Missing original template: ' + source);

@@ -25,7 +25,10 @@ level.objects.find((object) => object.id === 'OBFinish.002').position = [
   78, 64, 0,
 ];
 
-/** Clone an original into the level, retaining force properties and resolving self-links. */
+/** Append a clone to level.objects, retaining forces and resolving self-links.
+ * >>> place('OBPlane.022', 'OBExample', [0,0,0], [2,2,1], 'Ice').scale
+ * [2,2,1]
+ */
 function place(source, id, position, scale, label) {
   if (!originals.has(source)) throw Error('Missing original: ' + source);
   const object = structuredClone(originals.get(source));
