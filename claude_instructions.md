@@ -234,3 +234,6 @@ Delegated contiguous panel styling and original-asset palette previews to editor
 
 ### Final editor color integration and delivery
 Use exported original per-corner vertex paint in both palette thumbnails and map faces. Canvas authoring previews average colors per face and multiply source textures over that paint; they do not reproduce native lighting. The original-engine playtest remains authoritative. Final checks cover all fifteen themes, default-off perspective and selection, original gameplay/audio, published level catalog and editor, before the requested completion notification.
+
+### Published Reforged release
+The original engine, level catalog and workshop are published under https://ryanndagreat.github.io/ClarasHardestGame/ . Catalog: levels/ ; editor: reforged/ . Bundled challenges are Switchback, Crossfire and Parallax, each with a genuine keyboard-only finish recorded. Live catalog validation boots all three through the deployed WASM at 1920×1080 and opens Parallax in the editor with no browser exceptions. `validation/reforged/live-catalog-results.json` and the release screenshots record this check. The private preview remains intentionally available at port 8877 in the requested isolated worktree; no pending builds or agent jobs remain.
