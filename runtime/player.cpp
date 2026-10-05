@@ -76,6 +76,7 @@ static KX_KetsjiEngine *engine;
 static GPG_KeyboardDevice *keyboard;
 static GPC_MouseDevice *mouse;
 static std::set<int> pressedKeys;
+static PyObject *authoringTick = NULL;
 
 static int browserKey(const EmscriptenKeyboardEvent *event) {
     const char *code = event->code;
@@ -154,11 +155,24 @@ static void frame() {
         EM_ASM({ if (Module.onGameExit) Module.onGameExit($0); }, exitCode);
         return;
     }
-    if (engine->NextFrame()) engine->Render();
+    if (engine->NextFrame()) {
+        if (authoringTick) {
+            PyObject *result = PyObject_CallObject(authoringTick, NULL);
+            if (!result) {
+                PyErr_Print();
+                fprintf(stderr, "Authoring Python tick failed.\n");
+                emscripten_cancel_main_loop();
+                EM_ASM({ if (Module.onGameExit) Module.onGameExit(1); });
+                return;
+            }
+            Py_DECREF(result);
+        }
+        engine->Render();
+    }
 }
 
 int main(int argc, char **argv) {
-    if (argc < 2 || argc > 3) { fprintf(stderr, "Usage: player game.blend [diagnostic-scene]\n"); return 1; }
+    if (argc < 2 || argc > 4) { fprintf(stderr, "Usage: player game.blend [scene [authoring-script]]\n"); return 1; }
     init_nodesystem();
     initglobals();
     GEN_init_messaging_system();
@@ -186,7 +200,7 @@ int main(int argc, char **argv) {
     if (!data) { fprintf(stderr, "Blend loading failed: %s\n", BLO_bre_as_string(error)); return 1; }
     G.main = data->main;
     G.scene = data->curscene;
-    if (argc == 3) {
+    if (argc >= 3) {
         Scene *selected = (Scene *) data->main->scene.first;
         while (selected && strcmp(selected->id.name + 2, argv[2])) selected = (Scene *) selected->id.next;
         if (!selected) { fprintf(stderr, "Diagnostic scene not found: %s\n", argv[2]); return 1; }
@@ -243,6 +257,21 @@ int main(int argc, char **argv) {
     initBGL();
     converter->ConvertScene(scene, dictionary, renderTools, canvas);
     engine->AddScene(scene);
+    if (argc == 4) {
+        KX_SetActiveScene(scene);
+        FILE *script = fopen(argv[3], "r");
+        if (!script) { fprintf(stderr, "Authoring script not found: %s\n", argv[3]); return 1; }
+        PyObject *result = PyRun_File(script, argv[3], Py_file_input, dictionary, dictionary);
+        fclose(script);
+        if (!result) { PyErr_Print(); fprintf(stderr, "Authoring Python startup failed.\n"); return 1; }
+        Py_DECREF(result);
+        PyObject *tick = PyDict_GetItemString(dictionary, "reforged_tick");
+        if (tick) {
+            if (!PyCallable_Check(tick)) { fprintf(stderr, "reforged_tick must be callable.\n"); return 1; }
+            Py_INCREF(tick);
+            authoringTick = tick;
+        }
+    }
     rasterizer->Init();
     engine->StartEngine(true);
     engine->SetAnimFrameRate((double)G.scene->r.frs_sec / G.scene->r.frs_sec_base);
