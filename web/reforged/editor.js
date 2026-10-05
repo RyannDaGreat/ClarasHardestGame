@@ -1,4 +1,9 @@
+import { project, unproject } from "./projection.js";
 import { wallGeometry, containedFaces } from "./geometry.js";
+import {
+  componentThumbnail,
+  componentFaceColor,
+} from "./component-thumbnails.js";
 const $ = (selector) => document.querySelector(selector);
 const canvas = $("#map"),
   context = canvas.getContext("2d");
@@ -16,6 +21,7 @@ const state = {
   selected: null,
   tool: "select",
   placement: null,
+  perspective: false,
   history: [],
   future: [],
   view: { x: 0, y: 0, scale: 3 },
@@ -220,21 +226,29 @@ function point(matrix, xyz) {
   const p = matrix.transformPoint(new DOMPoint(...xyz));
   return [p.x, p.y, p.z];
 }
-function screen(x, y) {
-  return [
-    (x - state.view.x) * state.view.scale + canvas.clientWidth / 2,
-    canvas.clientHeight / 2 - (y - state.view.y) * state.view.scale,
-  ];
+function screen(x, y, z = 0) {
+  return project(
+    [x, y, z],
+    state.view,
+    [canvas.clientWidth, canvas.clientHeight],
+    state.perspective,
+  ).slice(0, 2);
 }
-function world(x, y) {
-  return [
-    (x - canvas.clientWidth / 2) / state.view.scale + state.view.x,
-    (canvas.clientHeight / 2 - y) / state.view.scale + state.view.y,
-  ];
+function world(x, y, z = 0) {
+  return unproject(
+    [x, y],
+    state.view,
+    [canvas.clientWidth, canvas.clientHeight],
+    state.perspective,
+    z,
+  );
 }
-function snapped(x) {
+function snapped(x, axis = 0) {
   const step = state.level.grid.spacing / state.level.grid.subdivisions;
-  return state.level.grid.snap ? Math.round(x / step) * step : x;
+  const origin = state.level.grid.origin[axis] || 0;
+  return state.level.grid.snap
+    ? origin + Math.round((x - origin) / step) * step
+    : x;
 }
 function family(o) {
   const m = metadata(o),
@@ -308,20 +322,35 @@ function draw() {
   const grid = state.level.grid.spacing,
     minor = grid / state.level.grid.subdivisions,
     step = minor * state.view.scale >= 8 ? minor : grid;
-  const [left, bottom] = world(0, h),
-    [right, top] = world(w, 0);
+  const corners = [
+    [0, 0],
+    [w, 0],
+    [0, h],
+    [w, h],
+  ].map((p) => world(...p));
+  const left = Math.min(...corners.map((p) => p[0])),
+    right = Math.max(...corners.map((p) => p[0]));
+  const bottom = Math.min(...corners.map((p) => p[1])),
+    top = Math.max(...corners.map((p) => p[1]));
+  const [originX, originY] = state.level.grid.origin;
   context.strokeStyle = color("map-grid");
   context.lineWidth = 1;
   context.beginPath();
-  for (let x = Math.ceil(left / step) * step; x < right; x += step) {
-    const sx = screen(x, 0)[0];
-    context.moveTo(sx, 0);
-    context.lineTo(sx, h);
+  for (
+    let x = originX + Math.ceil((left - originX) / step) * step;
+    x < right;
+    x += step
+  ) {
+    context.moveTo(...screen(x, bottom));
+    context.lineTo(...screen(x, top));
   }
-  for (let y = Math.ceil(bottom / step) * step; y < top; y += step) {
-    const sy = screen(0, y)[1];
-    context.moveTo(0, sy);
-    context.lineTo(w, sy);
+  for (
+    let y = originY + Math.ceil((bottom - originY) / step) * step;
+    y < top;
+    y += step
+  ) {
+    context.moveTo(...screen(left, y));
+    context.lineTo(...screen(right, y));
   }
   context.stroke();
   const drawn = state.level.objects
@@ -330,7 +359,9 @@ function draw() {
       (o) => !["Background", "Camera", "Light", "Utility"].includes(family(o)),
     )
     .sort((a, b) => worldMatrix(a).m43 - worldMatrix(b).m43);
-  for (const o of drawn) drawObject(o);
+  const surfaces = drawn.flatMap(objectFaces);
+  surfaces.sort((a, b) => b.depth - a.depth);
+  for (const surface of surfaces) drawFace(surface);
   for (const o of state.level.objects.filter(
     (o) => visible(o) && ["Start", "Finish"].includes(family(o)),
   ))
@@ -354,58 +385,57 @@ function draw() {
   }
   $("#zoom-label").textContent = Math.round((state.view.scale * 100) / 3) + "%";
 }
-function drawObject(o) {
-  const m = metadata(o),
-    mesh = state.library.meshes[m.data];
-  if (!mesh) return;
-  const matrix = worldMatrix(o),
-    verts = (o.geometry?.vertices || mesh.vertices).map((v) =>
-      screen(...point(matrix, v)),
-    );
+function objectFaces(o) {
+  if (metadata(o).restrictflag & 4) return []; // Original OB_RESTRICT_RENDER.
+  const mesh = state.library.meshes[metadata(o).data];
+  if (!mesh) return [];
+  const matrix = worldMatrix(o);
+  const vertices = (o.geometry?.vertices || mesh.vertices).map((v) =>
+    project(
+      point(matrix, v),
+      state.view,
+      [canvas.clientWidth, canvas.clientHeight],
+      state.perspective,
+    ),
+  );
   const disabled = new Set(o.geometry?.disabledFaces || []);
-  const combined = new Path2D();
-  let count = 0;
-  context.globalAlpha = o.active ? 1 : 0.28;
   const faces =
     o.geometry?.faces?.map((f) => ({ ...mesh.faces[f.templateFace], ...f })) ||
     mesh.faces;
-  for (let i = 0; i < faces.length; i++) {
-    const f = faces[i];
-    if (disabled.has(i) || f.mode & 1024) continue;
-    const points = f.vertices.map((index) => verts[index]);
-    if (points.some((p) => !p))
+  return faces.flatMap((f, index) => {
+    if (disabled.has(index) || f.mode & 1024) return [];
+    const corners = f.vertices.map((i) => vertices[i]);
+    if (corners.some((p) => !p))
       throw Error("Mesh face references missing vertex");
-    const path = new Path2D();
-    path.moveTo(...points[0]);
-    for (const p of points.slice(1)) path.lineTo(...p);
-    path.closePath();
-    combined.addPath(path);
-    const image = f.image || "",
-      kind = family(o);
-    context.fillStyle =
-      image.toLowerCase().includes("ice") || image.includes("Gloop")
-        ? color("floor")
-        : image.includes("Guide")
-          ? color("wall")
-          : image.toLowerCase().includes("chrome")
-            ? color("junction")
-            : kind === "Portal"
-              ? color("portal")
-              : kind === "Floor"
-                ? color("floor")
-                : kind === "Finish"
-                  ? color("goal")
-                  : kind === "Player"
-                    ? color("player")
-                    : ["Hazard", "Moving hazard", "Turret"].includes(kind)
-                      ? color("hazard")
-                      : color("junction");
-    context.fill(path);
-    if (textures.has(image)) drawTexture(points, f.uv, textures.get(image));
-    count++;
+    if (state.perspective && corners.some((p) => p[2] <= 1)) return [];
+    return [
+      {
+        o,
+        f,
+        points: corners.map((p) => p.slice(0, 2)),
+        depth: corners.reduce((sum, p) => sum + p[2], 0) / corners.length,
+      },
+    ];
+  });
+}
+function drawFace({ o, f, points }) {
+  const path = new Path2D();
+  path.moveTo(...points[0]);
+  for (const p of points.slice(1)) path.lineTo(...p);
+  path.closePath();
+  const image = f.image || "";
+  const mesh = state.library.meshes[metadata(o).data];
+  const material = state.library.materials[mesh.materials[f.material]];
+  context.globalAlpha = o.active ? 1 : 0.28;
+  context.fillStyle = componentFaceColor(f, material);
+  context.fill(path);
+  if (textures.has(image)) {
+    context.globalCompositeOperation = "multiply";
+    drawTexture(points, f.uv, textures.get(image));
+    context.globalCompositeOperation = "source-over";
   }
   context.globalAlpha = 1;
-  if (count) shapes.push({ id: o.id, path: combined });
+  shapes.push({ id: o.id, path });
 }
 /** Map three texture-space points [3,2] to screen [3,2].
  * >>> textureTransform([[0,0],[1,0],[0,1]], [[2,3],[4,3],[2,5]])
@@ -1174,7 +1204,11 @@ function palette() {
     const small = document.createElement("small");
     small.textContent = label(o);
     text.append(small);
-    button.append(glyph, text);
+    const preview = componentThumbnail(o.source, state.library, textures);
+    button.title =
+      label(o) +
+      (preview ? " · original component preview" : " · invisible marker");
+    button.append(preview || glyph, text);
     button.onclick = () => {
       state.placement = o.id;
       $("#placement").textContent =
@@ -1287,6 +1321,7 @@ canvas.onpointerdown = (event) => {
           object: o,
           indices: nearby.map((v) => v.index),
           start: w,
+          pointer: p,
           vertices: clone(o.geometry.vertices),
         };
         canvas.setPointerCapture(event.pointerId);
@@ -1338,7 +1373,11 @@ canvas.onpointerdown = (event) => {
     state.drag = {
       kind: "move",
       object: o,
-      start: w,
+      start: world(...p, worldMatrix(o).m43),
+      plane: worldMatrix(o).m43,
+      parentInverse: worldMatrix(o)
+        .multiply(trs(o.position, o.rotation, o.scale).inverse())
+        .inverse(),
       position: [...o.position],
     };
     canvas.setPointerCapture(event.pointerId);
@@ -1351,22 +1390,30 @@ canvas.onpointermove = (event) => {
   const drag = state.drag;
   if (!drag) return;
   if (drag.kind === "pan") {
-    state.view.x = drag.view.x - (p[0] - drag.p[0]) / state.view.scale;
-    state.view.y = drag.view.y + (p[1] - drag.p[1]) / state.view.scale;
+    const size = [canvas.clientWidth, canvas.clientHeight];
+    const start = unproject(drag.p, drag.view, size, state.perspective);
+    const end = unproject(p, drag.view, size, state.perspective);
+    state.view.x = drag.view.x + start[0] - end[0];
+    state.view.y = drag.view.y + start[1] - end[1];
   } else if (drag.kind === "wall") {
     drag.end = w.map(snapped);
   } else if (drag.kind === "move") {
-    const delta = [w[0] - drag.start[0], w[1] - drag.start[1]];
-    drag.object.position[0] = snapped(drag.position[0] + delta[0]);
-    drag.object.position[1] = snapped(drag.position[1] + delta[1]);
+    const target = world(...p, drag.plane);
+    const delta = drag.parentInverse.transformPoint(
+      new DOMPoint(target[0] - drag.start[0], target[1] - drag.start[1], 0, 0),
+    );
+    drag.object.position[0] = snapped(drag.position[0] + delta.x);
+    drag.object.position[1] = snapped(drag.position[1] + delta.y, 1);
     matrices.clear();
   } else {
     const inverse = worldMatrix(drag.object).inverse();
     for (const i of drag.indices) {
       const original = point(worldMatrix(drag.object), drag.vertices[i]);
+      const start = world(...drag.pointer, original[2]),
+        target = world(...p, original[2]);
       drag.object.geometry.vertices[i] = point(inverse, [
-        snapped(original[0] + w[0] - drag.start[0]),
-        snapped(original[1] + w[1] - drag.start[1]),
+        snapped(original[0] + target[0] - start[0]),
+        snapped(original[1] + target[1] - start[1], 1),
         original[2],
       ]);
     }
@@ -1455,6 +1502,10 @@ $("#show-inactive").onchange = () => {
   render();
 };
 $("#links").onchange = render;
+$("#perspective").onchange = () => {
+  state.perspective = $("#perspective").checked;
+  render();
+};
 $("#name").onchange = () => mutate(() => (state.level.name = $("#name").value));
 $("#spacing").onchange = () =>
   mutate(() => (state.level.grid.spacing = Number($("#spacing").value)));
@@ -1575,4 +1626,7 @@ window.reforgedEditor = {
   load,
   mutate,
   addWall,
+  screen,
+  world,
+  snapped,
 };

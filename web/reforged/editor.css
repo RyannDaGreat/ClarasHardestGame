@@ -17,10 +17,10 @@
   --pad: 16px;
   --large: 24px;
   --header: 72px;
-  --left: 240px;
+  --left: 256px;
   --right: 284px;
   --control: 34px;
-  --radius: 8px;
+  --radius: 2px;
   --font: 13px;
   --small-font: 11px;
   --title: 22px;
@@ -394,4 +394,118 @@ header {
 .workspace {
   height: auto;
   min-height: var(--zero);
+}
+
+/* One continuous workbench: panel rules carry the hierarchy. */
+:root {
+  --preview-size: 52px;
+  --component-height: 66px;
+  --section-height: 38px;
+  --selection-rule: 3px;
+  --section-tracking: 0.08em;
+  --transparent: transparent;
+  --focus-width: 2px;
+}
+aside { padding: var(--zero); }
+aside > h1, aside > p, aside > label, aside > input,
+aside > details, #inspector {
+  margin-left: var(--pad);
+  margin-right: var(--pad);
+}
+aside > h1 { margin-top: var(--pad); }
+aside > input { width: calc(var(--wide) - var(--pad) * 2); }
+.section-title {
+  margin: var(--pad) var(--zero) var(--zero);
+  padding: var(--gap) var(--pad);
+  border-top: var(--one) solid var(--line);
+  border-bottom: var(--one) solid var(--line);
+  font-weight: var(--weight);
+  letter-spacing: var(--section-tracking);
+}
+.inspector > .section-title { margin-top: var(--zero); }
+#search {
+  margin: var(--zero);
+  padding: var(--gap) var(--pad);
+  width: var(--wide);
+  border: var(--zero);
+  border-bottom: var(--one) solid var(--line);
+  border-radius: var(--zero);
+  background: var(--bg);
+}
+.component {
+  margin: var(--zero);
+  padding: var(--small) var(--pad);
+  min-height: var(--component-height);
+  border: var(--zero);
+  border-bottom: var(--one) solid var(--line);
+  border-radius: var(--zero);
+  background: var(--transparent);
+  white-space: normal;
+}
+.component:hover, .component:focus-visible {
+  background: var(--panel-raised);
+  box-shadow: inset var(--selection-rule) var(--zero) var(--accent);
+}
+.component > span:last-child { min-width: var(--zero); overflow-wrap: anywhere; }
+.component-preview, .component .glyph {
+  width: var(--preview-size);
+  height: var(--preview-size);
+  flex-shrink: 0;
+  object-fit: contain;
+}
+.component .glyph { display: grid; place-items: center; }
+.toolbar { padding: var(--zero) var(--gap) var(--zero) var(--zero); gap: var(--gap); }
+.tools { gap: var(--zero); align-self: stretch; }
+.tools button {
+  min-height: calc(var(--control) + var(--gap));
+  border: var(--zero);
+  border-right: var(--one) solid var(--line);
+  border-radius: var(--zero);
+  background: var(--transparent);
+}
+.tools button:hover { background: var(--panel-raised); }
+.tools button.active {
+  color: var(--accent);
+  background: var(--panel-raised);
+  box-shadow: inset var(--zero) calc(var(--selection-rule) * -1) var(--accent);
+}
+#inspector h1 { padding-top: var(--pad); overflow-wrap: anywhere; }
+#inspector h2 {
+  margin-inline: calc(var(--pad) * -1);
+  padding: var(--gap) var(--pad);
+  border-block: var(--one) solid var(--line);
+  background: var(--bg);
+}
+#inspector .row { gap: var(--gap); }
+#inspector .row label { margin-block: var(--zero) var(--gap); }
+#inspector > details {
+  margin-inline: calc(var(--pad) * -1);
+  padding: var(--gap) var(--pad);
+}
+.brick {
+  border-radius: var(--zero);
+  background: var(--transparent);
+  padding: var(--gap) var(--zero);
+  margin: var(--zero);
+}
+#objects button {
+  border: var(--zero);
+  border-bottom: var(--one) solid var(--line);
+  border-radius: var(--zero);
+  background: var(--transparent);
+  margin: var(--zero);
+}
+#objects button.active { color: var(--accent); background: var(--panel-raised); }
+#hint {
+  bottom: var(--zero);
+  left: var(--zero);
+  right: var(--zero);
+  padding: var(--small) var(--pad);
+  border-radius: var(--zero);
+  border-top: var(--one) solid var(--line);
+}
+#placement { border-radius: var(--zero); }
+button:focus-visible, input:focus-visible, select:focus-visible {
+  outline: var(--focus-width) solid var(--accent);
+  outline-offset: calc(var(--focus-width) * -1);
 }

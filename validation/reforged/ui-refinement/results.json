@@ -1,0 +1,125 @@
+{
+  "thumbs": [
+    {
+      "name": "WallGrid",
+      "title": "Grid · original component preview",
+      "image": true,
+      "loaded": true
+    },
+    {
+      "name": "◇PropMuck",
+      "title": "Muck · invisible marker",
+      "image": false
+    },
+    {
+      "name": "◇PropIcey",
+      "title": "Icey · invisible marker",
+      "image": false
+    },
+    {
+      "name": "▱WallCube",
+      "title": "Cube · invisible marker",
+      "image": false
+    },
+    {
+      "name": "PowerPlane",
+      "title": "Plane · original component preview",
+      "image": true,
+      "loaded": true
+    },
+    {
+      "name": "WallSplinters",
+      "title": "Splinters · original component preview",
+      "image": true,
+      "loaded": true
+    },
+    {
+      "name": "FloorPlane",
+      "title": "Plane · original component preview",
+      "image": true,
+      "loaded": true
+    },
+    {
+      "name": "Moving hazardKiller",
+      "title": "Killer · original component preview",
+      "image": true,
+      "loaded": true
+    },
+    {
+      "name": "PushDown Push",
+      "title": "Down Push · original component preview",
+      "image": true,
+      "loaded": true
+    },
+    {
+      "name": "ForcefieldForcefield",
+      "title": "Forcefield · original component preview",
+      "image": true,
+      "loaded": true
+    },
+    {
+      "name": "◇PropBounds",
+      "title": "Bounds · invisible marker",
+      "image": false
+    },
+    {
+      "name": "SwitchDot",
+      "title": "Dot · original component preview",
+      "image": true,
+      "loaded": true
+    },
+    {
+      "name": "FinishFinish",
+      "title": "Finish · original component preview",
+      "image": true,
+      "loaded": true
+    },
+    {
+      "name": "PortalPortal2",
+      "title": "Portal2 · original component preview",
+      "image": true,
+      "loaded": true
+    },
+    {
+      "name": "PortalPortal1",
+      "title": "Portal1 · original component preview",
+      "image": true,
+      "loaded": true
+    },
+    {
+      "name": "TurretLaserRack",
+      "title": "LaserRack · original component preview",
+      "image": true,
+      "loaded": true
+    },
+    {
+      "name": "➤StartSpawnPoint",
+      "title": "SpawnPoint · invisible marker",
+      "image": false
+    },
+    {
+      "name": "PushUp Push",
+      "title": "Up Push · original component preview",
+      "image": true,
+      "loaded": true
+    },
+    {
+      "name": "SwitchRed Dot",
+      "title": "Red Dot · original component preview",
+      "image": true,
+      "loaded": true
+    },
+    {
+      "name": "SwitchFury D",
+      "title": "Fury D · original component preview",
+      "image": true,
+      "loaded": true
+    }
+  ],
+  "layout": {
+    "overflow": false,
+    "toolbarHeight": 44,
+    "images": 15
+  },
+  "errors": []
+}

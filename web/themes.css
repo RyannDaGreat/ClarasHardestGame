@@ -87,16 +87,17 @@ button.primary,
 }
 [data-app="game"] header {
   padding: var(--gap);
-  border: var(--theme-border) solid var(--theme-line);
-  border-radius: var(--theme-radius);
-  box-shadow: var(--theme-shadow);
+  border: var(--theme-zero);
+  border-block: var(--theme-border) solid var(--theme-line);
+  border-radius: var(--theme-zero);
+  box-shadow: none;
   flex-wrap: wrap;
 }
 [data-app="game"] nav {
   flex-wrap: wrap;
 }
 [data-app="game"] #player {
-  box-shadow: var(--theme-shadow);
+  box-shadow: none;
 }
 [data-app="game"] .launch-card {
   color: var(--theme-overlay-ink);
@@ -142,9 +143,4 @@ button.primary:focus-visible,
 #start:focus-visible {
   outline: var(--theme-focus) solid var(--theme-on-accent);
   outline-offset: var(--theme-focus-inset);
-}
-.card {
-  --theme-cut: var(--theme-card-cut);
-  border-radius: var(--theme-zero);
-  clip-path: var(--theme-cut-shape);
 }
